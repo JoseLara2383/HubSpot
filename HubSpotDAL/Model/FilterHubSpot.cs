@@ -10,7 +10,7 @@ namespace HubSpotDAL.Model
     {
 
        
-            public List<FilterGroup> filterGroups { get; set; }
+            public List<FilterGroup> filterGroups { get; set; } = new List<FilterGroup>();
             public List<string> properties { get; set; }
             public int limit { get; set; }
             public int after { get; set; }

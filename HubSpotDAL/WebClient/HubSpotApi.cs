@@ -71,6 +71,7 @@ namespace HubSpotDAL.WebClient
             {
                 var ApiKey = Helpers.SettingSync.SettingHubSpot.APiKey;
                 var ColumnsContac = Helpers.SettingSync.SettingHubSpot.ColumsEntity.Find(element => element.Entity == EnumEntityHubSport.Contact.ToString());
+                Model.FilterHubSpot FilterHubSpot = new Model.FilterHubSpot();
 
                 var url = @"contacts/search?{0}";
 
@@ -78,7 +79,7 @@ namespace HubSpotDAL.WebClient
                 var columsProperty = string.Empty;
                 foreach (var item in ListColums)
                 {
-                    columsProperty = columsProperty + string.Format("properties={0}&", item);
+                    FilterHubSpot.properties.Add("actualizado");
                 }
 
                 url = string.Format(url, columsProperty);
@@ -86,17 +87,12 @@ namespace HubSpotDAL.WebClient
 
                 //                properties=hs_analytics_source&properties=hs_analytics_source_data_1&properties=first_conversion_event_name&archived=false
                 //&hapikey={0}&properties=currentlyinworkflow&properties=message&properties=hs_analytics_average_page_views";
-                Model.FilterHubSpot FilterHubSpot = new Model.FilterHubSpot();
+               
                 var filter = new Model.Filter() { propertyName = "lastmodifieddate", @operator = "GT", value = "919747892000" };
                 var filterg = new Model.FilterGroup();
-                filterg.filters = new List<Model.Filter>();
                 filterg.filters.Add(filter);
-                FilterHubSpot.filterGroups = new List<Model.FilterGroup>();
                 FilterHubSpot.filterGroups.Add(filterg);
-                FilterHubSpot.properties = new List<string>();
-                FilterHubSpot.properties.Add("actualizado");
-                FilterHubSpot.properties.Add("email");
-                FilterHubSpot.properties.Add("firstname");
+               
 
                 FilterHubSpot.limit = 100;
                 FilterHubSpot.after = 0;
