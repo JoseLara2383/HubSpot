@@ -27,7 +27,7 @@ namespace HubSpotDAL.Helpers
             }
             catch (Exception ex)
             {
-                //Helpers.ExcepcionLog.WriteLog("getSetting", ex);
+                Helpers.ExcepcionLog.WriteLog("getSetting", ex);
                 //throw ex;
             }
 
