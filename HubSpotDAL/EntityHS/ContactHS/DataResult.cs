@@ -1,4 +1,5 @@
-﻿using System;
+﻿using HubSpotDAL.Model;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -10,5 +11,6 @@ namespace HubSpotDAL.EntityHS.ContactHS
     {
         public List<ContactData> results { get; set; }
         public string Entity { get; set; }
+        public Paging paging { get; set; }
     }
 }

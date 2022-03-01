@@ -10,7 +10,7 @@ namespace HubSpotDAL.WebClient
 {
     internal static class HubSpotApi
     {
-        public static async Task<string> GetContact()
+        public static async Task<string> GetContact(string after="")
         {
             try
             {
@@ -60,12 +60,12 @@ namespace HubSpotDAL.WebClient
             }
             catch (HttpRequestException ex)
             {
-               // Helpers.ExcepcionLog.WriteLog("GetCliente", ex);
+                Helpers.ExcepcionLog.WriteLog("GetCliente", ex);
                 return "";
             }
         }
 
-        public static async Task<string> PostContact()
+        public static async Task<string> PostContact(string after ="")
         {
             try
             {
@@ -89,7 +89,7 @@ namespace HubSpotDAL.WebClient
                 filterg.filters.Add(filter);
                 FilterHubSpot.filterGroups.Add(filterg);              
                 FilterHubSpot.limit = 100;
-                FilterHubSpot.after = 0;
+                FilterHubSpot.after = after;
                // string jsonf = @"{""filterGroups"": [{ ""filters"": [{""propertyName"":""lastmodifieddate"",""operator"": ""GT"",""value"":""919747892000""}]}],""properties"":[""actualizado"",""email"",""firstname""],""limit"": 100,""after"": 0}";
                 //string.Format("{{\"security\":{{\"Email\":\"{0}\",\"Password\":\"{1}\"}}}}", 22, 22);
                 var json = Newtonsoft.Json.JsonConvert.SerializeObject(FilterHubSpot);

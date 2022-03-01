@@ -15,17 +15,29 @@ namespace HubSpotDAL
         public static async Task<string> GetContact()
         {
             SettingSync.getSetting();
+            string after = "0";
+            //Recorrer los contacts para procesarlos
+            var ContactDAL = new DAL.ContactDAL();
+            do
+            {
 
-            var dataContact= await HubSpotApi.PostContact();
+                var dataContact = await HubSpotApi.PostContact(after);
 
-            var contactResult = JsonConvert.DeserializeObject<EntityHS.ContactHS.DataResult>(dataContact);
+                var contactResult = JsonConvert.DeserializeObject<EntityHS.ContactHS.DataResult>(dataContact);
 
-            var a = new DAL.ContactDAL();
+                if(( contactResult.paging!=null && contactResult.paging.next!=null && contactResult.paging.next.after != null) )
+                {
+                    after = contactResult.paging.next.after ;
+                }
+                if (contactResult != null)
+                    ContactDAL.InsUpdData(SettingSync.SettingHubSpot.ConexionString, contactResult);
+            } while (after!=string.Empty);
 
-            if(contactResult!=null)
-                a.InsUpdData(SettingSync.SettingHubSpot.ConexionString, contactResult);
+            
 
-            return dataContact;
+         
+
+            return "La sincronizacion ha terminado con exito";
 
         }
     }

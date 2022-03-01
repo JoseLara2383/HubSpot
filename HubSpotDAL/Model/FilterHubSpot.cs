@@ -8,13 +8,10 @@ namespace HubSpotDAL.Model
 {
     internal class FilterHubSpot
     {
-
-       
-            public List<FilterGroup> filterGroups { get; set; } = new List<FilterGroup>();
-            public List<string> properties { get; set; }
-            public int limit { get; set; }
-            public int after { get; set; }
-
-
+        public List<FilterGroup> filterGroups { get; set; } = new List<FilterGroup>();
+        public List<string> properties { get; set; } = new List<string>();
+        public int limit { get; set; }
+        public string after { get; set; }
+        
     }
 }
