@@ -25,10 +25,14 @@ namespace HubSpotDAL
 
                 var contactResult = JsonConvert.DeserializeObject<EntityHS.ContactHS.DataResult>(dataContact);
 
-                if(( contactResult.paging!=null && contactResult.paging.next!=null && contactResult.paging.next.after != null) )
+                if ((contactResult != null && contactResult.paging != null && contactResult.paging.next != null && contactResult.paging.next.after != null))
                 {
-                    after = contactResult.paging.next.after ;
+                    after = contactResult.paging.next.after;
                 }
+                else
+                    after = string.Empty;
+
+
                 if (contactResult != null)
                     ContactDAL.InsUpdData(SettingSync.SettingHubSpot.ConexionString, contactResult);
             } while (after!=string.Empty);
