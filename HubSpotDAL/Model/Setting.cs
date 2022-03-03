@@ -15,7 +15,7 @@ namespace HubSpotDAL.Model
 
         public string APiKey { get; set; }
 
-        public Int32 NumItemsxPage { get; set; }
+        public Int32 NumItemsxPage { get; set; } = 100;
 
         public Int32 HorasSQL { get; set; } = 0;
 
