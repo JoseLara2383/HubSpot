@@ -17,12 +17,19 @@ namespace HubSpotDAL
             SettingSync.getSetting();
             string after = "0";
             string lastDate;
-            string fechafiltro = "919747892000";
+            string fechafiltro = "919747892000";//23-feb-1999 23:31:23
+            //ver la fecha inicial para la carga de todos los datos
+            //tomar la ultima fecha para las siguientes actualizaciones
+            //no modicar la fecha ultima sino trae nada de datos.
+            //probar las actualizacion de un registro y seguidamente hacer el filtro.
+
             string pageAfterLimit = "10000";
             //Recorrer los contacts para procesarlos
             var ContactDAL = new DAL.ContactDAL();
             do
             {           
+                //Recuperar la fecha guardar, ultima de ejecucion
+
                 var dataContact = await HubSpotApi.PostContact(fechafiltro, after);
 
                 var contactResult = JsonConvert.DeserializeObject<EntityHS.ContactHS.DataResult>(dataContact);
@@ -46,6 +53,7 @@ namespace HubSpotDAL
                     ContactDAL.InsUpdData(SettingSync.SettingHubSpot.ConexionString, contactResult);
             } while (after!=string.Empty);
 
+            //Guardar la fecha 
             
             return "La sincronizacion ha terminado con exito";
 
