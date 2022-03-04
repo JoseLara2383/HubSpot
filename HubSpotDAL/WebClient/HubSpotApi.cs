@@ -87,7 +87,8 @@ namespace HubSpotDAL.WebClient
                 var filter = new Model.Filter() { propertyName = "lastmodifieddate", @operator = "GT", value = lastmodifieddate };
                 var filterg = new Model.FilterGroup();
                 filterg.filters.Add(filter);
-                FilterHubSpot.filterGroups.Add(filterg);              
+                FilterHubSpot.filterGroups.Add(filterg);
+                FilterHubSpot.sorts.Add(new Model.Sorts());
                 FilterHubSpot.limit = Helpers.SettingSync.SettingHubSpot.NumItemsxPage;
                 FilterHubSpot.after = after;
                // string jsonf = @"{""filterGroups"": [{ ""filters"": [{""propertyName"":""lastmodifieddate"",""operator"": ""GT"",""value"":""919747892000""}]}],""properties"":[""actualizado"",""email"",""firstname""],""limit"": 100,""after"": 0}";

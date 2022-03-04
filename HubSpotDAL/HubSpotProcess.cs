@@ -30,7 +30,14 @@ namespace HubSpotDAL
                 if ((contactResult != null && contactResult.paging != null && contactResult.paging.next != null && contactResult.paging.next.after != null))
                 {
                     after = contactResult.paging.next.after;
-                    lastDate = contactResult.results[contactResult.results.Count - 1].updatedAt;
+                    if(pageAfterLimit== after)
+                    {
+                        lastDate = contactResult.results[contactResult.results.Count - 1].updatedAt;
+                        //convertir la fecha string a spam
+                        after = "0";
+                    }
+
+
                 }
                 else
                     after = string.Empty;
