@@ -41,11 +41,12 @@ namespace HubSpotDAL
                     if(pageAfterLimit== after)
                     {
                         lastDate = contactResult.results[contactResult.results.Count - 1].updatedAt;
-                        //convertir la fecha string a spam
+                        //convertir la fecha string a spam - 
+                        var fechaSpan = _tools.ConvertDateUnixTime(Convert.ToDateTime(lastDate));
+                        fechafiltro = fechaSpan.ToString();
+
                         after = "0";
                     }
-
-
                 }
                 else
                     after = string.Empty;

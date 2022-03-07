@@ -10,16 +10,15 @@ namespace HubSpotDAL.Helpers
     {
         public long ConvertDateUnixTime(DateTime date)
         {
+            long dateSpan = 0;
             try
             {
-               return long.Parse(((DateTimeOffset)date).ToUnixTimeSeconds().ToString() + "000");
+                dateSpan= long.Parse(((DateTimeOffset)date).ToUnixTimeSeconds().ToString() + "000");
             }
             catch (Exception)
-            {
-
-                return 0;
+            {             
             }
-            
+             return dateSpan;
         }
         public DateTimeOffset ConvertUnixTimeToDatetime(long unixTime)
         {
