@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using HubSpotDAL.Helpers;
 using HubSpotDAL.WebClient;
 using Newtonsoft.Json;
+using static HubSpotDAL.Helpers.EnumHubspot;
 
 namespace HubSpotDAL
 {
@@ -18,18 +19,24 @@ namespace HubSpotDAL
             SettingSync.getSetting();
             string after = "0";
             string lastDate;
-            string fechafiltro = "919747892000";//23-feb-1999 23:31:23
+            string fechafiltro = SettingSync.SettingHubSpot.FechaFiltro;//"919747892000";//23-feb-1999 23:31:23
             //ver la fecha inicial para la carga de todos los datos
             //tomar la ultima fecha para las siguientes actualizaciones
             //no modicar la fecha ultima sino trae nada de datos.
             //probar las actualizacion de un registro y seguidamente hacer el filtro.
 
             string pageAfterLimit = "10000";
+            DateTimeOffset Fecha;
             //Recorrer los contacts para procesarlos
             var ContactDAL = new DAL.ContactDAL();
             do
-            {           
+            {
                 //Recuperar la fecha guardar, ultima de ejecucion
+                //Obtener la fecha que corrio el sync para la tabla
+                 Fecha = _tools.ConvertUnixTimeToDatetime(long.Parse(fechafiltro));
+                ConfScheduleTable.getScheduleTable(1, TypeSync.HubSpottoBD, Fecha.UtcDateTime, fechafiltro);
+
+                //DateTime FechaInicio = Convert.ToDateTime(ConfScheduleTable.scheduleTable.FechaInicio.ToString("yyyy/MM/dd hh:mm tt"));
 
                 var dataContact = await HubSpotApi.PostContact(fechafiltro, after);
 
@@ -44,7 +51,7 @@ namespace HubSpotDAL
                         //convertir la fecha string a spam - 
                         var fechaSpan = _tools.ConvertDateUnixTime(Convert.ToDateTime(lastDate));
                         fechafiltro = fechaSpan.ToString();
-
+                        Fecha = _tools.ConvertUnixTimeToDatetime(long.Parse(fechafiltro));
                         after = "0";
                     }
                 }
@@ -59,6 +66,8 @@ namespace HubSpotDAL
 
                 if (contactResult != null)
                     ContactDAL.InsUpdData(SettingSync.SettingHubSpot.ConexionString, contactResult);
+                if (after == string.Empty)
+                    ConfScheduleTable.UpdateScheduleTable(1, Fecha.UtcDateTime, TypeSync.HubSpottoBD, fechafiltro);
             } while (after != string.Empty);
 
 

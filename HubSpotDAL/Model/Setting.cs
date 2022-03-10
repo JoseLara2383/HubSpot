@@ -18,7 +18,7 @@ namespace HubSpotDAL.Model
         public Int32 NumItemsxPage { get; set; } = 100;
 
         public Int32 HorasSQL { get; set; } = 0;
-
+        public string FechaFiltro { get; set; } 
         public List<ColumnsEntity> ColumsEntity { get; set; }
     }
 }

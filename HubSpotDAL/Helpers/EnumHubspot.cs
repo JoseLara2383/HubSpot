@@ -16,5 +16,11 @@ namespace HubSpotDAL.Helpers
 
 
         }
+        public enum TypeSync
+        {
+            HubSpottoBD = 1,
+            BDtoHubSpot = 2
+        }
+
     }
 }
