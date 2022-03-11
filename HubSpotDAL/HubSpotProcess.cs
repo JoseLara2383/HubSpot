@@ -38,20 +38,22 @@ namespace HubSpotDAL
 
                 //DateTime FechaInicio = Convert.ToDateTime(ConfScheduleTable.scheduleTable.FechaInicio.ToString("yyyy/MM/dd hh:mm tt"));
 
-                var dataContact = await HubSpotApi.PostContact(fechafiltro, after);
+                var dataContact = await HubSpotApi.PostContact(ConfScheduleTable.scheduleTable.FechaInicioSpam, after);
 
                 var contactResult = JsonConvert.DeserializeObject<EntityHS.ContactHS.DataResult>(dataContact);
 
                 if ((contactResult != null && contactResult.paging != null && contactResult.paging.next != null && contactResult.paging.next.after != null))
                 {
                     after = contactResult.paging.next.after;
-                    if(pageAfterLimit== after)
+                    lastDate = contactResult.results[contactResult.results.Count - 1].updatedAt;
+                    //convertir la fecha string a spam - 
+                    var fechaSpan = _tools.ConvertDateUnixTime(Convert.ToDateTime(lastDate));
+                    fechafiltro = fechaSpan.ToString();
+                    Fecha = _tools.ConvertUnixTimeToDatetime(long.Parse(fechafiltro));
+
+                    if (pageAfterLimit== after)
                     {
-                        lastDate = contactResult.results[contactResult.results.Count - 1].updatedAt;
-                        //convertir la fecha string a spam - 
-                        var fechaSpan = _tools.ConvertDateUnixTime(Convert.ToDateTime(lastDate));
-                        fechafiltro = fechaSpan.ToString();
-                        Fecha = _tools.ConvertUnixTimeToDatetime(long.Parse(fechafiltro));
+                       
                         after = "0";
                     }
                 }
@@ -66,7 +68,7 @@ namespace HubSpotDAL
 
                 if (contactResult != null)
                     ContactDAL.InsUpdData(SettingSync.SettingHubSpot.ConexionString, contactResult);
-                if (after == string.Empty)
+                if (after == string.Empty || after=="0")
                     ConfScheduleTable.UpdateScheduleTable(1, Fecha.UtcDateTime, TypeSync.HubSpottoBD, fechafiltro);
             } while (after != string.Empty);
 
