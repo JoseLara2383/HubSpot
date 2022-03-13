@@ -68,7 +68,8 @@ namespace HubSpotDAL
 
                 if (contactResult != null)
                     ContactDAL.InsUpdData(SettingSync.SettingHubSpot.ConexionString, contactResult);
-                if (after == string.Empty || after=="0")
+                if ((after == string.Empty || after=="0" )&& fechafiltro!= SettingSync.SettingHubSpot.FechaFiltro)
+                
                     ConfScheduleTable.UpdateScheduleTable(1, Fecha.UtcDateTime, TypeSync.HubSpottoBD, fechafiltro);
             } while (after != string.Empty);
 
