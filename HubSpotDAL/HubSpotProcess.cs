@@ -36,8 +36,6 @@ namespace HubSpotDAL
                  Fecha = _tools.ConvertUnixTimeToDatetime(long.Parse(fechafiltro));
                 ConfScheduleTable.getScheduleTable(1, TypeSync.HubSpottoBD, Fecha.UtcDateTime, fechafiltro);
 
-                //DateTime FechaInicio = Convert.ToDateTime(ConfScheduleTable.scheduleTable.FechaInicio.ToString("yyyy/MM/dd hh:mm tt"));
-
                 var dataContact = await HubSpotApi.PostContact(ConfScheduleTable.scheduleTable.FechaInicioSpam, after);
 
                 var contactResult = JsonConvert.DeserializeObject<EntityHS.ContactHS.DataResult>(dataContact);
@@ -58,18 +56,22 @@ namespace HubSpotDAL
                     }
                 }
                 else
+                {
                     after = string.Empty;
+                    if (contactResult != null && contactResult.results != null)
+                    {
+                        lastDate = contactResult.results[contactResult.results.Count - 1].updatedAt;
+                        //convertir la fecha string a spam - 
+                        var fechaSpan = _tools.ConvertDateUnixTime(Convert.ToDateTime(lastDate));
+                        fechafiltro = fechaSpan.ToString();
+                        Fecha = _tools.ConvertUnixTimeToDatetime(long.Parse(fechafiltro));
+                    }
+                }
+                    
                 
-                //TEST UNIX
-                //var unixTime =_tools .ConvertDateUnixTime(DateTime.Now);
-                //var datetim = _tools.ConvertUnixTimeToDatetime(unixTime);
-
-
-
                 if (contactResult != null)
                     ContactDAL.InsUpdData(SettingSync.SettingHubSpot.ConexionString, contactResult);
-                if ((after == string.Empty || after=="0" )&& fechafiltro!= SettingSync.SettingHubSpot.FechaFiltro)
-                
+                if ((after == string.Empty || after=="0" )&& fechafiltro!= SettingSync.SettingHubSpot.FechaFiltro)               
                     ConfScheduleTable.UpdateScheduleTable(1, Fecha.UtcDateTime, TypeSync.HubSpottoBD, fechafiltro);
             } while (after != string.Empty);
 
