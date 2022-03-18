@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using HubSpotDAL.EntityHS.ContactHS;
 using HubSpotDAL.Helpers;
 using HubSpotDAL.WebClient;
 using Newtonsoft.Json;
@@ -12,7 +13,7 @@ namespace HubSpotDAL
 {
     public class HubSpotProcess
     {
-       
+
         public static async Task<string> GetContact()
         {
             Tools _tools = new Tools();
@@ -33,7 +34,7 @@ namespace HubSpotDAL
             {
                 //Recuperar la fecha guardar, ultima de ejecucion
                 //Obtener la fecha que corrio el sync para la tabla
-                 Fecha = _tools.ConvertUnixTimeToDatetime(long.Parse(fechafiltro));
+                Fecha = _tools.ConvertUnixTimeToDatetime(long.Parse(fechafiltro));
                 ConfScheduleTable.getScheduleTable(1, TypeSync.HubSpottoBD, Fecha.UtcDateTime, fechafiltro);
 
                 var dataContact = await HubSpotApi.PostContact(ConfScheduleTable.scheduleTable.FechaInicioSpam, after);
@@ -49,9 +50,9 @@ namespace HubSpotDAL
                     fechafiltro = fechaSpan.ToString();
                     Fecha = _tools.ConvertUnixTimeToDatetime(long.Parse(fechafiltro));
 
-                    if (pageAfterLimit== after)
+                    if (pageAfterLimit == after)
                     {
-                       
+
                         after = "0";
                     }
                 }
@@ -67,20 +68,35 @@ namespace HubSpotDAL
                         Fecha = _tools.ConvertUnixTimeToDatetime(long.Parse(fechafiltro));
                     }
                 }
-                    
-                
+
+
                 if (contactResult != null)
                     ContactDAL.InsUpdData(SettingSync.SettingHubSpot.ConexionString, contactResult);
-                if ((after == string.Empty || after=="0" )&& fechafiltro!= SettingSync.SettingHubSpot.FechaFiltro)               
+                if ((after == string.Empty || after == "0") && fechafiltro != SettingSync.SettingHubSpot.FechaFiltro)
                     ConfScheduleTable.UpdateScheduleTable(1, Fecha.UtcDateTime, TypeSync.HubSpottoBD, fechafiltro);
             } while (after != string.Empty);
 
 
 
             //Guardar la fecha 
-            
-            return "La sincronizacion ha terminado con exito";
+
+            return "La sincronización ha terminado con éxito";
 
         }
+        public static async Task<string> UpdContact()
+        {
+            SettingSync.getSetting();
+
+            ContactDataUpd contactData = new ContactDataUpd();
+                  
+            contactData.properties.correo_electrnico = "veroop@yahoo.com.mx";
+            contactData.properties.am_mkt = "";
+
+            HubSpotApi.UpdContact(contactData, "2159951");
+
+
+            return "La actualización ha terminado con éxito";
+        }
+
     }
 }

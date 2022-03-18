@@ -1,4 +1,5 @@
-﻿using System;
+﻿using HubSpotDAL.EntityHS.ContactHS;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Net;
@@ -122,11 +123,47 @@ namespace HubSpotDAL.WebClient
             }
             catch (HttpRequestException ex)
             {
-                // Helpers.ExcepcionLog.WriteLog("GetCliente", ex);
+                 Helpers.ExcepcionLog.WriteLog("PostContact", ex);
                 return "";
             }
         }
 
+        public static async Task<string> UpdContact(ContactDataUpd contactData ,string Id)
+        {
+            try
+            {
+                var ApiKey = Helpers.SettingSync.SettingHubSpot.APiKey;
+                //var ColumnsContac = Helpers.SettingSync.SettingHubSpot.ColumsEntity.Find(element => element.Entity == EnumEntityHubSport.Contact.ToString());
+
+                var url = string.Format(@"contacts/{0}?hapikey={1}", Id, ApiKey);
+              
+                var json = Newtonsoft.Json.JsonConvert.SerializeObject(contactData);
+                var data = new System.Net.Http.StringContent(json, Encoding.UTF8, "application/json");
+                string baseUrl = Helpers.SettingSync.SettingHubSpot.UrlApiHubSpot; 
+                using (var client = new HttpClient())
+                {
+                    client.BaseAddress = new Uri(baseUrl);                
+                    var responseTask = client.PatchAsync(url, data);
+                    responseTask.Wait();
+                    string Result = string.Empty;
+                    if (responseTask.Result.IsSuccessStatusCode)
+                    {
+                        var jsonr = responseTask.Result.Content.ReadAsStringAsync();
+
+                        if (jsonr != null)
+                        {
+                            Result = jsonr.Result;
+                        }
+                    }
+                    return Result;
+                }
+            }
+            catch (Exception ex)
+            {
+                Helpers.ExcepcionLog.WriteLog("UpdContact", ex);
+                return "";
+            }
+        }
 
     }
 }
