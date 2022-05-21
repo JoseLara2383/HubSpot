@@ -88,7 +88,7 @@ namespace HubSpotDAL
             SettingSync.getSetting();
 
             ContactDataUpd contactData = new ContactDataUpd();
-                  
+
             contactData.properties.correo_electrnico = "veroop@yahoo.com.mx";
             contactData.properties.am_mkt = "";
 
@@ -96,6 +96,62 @@ namespace HubSpotDAL
 
 
             return "La actualización ha terminado con éxito";
+        }
+
+        public static async Task<string> SendProspectostoKRM()
+        {
+            SettingSync.getSetting();
+
+            Model.ListProspectos oProspectos = new Model.ListProspectos();
+
+            Model.Prospecto Prosp = new Model.Prospecto()
+            {
+                IdHubspot = "8",
+                Nombre = "DIEGO",
+                ApellidoPaterno = "MARTINEZ",
+                ApellidoMaterno = "TORRES",
+                FechadeNacimiento = "1981-03-11",
+                RFC = "MATD820312SQ1",
+                Genero = "1",
+                Telefono = "5541122211",
+                TelefonoMovil = "1176445235",
+                Email = "diego.martinez.T02@gmail.com",
+                TipoPersona = "1",
+                EstadoCivil = "1",
+                Etapa = "1",
+                PuntoVenta = "1",
+                MedioPubicidad = "5",
+                CampañaPublicidad = "4681"
+            };
+
+            oProspectos.Prospectos.Add(Prosp);
+
+          Prosp = new Model.Prospecto()
+            {
+                IdHubspot = "7",
+                Nombre = "IVAN",
+                ApellidoPaterno = "TORRES",
+                ApellidoMaterno = "GONZALES",
+                FechadeNacimiento = "1981-05-11",
+                RFC = "TOGI810613SQ1",
+                Genero = "1",
+                Telefono = "5227812241",
+                TelefonoMovil = "5117245235",
+                Email = "MAGI01@gmail.com",
+                TipoPersona = "1",
+                EstadoCivil = "1",
+                Etapa = "1",
+                PuntoVenta = "1",
+                MedioPubicidad = "5",
+                CampañaPublicidad = "4681"
+            };
+
+            oProspectos.Prospectos.Add(Prosp);
+
+           string test =await KRMApi.SendProspectostoKRM(oProspectos);
+
+
+                return "El envio ha terminado con éxito";
         }
 
     }

@@ -10,7 +10,11 @@ namespace HubSpotDAL.Model
     {
         public string ConexionString { get; set; }
         public string UrlApiHubSpot { get; set; }
-   
+        public string UrlApiKRM { get; set; }
+        public string User { get; set; }
+        public string Password { get; set; }
+        public string Grant_type { get; set; }
+        
         public string HubSpotId { get; set; }
 
         public string APiKey { get; set; }
