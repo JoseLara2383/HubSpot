@@ -30,6 +30,10 @@ namespace HubSpotDAL.DAL
                     foreach (var itemContact in DataResult.results)
                     {
                         command.Parameters.Clear();
+                        Param = new SqlParameter("@ID_Contacts",SqlDbType.BigInt);
+                        Param.Direction = ParameterDirection.Output;
+                        command.Parameters.Add(Param);
+                     
                         Param = new SqlParameter("@id", itemContact.id);
                         command.Parameters.Add(Param);
                         Param = new SqlParameter("@actualizado", itemContact.properties.actualizado);
@@ -221,10 +225,25 @@ namespace HubSpotDAL.DAL
                         command.Parameters.Add(Param);
                         Param = new SqlParameter("@yotellevo", itemContact.properties.yotellevo);
                         command.Parameters.Add(Param);
-                    
+                        Param = new SqlParameter("@gander", itemContact.properties.gander);
+                        command.Parameters.Add(Param);
+                        Param = new SqlParameter("@email", itemContact.properties.email);
+                        command.Parameters.Add(Param);
+                        Param = new SqlParameter("@tipo_persona", itemContact.properties.tipo_persona);
+                        command.Parameters.Add(Param);
+                        Param = new SqlParameter("@rfc", itemContact.properties.rfc);
+                        command.Parameters.Add(Param);
+                        Param = new SqlParameter("@estado_civil", itemContact.properties.estado_civil);
+                        command.Parameters.Add(Param);
 
-                  
-                    command.ExecuteNonQuery();
+
+
+                       int  i =  command.ExecuteNonQuery();
+
+                        if (itemContact.properties.ID_Contacts ==0)
+                        {
+                            itemContact.properties.ID_Contacts =  command.Parameters["@ID_Contacts"].Value == DBNull.Value ? 0 : Convert.ToInt64(command.Parameters["@ID_Contacts"].Value);
+                        }
                     }
                 }
             }

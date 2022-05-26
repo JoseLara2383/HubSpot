@@ -8,7 +8,7 @@ namespace HubSpotDAL.Model
 {
     public class contact
     {
-        public int ID_Contacts { get; set; }
+        public Int64 ID_Contacts { get; set; }
         public Int64 id { get; set; }
         public string? actualizado { get; set; }
         public string? agenteid { get; set; }
@@ -94,7 +94,11 @@ namespace HubSpotDAL.Model
         public string? username { get; set; }
         public string? visita { get; set; }
         public string? yotellevo { get; set; }
-
+        public string? gander { get; set; }
+        public string? email { get; set; }
+        public string? tipo_persona { get; set; }
+        public string? estado_civil { get; set; }
+        public string? rfc { get; set; }
 
     }
 }

@@ -11,7 +11,7 @@ namespace HubSpotDAL.WebClient
 {
     internal static class KRMApi
     {
-        public static async Task<string> SendProspectostoKRM(ListProspectos Prospectos)
+        public static async Task<string> SendProspectostoKRM(List<Prospecto> Prospectos)
         {
             try
             {

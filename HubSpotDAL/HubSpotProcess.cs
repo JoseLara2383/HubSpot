@@ -30,6 +30,7 @@ namespace HubSpotDAL
             DateTimeOffset Fecha;
             //Recorrer los contacts para procesarlos
             var ContactDAL = new DAL.ContactDAL();
+            var ProspectoDAL = new DAL.ProspectosDAL();
             do
             {
                 //Recuperar la fecha guardar, ultima de ejecucion
@@ -71,7 +72,14 @@ namespace HubSpotDAL
 
 
                 if (contactResult != null)
+                {
                     ContactDAL.InsUpdData(SettingSync.SettingHubSpot.ConexionString, contactResult);
+                    if (contactResult.results!= null)
+                    {
+                        //Enviar datos KRM
+                        ProspectoDAL.SendProspectotoKRM(SettingSync.SettingHubSpot.ConexionString, contactResult.results);
+                    }
+                }
                 if ((after == string.Empty || after == "0") && fechafiltro != SettingSync.SettingHubSpot.FechaFiltro)
                     ConfScheduleTable.UpdateScheduleTable(1, Fecha.UtcDateTime, TypeSync.HubSpottoBD, fechafiltro);
             } while (after != string.Empty);
@@ -102,7 +110,7 @@ namespace HubSpotDAL
         {
             SettingSync.getSetting();
 
-            Model.ListProspectos oProspectos = new Model.ListProspectos();
+           List< Model.Prospecto> oProspectos = new List<Model.Prospecto>();
 
             Model.Prospecto Prosp = new Model.Prospecto()
             {
@@ -124,7 +132,7 @@ namespace HubSpotDAL
                 CampañaPublicidad = "4681"
             };
 
-            oProspectos.Prospectos.Add(Prosp);
+            oProspectos.Add(Prosp);
 
           Prosp = new Model.Prospecto()
             {
@@ -146,7 +154,7 @@ namespace HubSpotDAL
                 CampañaPublicidad = "4681"
             };
 
-            oProspectos.Prospectos.Add(Prosp);
+            oProspectos.Add(Prosp);
 
            string test =await KRMApi.SendProspectostoKRM(oProspectos);
 

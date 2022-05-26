@@ -24,5 +24,11 @@ namespace HubSpotDAL.Model
         public Int32 HorasSQL { get; set; } = 0;
         public string FechaFiltro { get; set; } 
         public List<ColumnsEntity> ColumsEntity { get; set; }
+        public List<PuntoVenta> PuntoVenta { get; set; }
+        public List<MedioPublicidad> MedioPublicidad { get; set; }
+        public List<CampaniaPublicidad> CampaniaPublicidad { get; set; }
+        public List<TipoPersona> TipoPersona { get; set; }
+        public List<EstadoCivil> EstadoCivil { get; set; }
+        public List<Genero> Genero { get; set; }
     }
 }

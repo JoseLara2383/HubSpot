@@ -13,11 +13,5870 @@
   "ColumsEntity": [
     {
       "Entity": "Contact",
-      "Columns": "id,actualizado,agenteid,am_mkt,ap_mkt,apellido_materno,asesor,asistio_a_su_cita_programada_,banco,campana,canal,canal_digital,canal_tradicional,cantidad_hijos,clienteid,comentarios,contacto_efectivo,correo_electrnico,creado_en,credito,curp,date_of_birth,desarrollo,duplicado,enkontrol,estatus,fecha_apartado,fecha_asignacion,fecha_atencion,fecha_cita,fecha_creacion,fecha_registro,first_conversion_event_name,grado_interes,horario_de_contacto,hs_analytics_first_url,hs_analytics_last_timestamp,hs_analytics_last_touch_converting_campaign,hs_analytics_last_url,hs_analytics_num_page_views],hs_analytics_source,hs_analytics_source_data_1,hs_analytics_source_data_2,hs_content_membership_email_confirmed,hs_last_sales_activity_timestamp,hs_persona,hs_predictivescoringtier,hubspot_owner_assigneddate,hubspot_owner_id,imagen_url,isassignable],isover,isready,lastname,lugares_reservados,motivo_de_compra,motivo_de_no_contacto,nombre_categoria,nombre_completo,notes_last_contacted,notes_last_updated,objecion,origen_de_referido,pauta,phone,plataforma,plaza,precio_fraccionamiento,priority,propietario,prototipo,punto_de_encuentro,punto_de_venta,rango_ingresos,respondido,staff_mkt,tagid,telefono_2,tiempo_interes_compra,tiene_hijos,tipo_cita,twitterprofilephoto,username,visita,yotellevo"
+      "Columns": "id,actualizado,agenteid,am_mkt,ap_mkt,apellido_materno,asesor,asistio_a_su_cita_programada_,banco,campana,canal,canal_digital,canal_tradicional,cantidad_hijos,clienteid,comentarios,contacto_efectivo,correo_electrnico,creado_en,credito,curp,date_of_birth,desarrollo,duplicado,enkontrol,estatus,fecha_apartado,fecha_asignacion,fecha_atencion,fecha_cita,fecha_creacion,fecha_registro,first_conversion_event_name,grado_interes,horario_de_contacto,hs_analytics_first_url,hs_analytics_last_timestamp,hs_analytics_last_touch_converting_campaign,hs_analytics_last_url,hs_analytics_num_page_views],hs_analytics_source,hs_analytics_source_data_1,hs_analytics_source_data_2,hs_content_membership_email_confirmed,hs_last_sales_activity_timestamp,hs_persona,hs_predictivescoringtier,hubspot_owner_assigneddate,hubspot_owner_id,imagen_url,isassignable],isover,isready,lastname,lugares_reservados,motivo_de_compra,motivo_de_no_contacto,nombre_categoria,nombre_completo,notes_last_contacted,notes_last_updated,objecion,origen_de_referido,pauta,phone,plataforma,plaza,precio_fraccionamiento,priority,propietario,prototipo,punto_de_encuentro,punto_de_venta,rango_ingresos,respondido,staff_mkt,tagid,telefono_2,tiempo_interes_compra,tiene_hijos,tipo_cita,twitterprofilephoto,username,visita,yotellevo,gander,email,tipo_persona,rfc,estado_civil"
     },
     {
       "Entity": "Marketing",
       "Columns": "id"
+    }
+  ],
+  "TipoPersona": [
+    {
+      "ID": 1,
+      "Descripcion": "Física"
+    },
+    {
+      "ID": 2,
+      "Descripcion": "Moral"
+    }
+  ],
+  "Genero": [
+    {
+      "ID": 1,
+      "Descripcion": "Masculino"
+    },
+    {
+      "ID": 2,
+      "Descripcion": "Femenino"
+    }
+  ],
+  "EstadoCivil": [
+    {
+      "ID": 1,
+      "Descripcion": "Soltero(a)"
+    },
+    {
+      "ID": 2,
+      "Descripcion": "Casado(a)"
+    },
+    {
+      "ID": 3,
+      "Descripcion": "Divorciado(a)"
+    },
+    {
+      "ID": 4,
+      "Descripcion": "Viudo(a)"
+    },
+    {
+      "ID": 5,
+      "Descripcion": "Unión Libre"
+    }
+  ],
+  "MedioPublicidad": [
+    {
+      "ID": 1,
+      "Descripcion": "PERIÓDICO"
+    },
+    {
+      "ID": 2,
+      "Descripcion": "RADIO"
+    },
+    {
+      "ID": 3,
+      "Descripcion": "REVISTA"
+    },
+    {
+      "ID": 4,
+      "Descripcion": "EXPO"
+    },
+    {
+      "ID": 5,
+      "Descripcion": "PASO"
+    },
+    {
+      "ID": 6,
+      "Descripcion": "VOLANTEO"
+    },
+    {
+      "ID": 7,
+      "Descripcion": "PROSPECCIÓN"
+    },
+    {
+      "ID": 8,
+      "Descripcion": "SEÑALIZACIÓN"
+    },
+    {
+      "ID": 9,
+      "Descripcion": "ESPECTACULARES"
+    },
+    {
+      "ID": 10,
+      "Descripcion": "ACTIVACIÓN (STANDS)"
+    },
+    {
+      "ID": 11,
+      "Descripcion": "TELEVISIÓN"
+    },
+    {
+      "ID": 12,
+      "Descripcion": "CALL CENTER"
+    },
+    {
+      "ID": 13,
+      "Descripcion": "PUNTO DE VENTA"
+    },
+    {
+      "ID": 14,
+      "Descripcion": "ENCUESTA"
+    },
+    {
+      "ID": 15,
+      "Descripcion": "REFERIDO"
+    },
+    {
+      "ID": 16,
+      "Descripcion": "INTERNET"
+    },
+    {
+      "ID": 17,
+      "Descripcion": "RECOMENDADO"
+    },
+    {
+      "ID": 18,
+      "Descripcion": "PERIFONEO"
+    },
+    {
+      "ID": 19,
+      "Descripcion": "OTROS"
+    },
+    {
+      "ID": 20,
+      "Descripcion": "CARTELERA"
+    },
+    {
+      "ID": 21,
+      "Descripcion": "AUTOBUSES"
+    },
+    {
+      "ID": 22,
+      "Descripcion": "CAMBACEO"
+    },
+    {
+      "ID": 23,
+      "Descripcion": "SÚPER MERCADO"
+    },
+    {
+      "ID": 24,
+      "Descripcion": "TOTEM"
+    },
+    {
+      "ID": 25,
+      "Descripcion": "CAMIONETAS"
+    },
+    {
+      "ID": 26,
+      "Descripcion": "CAPTRALIR"
+    },
+    {
+      "ID": 27,
+      "Descripcion": "SUBURBANO"
+    },
+    {
+      "ID": 28,
+      "Descripcion": "PLAZAS"
+    },
+    {
+      "ID": 29,
+      "Descripcion": "CAMPER"
+    },
+    {
+      "ID": 30,
+      "Descripcion": "PABELLON ECATEPEC"
+    },
+    {
+      "ID": 31,
+      "Descripcion": "TÚNEL"
+    },
+    {
+      "ID": 32,
+      "Descripcion": "CINE"
+    },
+    {
+      "ID": 33,
+      "Descripcion": "ENCARTE"
+    },
+    {
+      "ID": 34,
+      "Descripcion": "BASE DE DATOS"
+    },
+    {
+      "ID": 35,
+      "Descripcion": "PROMOTORIA EXTERNA"
+    },
+    {
+      "ID": 36,
+      "Descripcion": "MEDIOS MASIVOS"
+    },
+    {
+      "ID": 37,
+      "Descripcion": "MUPI"
+    },
+    {
+      "ID": 38,
+      "Descripcion": "EVENTOS"
+    },
+    {
+      "ID": 39,
+      "Descripcion": "RESTAURANTES"
+    },
+    {
+      "ID": 40,
+      "Descripcion": "VALLAS MÓVIL"
+    },
+    {
+      "ID": 41,
+      "Descripcion": "CAMPAÑA FOVISSSTE"
+    },
+    {
+      "ID": 42,
+      "Descripcion": "PERLA NEGRA VINTE"
+    },
+    {
+      "ID": 43,
+      "Descripcion": "PANTALLA DIGITAL"
+    },
+    {
+      "ID": 44,
+      "Descripcion": "REFERIDO VIP PUEBLA"
+    },
+    {
+      "ID": 45,
+      "Descripcion": "FACEBOOK VINTE"
+    },
+    {
+      "ID": 46,
+      "Descripcion": "FACEBOOK QUERALT"
+    },
+    {
+      "ID": 47,
+      "Descripcion": "WEBSITE VINTE "
+    },
+    {
+      "ID": 48,
+      "Descripcion": "WEBSITE QUERALT"
+    },
+    {
+      "ID": 49,
+      "Descripcion": "ASESOR EXTERNO"
+    },
+    {
+      "ID": 50,
+      "Descripcion": "PERIÓDICO"
+    },
+    {
+      "ID": 51,
+      "Descripcion": "RADIO"
+    },
+    {
+      "ID": 52,
+      "Descripcion": "REVISTA"
+    },
+    {
+      "ID": 53,
+      "Descripcion": "EXPO"
+    },
+    {
+      "ID": 54,
+      "Descripcion": "PASO"
+    },
+    {
+      "ID": 55,
+      "Descripcion": "VOLANTEO"
+    },
+    {
+      "ID": 56,
+      "Descripcion": "PROSPECCIÓN"
+    },
+    {
+      "ID": 57,
+      "Descripcion": "SEÑALIZACIÓN"
+    },
+    {
+      "ID": 58,
+      "Descripcion": "ESPECTACULARES"
+    },
+    {
+      "ID": 59,
+      "Descripcion": "ACTIVACIÓN (STANDS)"
+    },
+    {
+      "ID": 60,
+      "Descripcion": "TELEVISIÓN"
+    },
+    {
+      "ID": 61,
+      "Descripcion": "CALL CENTER"
+    },
+    {
+      "ID": 62,
+      "Descripcion": "PUNTO DE VENTA"
+    },
+    {
+      "ID": 63,
+      "Descripcion": "ENCUESTA"
+    },
+    {
+      "ID": 64,
+      "Descripcion": "REFERIDO"
+    },
+    {
+      "ID": 65,
+      "Descripcion": "INTERNET"
+    },
+    {
+      "ID": 66,
+      "Descripcion": "RECOMENDADO"
+    },
+    {
+      "ID": 67,
+      "Descripcion": "PERIFONEO"
+    },
+    {
+      "ID": 68,
+      "Descripcion": "OTROS"
+    },
+    {
+      "ID": 69,
+      "Descripcion": "CARTELERA"
+    },
+    {
+      "ID": 70,
+      "Descripcion": "AUTOBUSES"
+    },
+    {
+      "ID": 71,
+      "Descripcion": "CAMBACEO"
+    },
+    {
+      "ID": 72,
+      "Descripcion": "SÚPER MERCADO"
+    },
+    {
+      "ID": 73,
+      "Descripcion": "TOTEM"
+    },
+    {
+      "ID": 74,
+      "Descripcion": "CAMIONETAS"
+    },
+    {
+      "ID": 75,
+      "Descripcion": "CAPTRALIR"
+    },
+    {
+      "ID": 76,
+      "Descripcion": "SUBURBANO"
+    },
+    {
+      "ID": 77,
+      "Descripcion": "PLAZAS"
+    },
+    {
+      "ID": 78,
+      "Descripcion": "CAMPER"
+    },
+    {
+      "ID": 79,
+      "Descripcion": "PABELLON ECATEPEC"
+    },
+    {
+      "ID": 80,
+      "Descripcion": "ENCARTE"
+    },
+    {
+      "ID": 81,
+      "Descripcion": "FERIAS Y EXPOS"
+    },
+    {
+      "ID": 82,
+      "Descripcion": "GALLARDETES"
+    },
+    {
+      "ID": 83,
+      "Descripcion": "MUPI"
+    },
+    {
+      "ID": 84,
+      "Descripcion": "EVENTOS"
+    },
+    {
+      "ID": 85,
+      "Descripcion": "PERLA NEGRA VINTE"
+    },
+    {
+      "ID": 86,
+      "Descripcion": "PANTALLA DIGITAL"
+    },
+    {
+      "ID": 87,
+      "Descripcion": "PUNTO DE VENTA MIRADOR"
+    },
+    {
+      "ID": 88,
+      "Descripcion": "BROCKER FORÁNEO"
+    },
+    {
+      "ID": 89,
+      "Descripcion": "LA VUELTA MAYAKOBA"
+    },
+    {
+      "ID": 90,
+      "Descripcion": "OHL CLASSIC"
+    },
+    {
+      "ID": 91,
+      "Descripcion": "FÓRMULA 4"
+    },
+    {
+      "ID": 92,
+      "Descripcion": "CARRERA MAYAKOBA"
+    },
+    {
+      "ID": 93,
+      "Descripcion": "BEER AND FOOD FESTIVAL"
+    },
+    {
+      "ID": 94,
+      "Descripcion": "FOOD TRUCK FEST"
+    },
+    {
+      "ID": 95,
+      "Descripcion": "GOLF CON LAS ESTRELLAS"
+    },
+    {
+      "ID": 96,
+      "Descripcion": "TELEMARKETING Y SMS"
+    },
+    {
+      "ID": 97,
+      "Descripcion": "MERCADO LIBRE"
+    },
+    {
+      "ID": 98,
+      "Descripcion": "METROS CÚBICOS"
+    },
+    {
+      "ID": 99,
+      "Descripcion": "GUÍA DE INMUEBLES"
+    },
+    {
+      "ID": 100,
+      "Descripcion": "TU CASA ONLINE"
+    },
+    {
+      "ID": 101,
+      "Descripcion": "INSTAGRAM"
+    },
+    {
+      "ID": 102,
+      "Descripcion": "CIUDAD MAYAKOBA"
+    },
+    {
+      "ID": 103,
+      "Descripcion": "BANNER"
+    },
+    {
+      "ID": 105,
+      "Descripcion": "PENDONES/GALLARDETES"
+    },
+    {
+      "ID": 106,
+      "Descripcion": "MAILING"
+    },
+    {
+      "ID": 107,
+      "Descripcion": "PROMOCIÓN CAMPAÑA BUEN FIN"
+    },
+    {
+      "ID": 108,
+      "Descripcion": "ROBOT VIC"
+    },
+    {
+      "ID": 109,
+      "Descripcion": "PRENSA"
+    },
+    {
+      "ID": 110,
+      "Descripcion": "COLABORADOR"
+    }
+  ],
+  "CampaniaPublicidad": [
+    {
+      "ID": 5294,
+      "Descripcion": "VALLA FINSA,PUEBLA",
+      "FIELD3": ""
+    },
+    {
+      "ID": 5296,
+      "Descripcion": "DEPORTIVO VOLKSWAGEN,PUEBLA",
+      "FIELD3": ""
+    },
+    {
+      "ID": 5298,
+      "Descripcion": "VIVANUNCIOS,LA VISTA",
+      "FIELD3": ""
+    },
+    {
+      "ID": 5300,
+      "Descripcion": "PROSPECCIÓN SINDICATO VW,PUEBLA",
+      "FIELD3": ""
+    },
+    {
+      "ID": 5302,
+      "Descripcion": "PROSPECCIÓN CDMX,PUEBLA",
+      "FIELD3": ""
+    },
+    {
+      "ID": 5304,
+      "Descripcion": "FACEBOOK PLAZA,TECAMAC",
+      "FIELD3": ""
+    },
+    {
+      "ID": 5308,
+      "Descripcion": "PLAZA LATITUD VICTORIA,QUERÉTARO",
+      "FIELD3": ""
+    },
+    {
+      "ID": 5310,
+      "Descripcion": "WHATSAPP,TULA",
+      "FIELD3": ""
+    },
+    {
+      "ID": 5312,
+      "Descripcion": "ESPECTACULAR PERIFÉRICO-RECTA,PUEBLA",
+      "FIELD3": ""
+    },
+    {
+      "ID": 5314,
+      "Descripcion": "ESPECTACULAR CHALCO,PUEBLA",
+      "FIELD3": ""
+    },
+    {
+      "ID": 5316,
+      "Descripcion": "PROSPECCIÓN RETÉN ACCESO,PUEBLA",
+      "FIELD3": ""
+    },
+    {
+      "ID": 5318,
+      "Descripcion": "BLACK MARKETING,TECAMAC",
+      "FIELD3": ""
+    },
+    {
+      "ID": 5322,
+      "Descripcion": "WAZE-INFONAVIT",
+      "FIELD3": ""
+    },
+    {
+      "ID": 5338,
+      "Descripcion": "ESPECTACULAR OCOTLÁN,PUEBLA",
+      "FIELD3": ""
+    },
+    {
+      "ID": 5340,
+      "Descripcion": "PROPIEDADES,TULA",
+      "FIELD3": ""
+    },
+    {
+      "ID": 5342,
+      "Descripcion": "LAMUDI,TULA",
+      "FIELD3": ""
+    },
+    {
+      "ID": 5344,
+      "Descripcion": "PROSPECCIÓN DE VENTAS,QUERÉTARO",
+      "FIELD3": ""
+    },
+    {
+      "ID": 5346,
+      "Descripcion": "BASE DE DATOS SEGUNDOS CRÉDITOS INFO,TECÁMAC",
+      "FIELD3": ""
+    },
+    {
+      "ID": 5350,
+      "Descripcion": "INTERNET SEGUNDA MANO",
+      "FIELD3": ""
+    },
+    {
+      "ID": 5364,
+      "Descripcion": "FACEBOOK,PUEBLA",
+      "FIELD3": ""
+    },
+    {
+      "ID": 5757,
+      "Descripcion": "VIVANUNCIOS,PUEBLA",
+      "FIELD3": ""
+    },
+    {
+      "ID": 5758,
+      "Descripcion": "FERIA CCU,PUEBLA",
+      "FIELD3": ""
+    },
+    {
+      "ID": 5760,
+      "Descripcion": "LLAMADA ENTRANTE,PUEBLA",
+      "FIELD3": ""
+    },
+    {
+      "ID": 5762,
+      "Descripcion": "EXPO BANCOMER,TECÁMAC",
+      "FIELD3": ""
+    },
+    {
+      "ID": 5766,
+      "Descripcion": "VIVANUNCIOS,CANCÚN",
+      "FIELD3": ""
+    },
+    {
+      "ID": 5768,
+      "Descripcion": "CALL CENTER,CANCÚN",
+      "FIELD3": ""
+    },
+    {
+      "ID": 5770,
+      "Descripcion": "TU HOGAR MÉXICO,TECÁMAC",
+      "FIELD3": ""
+    },
+    {
+      "ID": 5774,
+      "Descripcion": "VIVA ANUNCIOS,TECÁMAC",
+      "FIELD3": ""
+    },
+    {
+      "ID": 5778,
+      "Descripcion": "PROSPECCION VIZCAYA,TECÁMAC",
+      "FIELD3": ""
+    },
+    {
+      "ID": 5782,
+      "Descripcion": "POTENCIAL INFONAVIT,TECÁMAC",
+      "FIELD3": ""
+    },
+    {
+      "ID": 5786,
+      "Descripcion": "MINI FERIA SAMSUNG,QUERÉTARO",
+      "FIELD3": ""
+    },
+    {
+      "ID": 5788,
+      "Descripcion": "FERIA UDLAP,PUEBLA",
+      "FIELD3": ""
+    },
+    {
+      "ID": 5790,
+      "Descripcion": "PASO,LA VISTA",
+      "FIELD3": ""
+    },
+    {
+      "ID": 5792,
+      "Descripcion": "PORTAL INMOBILIARIO LAMUDI,QUERÉTARO",
+      "FIELD3": ""
+    },
+    {
+      "ID": 5794,
+      "Descripcion": "PLAZA FIESTA COAPA,QUERÉTARO",
+      "FIELD3": ""
+    },
+    {
+      "ID": 5796,
+      "Descripcion": "EXPO MUJER,QUERÉTARO",
+      "FIELD3": ""
+    },
+    {
+      "ID": 5879,
+      "Descripcion": "INTERNET INMUEBLES 24",
+      "FIELD3": ""
+    },
+    {
+      "ID": 5883,
+      "Descripcion": "ROBOT VINTE",
+      "FIELD3": ""
+    },
+    {
+      "ID": 5887,
+      "Descripcion": "CALL CENTER- BBVA,PACHUCA",
+      "FIELD3": ""
+    },
+    {
+      "ID": 5891,
+      "Descripcion": "PROSPECCIÓN DIGITAL,PACHUCA",
+      "FIELD3": ""
+    },
+    {
+      "ID": 5893,
+      "Descripcion": "MKT DIGITAL INMOBILIARIO,PACHUCA",
+      "FIELD3": ""
+    },
+    {
+      "ID": 5895,
+      "Descripcion": "EXPO SEDENA,PACHUCA",
+      "FIELD3": ""
+    },
+    {
+      "ID": 5897,
+      "Descripcion": "FACEBOOK ASESOR,PACHUCA",
+      "FIELD3": ""
+    },
+    {
+      "ID": 5899,
+      "Descripcion": "SEGUNDA MANO,PACHUCA",
+      "FIELD3": ""
+    },
+    {
+      "ID": 5901,
+      "Descripcion": "PAE HUEJUTLA,PACHUCA",
+      "FIELD3": ""
+    },
+    {
+      "ID": 5903,
+      "Descripcion": "REFERIDO VIP HUEJUTLA,PACHUCA",
+      "FIELD3": ""
+    },
+    {
+      "ID": 5931,
+      "Descripcion": "PABELLON ECATEPEC",
+      "FIELD3": ""
+    },
+    {
+      "ID": 6431,
+      "Descripcion": "MÓDULO THYSSENKRUPP",
+      "FIELD3": ""
+    },
+    {
+      "ID": 6433,
+      "Descripcion": "MÓDULO HUAUCHINANGO",
+      "FIELD3": ""
+    },
+    {
+      "ID": 6435,
+      "Descripcion": "PAG WEB LA VISTA",
+      "FIELD3": ""
+    },
+    {
+      "ID": 6437,
+      "Descripcion": "IMSS,PUEBLA",
+      "FIELD3": ""
+    },
+    {
+      "ID": 6439,
+      "Descripcion": "PROSPECCIÓN DIGITAL,PUEBLA",
+      "FIELD3": ""
+    },
+    {
+      "ID": 6441,
+      "Descripcion": "EVENTOS REAL SEGOVIA,PUEBLA",
+      "FIELD3": ""
+    },
+    {
+      "ID": 6443,
+      "Descripcion": "MINI FERIA – SAFRÁN,QUERÉTARO",
+      "FIELD3": ""
+    },
+    {
+      "ID": 6449,
+      "Descripcion": "LOCAL INFONAVIT,PUEBLA",
+      "FIELD3": ""
+    },
+    {
+      "ID": 6451,
+      "Descripcion": "ESPECTACULAR SAN DIEGO,PUEBLA",
+      "FIELD3": ""
+    },
+    {
+      "ID": 6453,
+      "Descripcion": "ESPECTACULAR PERIFÉRICO VELÓDROMO,PUEBLA",
+      "FIELD3": ""
+    },
+    {
+      "ID": 6455,
+      "Descripcion": "ESPECTACULAR IXTAPALUCA,PUEBLA",
+      "FIELD3": ""
+    },
+    {
+      "ID": 6457,
+      "Descripcion": "PROSPECCIÓN ARCO SEGURIDAD,PUEBLA",
+      "FIELD3": ""
+    },
+    {
+      "ID": 6477,
+      "Descripcion": "PLAZA PASEO QUERÉTARO,LA VISTA",
+      "FIELD3": ""
+    },
+    {
+      "ID": 6479,
+      "Descripcion": "ICASAS,TULA",
+      "FIELD3": ""
+    },
+    {
+      "ID": 6481,
+      "Descripcion": "NOCNOK,TULA",
+      "FIELD3": ""
+    },
+    {
+      "ID": 6483,
+      "Descripcion": "GOOGLE,LA VISTA",
+      "FIELD3": ""
+    },
+    {
+      "ID": 6485,
+      "Descripcion": "BASE FOVISSSTE,QUERÉTARO",
+      "FIELD3": ""
+    },
+    {
+      "ID": 6592,
+      "Descripcion": "PLAZA CRUZ DEL SUR,PUEBLA",
+      "FIELD3": ""
+    },
+    {
+      "ID": 6751,
+      "Descripcion": "METROS CÚBICOS,PLAYA",
+      "FIELD3": ""
+    },
+    {
+      "ID": 6770,
+      "Descripcion": "FACEBOOK VINTE,PUEBLA",
+      "FIELD3": ""
+    },
+    {
+      "ID": 6804,
+      "Descripcion": "TU HOGAR MÉXICO,PUEBLA",
+      "FIELD3": ""
+    },
+    {
+      "ID": 6818,
+      "Descripcion": "LA COMER-ZARAGOZA,QUERÉTARO",
+      "FIELD3": ""
+    },
+    {
+      "ID": 6832,
+      "Descripcion": "VIVANUNCIOS,QUERÉTARO",
+      "FIELD3": ""
+    },
+    {
+      "ID": 6834,
+      "Descripcion": "CARTELERA REFUGIO,LA VISTA",
+      "FIELD3": ""
+    },
+    {
+      "ID": 6836,
+      "Descripcion": "GMAIL SOLARE,QUERÉTARO",
+      "FIELD3": ""
+    },
+    {
+      "ID": 6838,
+      "Descripcion": "SORIANA BERNARDO QUINTANA,QUERÉTARO",
+      "FIELD3": ""
+    },
+    {
+      "ID": 6840,
+      "Descripcion": "IMSS E INFONAVIT,QUERÉTARO",
+      "FIELD3": ""
+    },
+    {
+      "ID": 7379,
+      "Descripcion": "INTERNET INMUEBLES 24",
+      "FIELD3": ""
+    },
+    {
+      "ID": 7380,
+      "Descripcion": "ROBOT VINTE",
+      "FIELD3": ""
+    },
+    {
+      "ID": 7381,
+      "Descripcion": "VIVANUNCIOS,PLAYA",
+      "FIELD3": ""
+    },
+    {
+      "ID": 7382,
+      "Descripcion": "METROS CÚBICOS,PLAYA",
+      "FIELD3": ""
+    },
+    {
+      "ID": 7383,
+      "Descripcion": "INTERCAMBIO DE CARTERA LA VISTA/ SOLARE",
+      "FIELD3": ""
+    },
+    {
+      "ID": 7384,
+      "Descripcion": "CINEMINUTO",
+      "FIELD3": ""
+    },
+    {
+      "ID": 7385,
+      "Descripcion": "WAZE-INFONAVIT",
+      "FIELD3": ""
+    },
+    {
+      "ID": 7386,
+      "Descripcion": "CARTELERA PUNTO DE VENTAS,MONTERREY",
+      "FIELD3": ""
+    },
+    {
+      "ID": 7387,
+      "Descripcion": "ESPECTACULAR MIGUEL ALEMÁN,MONTERREY",
+      "FIELD3": ""
+    },
+    {
+      "ID": 7388,
+      "Descripcion": "INTERNET SEGUNDA MANO",
+      "FIELD3": ""
+    },
+    {
+      "ID": 7389,
+      "Descripcion": "EVENTO FRIENDS AND FAMILY,MONTERREY",
+      "FIELD3": ""
+    },
+    {
+      "ID": 7390,
+      "Descripcion": "FACEBOOK MONTALTO",
+      "FIELD3": ""
+    },
+    {
+      "ID": 7391,
+      "Descripcion": "REFERIDO,MONTERREY",
+      "FIELD3": ""
+    },
+    {
+      "ID": 7392,
+      "Descripcion": "RECOMENDADO,MONTERREY",
+      "FIELD3": ""
+    },
+    {
+      "ID": 7393,
+      "Descripcion": "VOLANTEO AURRERA,TECAMAC",
+      "FIELD3": ""
+    },
+    {
+      "ID": 7394,
+      "Descripcion": "VOLANTEO VENTA DE CARPIO,TECAMAC",
+      "FIELD3": ""
+    },
+    {
+      "ID": 7395,
+      "Descripcion": "PERIÓDICO EL REFORMA,TECÁMAC",
+      "FIELD3": ""
+    },
+    {
+      "ID": 7396,
+      "Descripcion": "PERIODICO EL METRO,TECAMAC",
+      "FIELD3": ""
+    },
+    {
+      "ID": 7397,
+      "Descripcion": "PERIODICO GRAFICO,TECAMAC",
+      "FIELD3": ""
+    },
+    {
+      "ID": 7398,
+      "Descripcion": "PERIODICO LA PRENSA,TECAMAC",
+      "FIELD3": ""
+    },
+    {
+      "ID": 7399,
+      "Descripcion": "PERIODICO SEGUNDA MANO,TECAMAC",
+      "FIELD3": ""
+    },
+    {
+      "ID": 7400,
+      "Descripcion": "VOLANTEO INDIOS VERDES,TECAMAC",
+      "FIELD3": ""
+    },
+    {
+      "ID": 7401,
+      "Descripcion": "VOLANTEO ENTRONQUE,TECAMAC",
+      "FIELD3": ""
+    },
+    {
+      "ID": 7402,
+      "Descripcion": "VOLANTEO LAS AMERICAS,TECAMAC",
+      "FIELD3": ""
+    },
+    {
+      "ID": 7403,
+      "Descripcion": "VOLANTEO PLAZA COACALCO,TECAMAC",
+      "FIELD3": ""
+    },
+    {
+      "ID": 7404,
+      "Descripcion": "VOLANTEO PUENTE DE FIERRO,TECAMAC",
+      "FIELD3": ""
+    },
+    {
+      "ID": 7405,
+      "Descripcion": "VOLANTEO  PLAZA ARAGON,TECAMAC",
+      "FIELD3": ""
+    },
+    {
+      "ID": 7406,
+      "Descripcion": "ESPECTACULARES AUTOPISTA KM15,TECAMAC",
+      "FIELD3": ""
+    },
+    {
+      "ID": 7407,
+      "Descripcion": "SEÑALIAZCION PENDONES,TECAMAC",
+      "FIELD3": ""
+    },
+    {
+      "ID": 7408,
+      "Descripcion": "SEÑALIAZCION ZANQUEROS,TECAMAC",
+      "FIELD3": ""
+    },
+    {
+      "ID": 7409,
+      "Descripcion": "ESPECTACULARES AUTOPISTA KM29,TECAMAC",
+      "FIELD3": ""
+    },
+    {
+      "ID": 7410,
+      "Descripcion": "ESPECTACULARES BODEGA AURRERA,TECAMAC",
+      "FIELD3": ""
+    },
+    {
+      "ID": 7411,
+      "Descripcion": "ESPECTACULARES COACALCO,TECAMAC",
+      "FIELD3": ""
+    },
+    {
+      "ID": 7412,
+      "Descripcion": "ESPECTACULARES ENTRONQUE TECAMAC",
+      "FIELD3": ""
+    },
+    {
+      "ID": 7413,
+      "Descripcion": "ESPECTACULARES VENTA DE CARPIO,TECAMAC",
+      "FIELD3": ""
+    },
+    {
+      "ID": 7414,
+      "Descripcion": "ESPECTACULARES ENT INDIOS VERDES,TECAMAC",
+      "FIELD3": ""
+    },
+    {
+      "ID": 7415,
+      "Descripcion": "ESPECTACULARES QUMA,TECAMAC",
+      "FIELD3": ""
+    },
+    {
+      "ID": 7416,
+      "Descripcion": "ESPECTACULARES OJO DE AGUA,TECAMAC",
+      "FIELD3": ""
+    },
+    {
+      "ID": 7417,
+      "Descripcion": "ESPECTACULARES OZUMBILLA,TECAMAC",
+      "FIELD3": ""
+    },
+    {
+      "ID": 7418,
+      "Descripcion": "ACCESO,TECAMAC",
+      "FIELD3": ""
+    },
+    {
+      "ID": 7419,
+      "Descripcion": "REVISTA GUIA DE INMUEBLES,TECAMAC",
+      "FIELD3": ""
+    },
+    {
+      "ID": 7420,
+      "Descripcion": "ENCUENTRA TU CASA,TECAMAC",
+      "FIELD3": ""
+    },
+    {
+      "ID": 7421,
+      "Descripcion": "CTM INFONAVIT,TECAMAC",
+      "FIELD3": ""
+    },
+    {
+      "ID": 7422,
+      "Descripcion": "LETREROS EN POSTES",
+      "FIELD3": ""
+    },
+    {
+      "ID": 7423,
+      "Descripcion": "COMERCIAL CANAL 4,TECAMAC",
+      "FIELD3": ""
+    },
+    {
+      "ID": 7424,
+      "Descripcion": "ESPECTACULAR ACCESO,R TOLEDO",
+      "FIELD3": ""
+    },
+    {
+      "ID": 7425,
+      "Descripcion": "EL SOL DE HIDALGO,R TOLEDO",
+      "FIELD3": ""
+    },
+    {
+      "ID": 7426,
+      "Descripcion": "ESPECTACULAR TIZAYUCA,R TOLEDO",
+      "FIELD3": ""
+    },
+    {
+      "ID": 7427,
+      "Descripcion": "ESPECTACULAR MATILDE,R TOLEDO",
+      "FIELD3": ""
+    },
+    {
+      "ID": 7428,
+      "Descripcion": "VOLANTEO TIZAYUCA,R TOLEDO",
+      "FIELD3": ""
+    },
+    {
+      "ID": 7429,
+      "Descripcion": "VOLANTEO TULIPANES,R TOLEDO",
+      "FIELD3": ""
+    },
+    {
+      "ID": 7430,
+      "Descripcion": "VOLANTEO CORREDOR TURISTICO,R TOLEDO",
+      "FIELD3": ""
+    },
+    {
+      "ID": 7431,
+      "Descripcion": "CALL CENTER,R TOLEDO",
+      "FIELD3": ""
+    },
+    {
+      "ID": 7432,
+      "Descripcion": "REFERIDO,R TOLEDO",
+      "FIELD3": ""
+    },
+    {
+      "ID": 7433,
+      "Descripcion": "RECOMENDADO REAL,R TOLEDO ",
+      "FIELD3": ""
+    },
+    {
+      "ID": 7434,
+      "Descripcion": "PERIODICO EL UNIVERSAL,TECAMAC",
+      "FIELD3": ""
+    },
+    {
+      "ID": 7435,
+      "Descripcion": "ESPECTACULAR CHICONAUTLA,TECAMAC",
+      "FIELD3": ""
+    },
+    {
+      "ID": 7436,
+      "Descripcion": "RECOMENDADO,TECAMAC",
+      "FIELD3": ""
+    },
+    {
+      "ID": 7437,
+      "Descripcion": "REFERIDO,TECAMAC",
+      "FIELD3": ""
+    },
+    {
+      "ID": 7438,
+      "Descripcion": "GALLARDETES,TECAMAC",
+      "FIELD3": ""
+    },
+    {
+      "ID": 7439,
+      "Descripcion": "ESPECTACULAR AVENIDA CENTRAL,TECAMAC",
+      "FIELD3": ""
+    },
+    {
+      "ID": 7440,
+      "Descripcion": "FERIA CANADEVI,R TOLEDO",
+      "FIELD3": ""
+    },
+    {
+      "ID": 7441,
+      "Descripcion": "CANADEVI PALACIO DE LOS DEPORTES,TECAMAC",
+      "FIELD3": ""
+    },
+    {
+      "ID": 7442,
+      "Descripcion": "CANADEVI ZOCALO,TECAMAC",
+      "FIELD3": ""
+    },
+    {
+      "ID": 7443,
+      "Descripcion": "VENTA NOCTURNA,R TOLEDO",
+      "FIELD3": ""
+    },
+    {
+      "ID": 7444,
+      "Descripcion": "RADIO ACIR,R TOLEDO",
+      "FIELD3": ""
+    },
+    {
+      "ID": 7445,
+      "Descripcion": "PROSPECCION A EMPRESAS,TECAMAC",
+      "FIELD3": ""
+    },
+    {
+      "ID": 7446,
+      "Descripcion": "EL SOL DE TULANCINGO,R TOLEDO",
+      "FIELD3": ""
+    },
+    {
+      "ID": 7447,
+      "Descripcion": "FERIA PACHUCA 2007,R TOLEDO",
+      "FIELD3": ""
+    },
+    {
+      "ID": 7448,
+      "Descripcion": "FERIA ECATEPEC 2007,TECAMAC",
+      "FIELD3": ""
+    },
+    {
+      "ID": 7449,
+      "Descripcion": "EXPO WALMART,TECAMAC",
+      "FIELD3": ""
+    },
+    {
+      "ID": 7450,
+      "Descripcion": "CORREO DIRECTO,R TOLEDO",
+      "FIELD3": ""
+    },
+    {
+      "ID": 7451,
+      "Descripcion": "VOLANTEO NEGOCIO,R TOLEDO",
+      "FIELD3": ""
+    },
+    {
+      "ID": 7452,
+      "Descripcion": "VOLANTEO CASA,R TOLEDO",
+      "FIELD3": ""
+    },
+    {
+      "ID": 7453,
+      "Descripcion": "VOLANTEO CRUCERO,R TOLEDO",
+      "FIELD3": ""
+    },
+    {
+      "ID": 7454,
+      "Descripcion": "VOLANTEO CENTRO COMERCIAL,R TOLEDO",
+      "FIELD3": ""
+    },
+    {
+      "ID": 7455,
+      "Descripcion": "WTC CANADEVI,TECAMAC",
+      "FIELD3": ""
+    },
+    {
+      "ID": 7456,
+      "Descripcion": "FERIA VENTAS,R TOLEDO",
+      "FIELD3": ""
+    },
+    {
+      "ID": 7457,
+      "Descripcion": "ESPECTACULAR CIRCUITO INTERIOR,TECAMAC",
+      "FIELD3": ""
+    },
+    {
+      "ID": 7458,
+      "Descripcion": "EXPO DIA DEL PADRE,R TOLEDO",
+      "FIELD3": ""
+    },
+    {
+      "ID": 7459,
+      "Descripcion": "LOCALES COMERCIALES,R TOLEDO",
+      "FIELD3": ""
+    },
+    {
+      "ID": 7460,
+      "Descripcion": "PUESTOS DE BARBACOA,R TOLEDO",
+      "FIELD3": ""
+    },
+    {
+      "ID": 7461,
+      "Descripcion": "CLIENTE VIP G7,TECAMAC",
+      "FIELD3": ""
+    },
+    {
+      "ID": 7462,
+      "Descripcion": "ESPECTACULAR LINDAVISTA,TECAMAC",
+      "FIELD3": ""
+    },
+    {
+      "ID": 7463,
+      "Descripcion": "MICROESPECTACULARES,TECAMAC",
+      "FIELD3": ""
+    },
+    {
+      "ID": 7464,
+      "Descripcion": "ESPECTACULAR BLVRD OJO DE AGUA,TECAMAC",
+      "FIELD3": ""
+    },
+    {
+      "ID": 7465,
+      "Descripcion": "EVENTO ESPECIAL CALLE,R TOLEDO",
+      "FIELD3": ""
+    },
+    {
+      "ID": 7466,
+      "Descripcion": "EXPO CANADEVI 2008,R IBIZA",
+      "FIELD3": ""
+    },
+    {
+      "ID": 7467,
+      "Descripcion": "REFERIDO,R IBIZA",
+      "FIELD3": ""
+    },
+    {
+      "ID": 7468,
+      "Descripcion": "VOLANTEO,R IBIZA",
+      "FIELD3": ""
+    },
+    {
+      "ID": 7469,
+      "Descripcion": "MAIL,R IBIZA",
+      "FIELD3": ""
+    },
+    {
+      "ID": 7470,
+      "Descripcion": "PASO,R IBIZA",
+      "FIELD3": ""
+    },
+    {
+      "ID": 7471,
+      "Descripcion": "PERIODICO NOVEDADES,R IBIZA",
+      "FIELD3": ""
+    },
+    {
+      "ID": 7472,
+      "Descripcion": "GALLARDETES,R IBIZA",
+      "FIELD3": ""
+    },
+    {
+      "ID": 7473,
+      "Descripcion": "INTERNET PÁGINA WEB VINTE",
+      "FIELD3": ""
+    },
+    {
+      "ID": 7474,
+      "Descripcion": "SER ÚNICA,IBIZA",
+      "FIELD3": ""
+    },
+    {
+      "ID": 7475,
+      "Descripcion": "BACKLIGHT,R IBIZA",
+      "FIELD3": ""
+    },
+    {
+      "ID": 7476,
+      "Descripcion": "VIDEO BANCOS,R IBIZA",
+      "FIELD3": ""
+    },
+    {
+      "ID": 7477,
+      "Descripcion": "PROSPECCION,R IBIZA",
+      "FIELD3": ""
+    },
+    {
+      "ID": 7478,
+      "Descripcion": "RECOMENDADO,R IBIZA",
+      "FIELD3": ""
+    },
+    {
+      "ID": 7479,
+      "Descripcion": "TV AZTECA,R TOLEDO",
+      "FIELD3": ""
+    },
+    {
+      "ID": 7480,
+      "Descripcion": "SISTEMA DE TRANSPORTE COLECTIVO,TECAMAC",
+      "FIELD3": ""
+    },
+    {
+      "ID": 7481,
+      "Descripcion": "TELEVISIÓN POR CABLE,R IBIZA",
+      "FIELD3": ""
+    },
+    {
+      "ID": 7482,
+      "Descripcion": "GUÍA DE INMUEBLES,R IBIZA",
+      "FIELD3": ""
+    },
+    {
+      "ID": 7483,
+      "Descripcion": "CARIBE INMOBILIARIO,R IBIZA",
+      "FIELD3": ""
+    },
+    {
+      "ID": 7484,
+      "Descripcion": "ENLACE,R IBIZA",
+      "FIELD3": ""
+    },
+    {
+      "ID": 7485,
+      "Descripcion": "RIVIERA´S PEOPLE,R IBIZA",
+      "FIELD3": ""
+    },
+    {
+      "ID": 7486,
+      "Descripcion": "GRAN CINEMA,R IBIZA",
+      "FIELD3": ""
+    },
+    {
+      "ID": 7487,
+      "Descripcion": "ÁNDALE,R IBIZA",
+      "FIELD3": ""
+    },
+    {
+      "ID": 7488,
+      "Descripcion": "CAMIONETA ROTULADA,R IBIZA",
+      "FIELD3": ""
+    },
+    {
+      "ID": 7489,
+      "Descripcion": "HOTEL CATALONIA,R IBIZA",
+      "FIELD3": ""
+    },
+    {
+      "ID": 7490,
+      "Descripcion": "HOTEL IBEROSTAR PLAYA PARAÍSO,R IBIZA",
+      "FIELD3": ""
+    },
+    {
+      "ID": 7491,
+      "Descripcion": "HOTEL GRAN IBEROSTAR,R IBIZA",
+      "FIELD3": ""
+    },
+    {
+      "ID": 7492,
+      "Descripcion": "HOTEL OCCIDENTAL FLAMENCO XCARET,R IBIZA",
+      "FIELD3": ""
+    },
+    {
+      "ID": 7493,
+      "Descripcion": "PARQUE XCARET,R IBIZA",
+      "FIELD3": ""
+    },
+    {
+      "ID": 7494,
+      "Descripcion": "HOTEL GRAN SIRENIS,R IBIZA",
+      "FIELD3": ""
+    },
+    {
+      "ID": 7495,
+      "Descripcion": "HOTEL DREAMS,R IBIZA",
+      "FIELD3": ""
+    },
+    {
+      "ID": 7496,
+      "Descripcion": "SINDICATO DE TAXISTAS,R IBIZA",
+      "FIELD3": ""
+    },
+    {
+      "ID": 7497,
+      "Descripcion": "SAM´S,R IBIZA",
+      "FIELD3": ""
+    },
+    {
+      "ID": 7498,
+      "Descripcion": "PLAZA LAS AMÉRICAS,R IBIZA",
+      "FIELD3": ""
+    },
+    {
+      "ID": 7499,
+      "Descripcion": "CENTRO MAYA,R IBIZA",
+      "FIELD3": ""
+    },
+    {
+      "ID": 7500,
+      "Descripcion": "EVENTOS PLAYA,R IBIZA",
+      "FIELD3": ""
+    },
+    {
+      "ID": 7501,
+      "Descripcion": "BANCOMER,R IBIZA",
+      "FIELD3": ""
+    },
+    {
+      "ID": 7502,
+      "Descripcion": "SCOTIABANK,R IBIZA",
+      "FIELD3": ""
+    },
+    {
+      "ID": 7503,
+      "Descripcion": "TELMEX,R IBIZA",
+      "FIELD3": ""
+    },
+    {
+      "ID": 7504,
+      "Descripcion": "HACIENDA,R IBIZA",
+      "FIELD3": ""
+    },
+    {
+      "ID": 7505,
+      "Descripcion": "STAND EN CHEDRAUI,TECÁMAC",
+      "FIELD3": ""
+    },
+    {
+      "ID": 7506,
+      "Descripcion": "ESPECTACULAR CASETA ECATEPEC,TECÁMAC",
+      "FIELD3": ""
+    },
+    {
+      "ID": 7507,
+      "Descripcion": "ESPECTACULAR DE INDUSTRIAS,TECÁMAC",
+      "FIELD3": ""
+    },
+    {
+      "ID": 7508,
+      "Descripcion": "ENCARTE RECIBOS DE CABLEMÁS,R IBIZA",
+      "FIELD3": ""
+    },
+    {
+      "ID": 7509,
+      "Descripcion": "ENCARTE REVISTAS,R IBIZA",
+      "FIELD3": ""
+    },
+    {
+      "ID": 7510,
+      "Descripcion": "NOVELA \"MAÑANA ES PARA SIEMPRE\",R IBIZA",
+      "FIELD3": ""
+    },
+    {
+      "ID": 7511,
+      "Descripcion": "FÚTBOL,R IBIZA",
+      "FIELD3": ""
+    },
+    {
+      "ID": 7512,
+      "Descripcion": "RADIO FORMULA 92.3,R IBIZA",
+      "FIELD3": ""
+    },
+    {
+      "ID": 7513,
+      "Descripcion": "PERIÓDICO MILENIO,R TOLEDO",
+      "FIELD3": ""
+    },
+    {
+      "ID": 7514,
+      "Descripcion": "ALIADOS,R IBIZA",
+      "FIELD3": ""
+    },
+    {
+      "ID": 7515,
+      "Descripcion": "CAMIONETA ROTULADA,TECÁMAC",
+      "FIELD3": ""
+    },
+    {
+      "ID": 7516,
+      "Descripcion": "PROMOTORÍA EXTERNA,TECÁMAC",
+      "FIELD3": ""
+    },
+    {
+      "ID": 7517,
+      "Descripcion": "ESPECTACULAR KM 28 CARR FEDERAL,TECÁMAC",
+      "FIELD3": ""
+    },
+    {
+      "ID": 7518,
+      "Descripcion": "FERIA CANADEVI,TECÁMAC",
+      "FIELD3": ""
+    },
+    {
+      "ID": 7519,
+      "Descripcion": "PANTALLA LEDS,R IBIZA",
+      "FIELD3": ""
+    },
+    {
+      "ID": 7520,
+      "Descripcion": "REVISTA VAMOS,R IBIZA",
+      "FIELD3": ""
+    },
+    {
+      "ID": 7521,
+      "Descripcion": "DIRECTORIO GUÍA MEXI,R IBIZA",
+      "FIELD3": ""
+    },
+    {
+      "ID": 7522,
+      "Descripcion": "ESPECTACULAR CANCÚN - PLAYA,R IBIZA",
+      "FIELD3": ""
+    },
+    {
+      "ID": 7523,
+      "Descripcion": "ESPECTACULAR SALIDA MÉRIDA,R IBIZA",
+      "FIELD3": ""
+    },
+    {
+      "ID": 7524,
+      "Descripcion": "REVISTA METROS CÚBICOS,R IBIZA",
+      "FIELD3": ""
+    },
+    {
+      "ID": 7525,
+      "Descripcion": "SEÑALETICA AV 115,R IBIZA",
+      "FIELD3": ""
+    },
+    {
+      "ID": 7526,
+      "Descripcion": "REVISTA PIONEROS,R IBIZA.",
+      "FIELD3": ""
+    },
+    {
+      "ID": 7527,
+      "Descripcion": "PANTALLA CENTRO MAYA,R IBIZA",
+      "FIELD3": ""
+    },
+    {
+      "ID": 7528,
+      "Descripcion": "PANTALLA PLAZA LAS AMÉRICAS,R IBIZA",
+      "FIELD3": ""
+    },
+    {
+      "ID": 7529,
+      "Descripcion": "PLAZA GRAN PATIO,R TOLEDO",
+      "FIELD3": ""
+    },
+    {
+      "ID": 7530,
+      "Descripcion": "EL UNIVERSAL ONLINE,TECÁMAC",
+      "FIELD3": ""
+    },
+    {
+      "ID": 7531,
+      "Descripcion": "FERIA PACHUCA,R TOLEDO",
+      "FIELD3": ""
+    },
+    {
+      "ID": 7532,
+      "Descripcion": "CALL CENTER,TECAMAC",
+      "FIELD3": ""
+    },
+    {
+      "ID": 7533,
+      "Descripcion": "PLAZA GALERÍAS,R TOLEDO",
+      "FIELD3": ""
+    },
+    {
+      "ID": 7534,
+      "Descripcion": "PERIÓDICO EL FINANCIERO,TECÁMAC",
+      "FIELD3": ""
+    },
+    {
+      "ID": 7535,
+      "Descripcion": "AGENTES EXTERNOS,R TOLEDO",
+      "FIELD3": ""
+    },
+    {
+      "ID": 7536,
+      "Descripcion": "PLAZA MEXIPUERTO,TECAMAC",
+      "FIELD3": ""
+    },
+    {
+      "ID": 7537,
+      "Descripcion": "PLAZA CIUDAD JARDIN,TECAMAC",
+      "FIELD3": ""
+    },
+    {
+      "ID": 7538,
+      "Descripcion": "PLAZA DELTA,TECAMAC",
+      "FIELD3": ""
+    },
+    {
+      "ID": 7539,
+      "Descripcion": "PARQUE LINDAVISTA,TECAMAC",
+      "FIELD3": ""
+    },
+    {
+      "ID": 7540,
+      "Descripcion": "PLAZA JARDÍN,R TOLEDO",
+      "FIELD3": ""
+    },
+    {
+      "ID": 7541,
+      "Descripcion": "VOLANTEO PLAZA LINDAVISTA,R TOLEDO",
+      "FIELD3": ""
+    },
+    {
+      "ID": 7542,
+      "Descripcion": "VOLANTEO INSURGENTES,R TOLEDO",
+      "FIELD3": ""
+    },
+    {
+      "ID": 7543,
+      "Descripcion": "VOLANTEO INDIOS VERDES,R TOLEDO",
+      "FIELD3": ""
+    },
+    {
+      "ID": 7544,
+      "Descripcion": "MAILING,R TOLEDO",
+      "FIELD3": ""
+    },
+    {
+      "ID": 7545,
+      "Descripcion": "CANADEVI 2010 CANCUN,R IBIZA",
+      "FIELD3": ""
+    },
+    {
+      "ID": 7546,
+      "Descripcion": "FERIA WTC,TECAMAC",
+      "FIELD3": ""
+    },
+    {
+      "ID": 7547,
+      "Descripcion": "CARRITO DE SUPER CHEDRAUI,R IBIZA",
+      "FIELD3": ""
+    },
+    {
+      "ID": 7548,
+      "Descripcion": "SUCURSALES BBVA,TECAMAC",
+      "FIELD3": ""
+    },
+    {
+      "ID": 7549,
+      "Descripcion": "REVISTA INMOBILIARIA,TECAMAC",
+      "FIELD3": ""
+    },
+    {
+      "ID": 7550,
+      "Descripcion": "PROMOCION MKT,TECAMAC",
+      "FIELD3": ""
+    },
+    {
+      "ID": 7551,
+      "Descripcion": "EXPO REFORMA,TECAMAC",
+      "FIELD3": ""
+    },
+    {
+      "ID": 7552,
+      "Descripcion": "CANADEVI,TECAMAC",
+      "FIELD3": ""
+    },
+    {
+      "ID": 7553,
+      "Descripcion": "PLAZA GALERÍAS CALLE,R TOLEDO",
+      "FIELD3": ""
+    },
+    {
+      "ID": 7554,
+      "Descripcion": "VOLANTEO VENTAS III,R TOLEDO",
+      "FIELD3": ""
+    },
+    {
+      "ID": 7555,
+      "Descripcion": "FERIA CANADEVI,REAL TOLEDO",
+      "FIELD3": ""
+    },
+    {
+      "ID": 7556,
+      "Descripcion": "PROSP EMPRESAS CALLE,R TOLEDO",
+      "FIELD3": ""
+    },
+    {
+      "ID": 7557,
+      "Descripcion": "KE BUENA,TECAMAC",
+      "FIELD3": ""
+    },
+    {
+      "ID": 7558,
+      "Descripcion": "REVISTA TV Y NOVELAS,TECAMAC",
+      "FIELD3": ""
+    },
+    {
+      "ID": 7559,
+      "Descripcion": "ESPECTACULAR LECHERÍA - TEXCOCO,TECAMAC",
+      "FIELD3": ""
+    },
+    {
+      "ID": 7560,
+      "Descripcion": "ESPECTACULAR VIA MORELOS Y AUT MEX-PACH,TECAMAC",
+      "FIELD3": ""
+    },
+    {
+      "ID": 7561,
+      "Descripcion": "PROSPECCIÓN P. JARDÍN VTAS III,R TOLEDO",
+      "FIELD3": ""
+    },
+    {
+      "ID": 7562,
+      "Descripcion": "PROSPECCIÓN P. MEXIPUERTO VTAS III,R TOLEDO",
+      "FIELD3": ""
+    },
+    {
+      "ID": 7563,
+      "Descripcion": "FERIA MONUMENTO A LA MADRE,TECAMAC",
+      "FIELD3": ""
+    },
+    {
+      "ID": 7564,
+      "Descripcion": "SECCION AMARILLA,TECAMAC",
+      "FIELD3": ""
+    },
+    {
+      "ID": 7565,
+      "Descripcion": "ESPECTACULAR LUMINOSO,LECHERIA",
+      "FIELD3": ""
+    },
+    {
+      "ID": 7566,
+      "Descripcion": "PERIÓDICO SOLO OFERTAS,LECHERIA",
+      "FIELD3": ""
+    },
+    {
+      "ID": 7567,
+      "Descripcion": "RADIO KRISTAL,LECHERIA",
+      "FIELD3": ""
+    },
+    {
+      "ID": 7568,
+      "Descripcion": "VOLANTEO LECHERIA TEXCOCO",
+      "FIELD3": ""
+    },
+    {
+      "ID": 7569,
+      "Descripcion": "CALL CENTER I,R TOLEDO",
+      "FIELD3": ""
+    },
+    {
+      "ID": 7570,
+      "Descripcion": "CALL CENTER II,R TOLEDO",
+      "FIELD3": ""
+    },
+    {
+      "ID": 7571,
+      "Descripcion": "CORRESPONDENCIA A DOMICILIO,R TOLEDO",
+      "FIELD3": ""
+    },
+    {
+      "ID": 7572,
+      "Descripcion": "CORRESPONDENCIA ELEKTRA,R TOLEDO",
+      "FIELD3": ""
+    },
+    {
+      "ID": 7573,
+      "Descripcion": "FERIA MNTO REVOLUCIÓN,TECÁMAC",
+      "FIELD3": ""
+    },
+    {
+      "ID": 7574,
+      "Descripcion": "STAND MEGA COMERCIAL,R IBIZA",
+      "FIELD3": ""
+    },
+    {
+      "ID": 7575,
+      "Descripcion": "FACEBOOK VINTE",
+      "FIELD3": ""
+    },
+    {
+      "ID": 7576,
+      "Descripcion": "RADIO 40 PRINCIPALES,R TOLEDO",
+      "FIELD3": ""
+    },
+    {
+      "ID": 7577,
+      "Descripcion": "CONTACT CENTER,TECAMAC ",
+      "FIELD3": ""
+    },
+    {
+      "ID": 7578,
+      "Descripcion": "CONTACT CENTER,R TOLEDO",
+      "FIELD3": ""
+    },
+    {
+      "ID": 7579,
+      "Descripcion": "CONTACT CENTER,R IBIZA",
+      "FIELD3": ""
+    },
+    {
+      "ID": 7580,
+      "Descripcion": "CONTACT CENTER,R SOLARE",
+      "FIELD3": ""
+    },
+    {
+      "ID": 7581,
+      "Descripcion": "POP AURRERA,R IBIZA",
+      "FIELD3": ""
+    },
+    {
+      "ID": 7582,
+      "Descripcion": "POP WALMART,R IBIZA",
+      "FIELD3": ""
+    },
+    {
+      "ID": 7583,
+      "Descripcion": "MAILING MANZANITA VERDE,R IBIZA",
+      "FIELD3": ""
+    },
+    {
+      "ID": 7584,
+      "Descripcion": "PERIÓDICO TABASCO HOY,R IBIZA",
+      "FIELD3": ""
+    },
+    {
+      "ID": 7585,
+      "Descripcion": "VOLANTEO,R SOLARE",
+      "FIELD3": ""
+    },
+    {
+      "ID": 7586,
+      "Descripcion": "GUÍA DE INMUEBLES,R SOLARE",
+      "FIELD3": ""
+    },
+    {
+      "ID": 7587,
+      "Descripcion": "QROQUIS,R SOLARE",
+      "FIELD3": ""
+    },
+    {
+      "ID": 7588,
+      "Descripcion": "PENDONES,R SOLARE",
+      "FIELD3": ""
+    },
+    {
+      "ID": 7589,
+      "Descripcion": "VALLAS,R SOLARE",
+      "FIELD3": ""
+    },
+    {
+      "ID": 7590,
+      "Descripcion": "CALL CENTER,R SOLARE",
+      "FIELD3": ""
+    },
+    {
+      "ID": 7591,
+      "Descripcion": "ESPECTACULAR TRANSPORMEX NORTE,R SOLARE",
+      "FIELD3": ""
+    },
+    {
+      "ID": 7592,
+      "Descripcion": "ESPECTACULAR TRANSPORMEX SUR,R SOLARE",
+      "FIELD3": ""
+    },
+    {
+      "ID": 7593,
+      "Descripcion": "MENSAJES DE TEXTO,R TOLEDO",
+      "FIELD3": ""
+    },
+    {
+      "ID": 7594,
+      "Descripcion": "GALLARDETES,R SOLARE",
+      "FIELD3": ""
+    },
+    {
+      "ID": 7595,
+      "Descripcion": "REFERIDO,R SOLARE",
+      "FIELD3": ""
+    },
+    {
+      "ID": 7596,
+      "Descripcion": "RECOMENDADO,R SOLARE",
+      "FIELD3": ""
+    },
+    {
+      "ID": 7597,
+      "Descripcion": "CAMBACEO,TECAMAC",
+      "FIELD3": ""
+    },
+    {
+      "ID": 7598,
+      "Descripcion": "PERIÓDICO PLAZA DE ARMAS,R SOLARE",
+      "FIELD3": ""
+    },
+    {
+      "ID": 7599,
+      "Descripcion": "RADIO TOP MUSIC 91.7 FM,R SOLARE",
+      "FIELD3": ""
+    },
+    {
+      "ID": 7600,
+      "Descripcion": "RADIO 91 DAT 90.0 FM,R SOLARE",
+      "FIELD3": ""
+    },
+    {
+      "ID": 7601,
+      "Descripcion": "RADIO LA K BUENA 98.7 FM,R SOLARE",
+      "FIELD3": ""
+    },
+    {
+      "ID": 7602,
+      "Descripcion": "RADIO AMOR 101.1 FM,R SOLARE",
+      "FIELD3": ""
+    },
+    {
+      "ID": 7603,
+      "Descripcion": "PERIÓDICO EL UNIVERSAL,R SOLARE",
+      "FIELD3": ""
+    },
+    {
+      "ID": 7604,
+      "Descripcion": "PROSPECCIÓN A EMPRESAS,R SOLARE",
+      "FIELD3": ""
+    },
+    {
+      "ID": 7605,
+      "Descripcion": "PERIÓDICO DIARIO DE QUERÉTARO,R SOLARE",
+      "FIELD3": ""
+    },
+    {
+      "ID": 7606,
+      "Descripcion": "ESPECTACULAR CONIN,R SOLARE",
+      "FIELD3": ""
+    },
+    {
+      "ID": 7607,
+      "Descripcion": "MANTELETA COCHINITOS,R SOLARE",
+      "FIELD3": ""
+    },
+    {
+      "ID": 7608,
+      "Descripcion": "FERIA INTERNACIONAL GANADERA,R SOLARE",
+      "FIELD3": ""
+    },
+    {
+      "ID": 7609,
+      "Descripcion": "MENSAJES DE TEXTO,R SOLARE",
+      "FIELD3": ""
+    },
+    {
+      "ID": 7610,
+      "Descripcion": "MENSAJES DE TEXTO,TECAMAC",
+      "FIELD3": ""
+    },
+    {
+      "ID": 7611,
+      "Descripcion": "MENSAJES DE TEXTO,R IBIZA",
+      "FIELD3": ""
+    },
+    {
+      "ID": 7612,
+      "Descripcion": "PERIODICO NOSOTROS,TECAMAC",
+      "FIELD3": ""
+    },
+    {
+      "ID": 7613,
+      "Descripcion": "PAE VENTAS,TECAMAC",
+      "FIELD3": ""
+    },
+    {
+      "ID": 7614,
+      "Descripcion": "PAE VENTAS,R TOLEDO",
+      "FIELD3": ""
+    },
+    {
+      "ID": 7615,
+      "Descripcion": "ESPECTACULAR EL COLORADO,R SOLARE",
+      "FIELD3": ""
+    },
+    {
+      "ID": 7616,
+      "Descripcion": "ESPECTACULAR LOS CUES,R SOLARE",
+      "FIELD3": ""
+    },
+    {
+      "ID": 7617,
+      "Descripcion": "ESPECTACULAR ENTRADA FERIA,R SOLARE",
+      "FIELD3": ""
+    },
+    {
+      "ID": 7618,
+      "Descripcion": "ESPECTACULAR CONSTITUYENTES,R SOLARE",
+      "FIELD3": ""
+    },
+    {
+      "ID": 7619,
+      "Descripcion": "PLAZA COACALCO,TECAMAC",
+      "FIELD3": ""
+    },
+    {
+      "ID": 7620,
+      "Descripcion": "FERIA UAQ,R SOLARE",
+      "FIELD3": ""
+    },
+    {
+      "ID": 7621,
+      "Descripcion": "ENTRONQUE LOPEZ PORTILLO A LCHA-TEXCOCO,TECAMAC",
+      "FIELD3": ""
+    },
+    {
+      "ID": 7622,
+      "Descripcion": "PROSPECCIÓN SUMA,R SOLARE",
+      "FIELD3": ""
+    },
+    {
+      "ID": 7623,
+      "Descripcion": "PROSPECCIÓN JARUMO,R SOLARE",
+      "FIELD3": ""
+    },
+    {
+      "ID": 7624,
+      "Descripcion": "PLAZA DEL PARQUE,R SOLARE",
+      "FIELD3": ""
+    },
+    {
+      "ID": 7625,
+      "Descripcion": "REVISTA VIDA Y ESTILO,R SOLARE",
+      "FIELD3": ""
+    },
+    {
+      "ID": 7626,
+      "Descripcion": "PORTAL CASA CHILANGA,TECAMAC",
+      "FIELD3": ""
+    },
+    {
+      "ID": 7627,
+      "Descripcion": "PAPELETA REFERIDO,TECAMAC",
+      "FIELD3": ""
+    },
+    {
+      "ID": 7628,
+      "Descripcion": "PAPELETA RECOMENDADO,TECAMAC",
+      "FIELD3": ""
+    },
+    {
+      "ID": 7629,
+      "Descripcion": "PLAZA VALLEJO,TECAMAC",
+      "FIELD3": ""
+    },
+    {
+      "ID": 7630,
+      "Descripcion": "CENTRAL CAMIONERA,R SOLARE",
+      "FIELD3": ""
+    },
+    {
+      "ID": 7631,
+      "Descripcion": "PROSPECCION ESPAZIA,R SOLARE",
+      "FIELD3": ""
+    },
+    {
+      "ID": 7632,
+      "Descripcion": "EQUIPO DE PROSPECCIÓN,R SOLARE",
+      "FIELD3": ""
+    },
+    {
+      "ID": 7633,
+      "Descripcion": "PORTAL INFONAVIT,CORPORATIVO",
+      "FIELD3": ""
+    },
+    {
+      "ID": 7634,
+      "Descripcion": "MANTELETAS,R TOLEDO",
+      "FIELD3": ""
+    },
+    {
+      "ID": 7635,
+      "Descripcion": "PERIÓDICO RECORD,TECAMAC",
+      "FIELD3": ""
+    },
+    {
+      "ID": 7636,
+      "Descripcion": "STAND CINEPOLIS LAS AMÉRICAS,TECAMAC",
+      "FIELD3": ""
+    },
+    {
+      "ID": 7637,
+      "Descripcion": "STAND CINEPOLIS CD JARDIN,TECAMAC",
+      "FIELD3": ""
+    },
+    {
+      "ID": 7638,
+      "Descripcion": "CALL CENTER EXTERNO,R TOLEDO",
+      "FIELD3": ""
+    },
+    {
+      "ID": 7639,
+      "Descripcion": "PLAZA DE LAS AMÉRICAS,R SOLARE",
+      "FIELD3": ""
+    },
+    {
+      "ID": 7640,
+      "Descripcion": "EL GRÁFICO,R SOLARE",
+      "FIELD3": ""
+    },
+    {
+      "ID": 7641,
+      "Descripcion": "SECCIÓN AMARILLA,R SOLARE",
+      "FIELD3": ""
+    },
+    {
+      "ID": 7642,
+      "Descripcion": "REFERIDO RH EMPRESA CLIENTE,R TOLEDO",
+      "FIELD3": ""
+    },
+    {
+      "ID": 7643,
+      "Descripcion": "REFERIDO PROSPECCION HUEJUTLA,R TOLEDO",
+      "FIELD3": ""
+    },
+    {
+      "ID": 7644,
+      "Descripcion": "PROSPECCION GALERIAS BANCOMER,R TOLEDO",
+      "FIELD3": ""
+    },
+    {
+      "ID": 7645,
+      "Descripcion": "PROSPECCION ZONA IND SAHAGUN,R TOLEDO",
+      "FIELD3": ""
+    },
+    {
+      "ID": 7646,
+      "Descripcion": "PROSPECCION REAL SPORT,R TOLEDO",
+      "FIELD3": ""
+    },
+    {
+      "ID": 7647,
+      "Descripcion": "PROSPECCION PGR Y SSP DF,R TOLEDO",
+      "FIELD3": ""
+    },
+    {
+      "ID": 7648,
+      "Descripcion": "FERIA WTC,R SOLARE",
+      "FIELD3": ""
+    },
+    {
+      "ID": 7649,
+      "Descripcion": "ENCARTE FOVISSSTE,TECAMAC",
+      "FIELD3": ""
+    },
+    {
+      "ID": 7650,
+      "Descripcion": "ENCARTE FOVISSSTE,R TOLEDO",
+      "FIELD3": ""
+    },
+    {
+      "ID": 7651,
+      "Descripcion": "ENCARTE FOVISSSTE,R IBIZA",
+      "FIELD3": ""
+    },
+    {
+      "ID": 7652,
+      "Descripcion": "ENCARTE FOVISSSTE,R SOLARE",
+      "FIELD3": ""
+    },
+    {
+      "ID": 7653,
+      "Descripcion": "FERIA EXPO VIVE,R SOLARE",
+      "FIELD3": ""
+    },
+    {
+      "ID": 7654,
+      "Descripcion": "TWITTER VINTE",
+      "FIELD3": ""
+    },
+    {
+      "ID": 7655,
+      "Descripcion": "YOUTUBE VINTE",
+      "FIELD3": ""
+    },
+    {
+      "ID": 7656,
+      "Descripcion": "ESPECTACULAR TEPOTZOTLAN,R CASTILLA",
+      "FIELD3": ""
+    },
+    {
+      "ID": 7657,
+      "Descripcion": "ESPECTACULAR COYOTEPEC,R CASTILLA",
+      "FIELD3": ""
+    },
+    {
+      "ID": 7658,
+      "Descripcion": "ESPECTACULAR C MEXIQUENSE,R CASTILLA",
+      "FIELD3": ""
+    },
+    {
+      "ID": 7659,
+      "Descripcion": "ESPECTACULAR POTRERO,R CASTILLA",
+      "FIELD3": ""
+    },
+    {
+      "ID": 7660,
+      "Descripcion": "ESPECTACULAR EL PEDREGAL,R CASTILLA",
+      "FIELD3": ""
+    },
+    {
+      "ID": 7661,
+      "Descripcion": "PENDONES,R CASTILLA",
+      "FIELD3": ""
+    },
+    {
+      "ID": 7662,
+      "Descripcion": "GALLARDETES,R CASTILLA",
+      "FIELD3": ""
+    },
+    {
+      "ID": 7663,
+      "Descripcion": "VOLANTEO,R CASTILLA",
+      "FIELD3": ""
+    },
+    {
+      "ID": 7664,
+      "Descripcion": "REVISTA DE FRENTE,R CASTILLA",
+      "FIELD3": ""
+    },
+    {
+      "ID": 7665,
+      "Descripcion": "REVISTA PUBLIVISION,R CASTILLA",
+      "FIELD3": ""
+    },
+    {
+      "ID": 7666,
+      "Descripcion": "PERIODICO EL GRAFICO,R CASTILLA",
+      "FIELD3": ""
+    },
+    {
+      "ID": 7667,
+      "Descripcion": "PROSPECCION SUR ZONA 1,R CASTILLA",
+      "FIELD3": ""
+    },
+    {
+      "ID": 7668,
+      "Descripcion": "PROSPECCION SUR ZONA 2,R CASTILLA",
+      "FIELD3": ""
+    },
+    {
+      "ID": 7669,
+      "Descripcion": "PROSPECCION SUR ZONA 3,R CASTILLA",
+      "FIELD3": ""
+    },
+    {
+      "ID": 7670,
+      "Descripcion": "PROSPECCION SUR ZONA 4,R CASTILLA",
+      "FIELD3": ""
+    },
+    {
+      "ID": 7671,
+      "Descripcion": "PROSPECCION NORTE ZONA 1,R CASTILLA",
+      "FIELD3": ""
+    },
+    {
+      "ID": 7672,
+      "Descripcion": "PROSPECCION NORTE ZONA 2,R CASTILLA",
+      "FIELD3": ""
+    },
+    {
+      "ID": 7673,
+      "Descripcion": "PROSPECCION NORTE ZONA 3,R CASTILLA",
+      "FIELD3": ""
+    },
+    {
+      "ID": 7674,
+      "Descripcion": "PROSPECCION NORTE ZONA 4,R CASTILLA",
+      "FIELD3": ""
+    },
+    {
+      "ID": 7675,
+      "Descripcion": "CAMBACEO PLAZA SAN MARCOS,R CASTILLA",
+      "FIELD3": ""
+    },
+    {
+      "ID": 7676,
+      "Descripcion": "CAMBACEO PLAZA PERINORTE,R CASTILLA",
+      "FIELD3": ""
+    },
+    {
+      "ID": 7677,
+      "Descripcion": "CAMBACEO PUNTO NORTE,R CASTILLA",
+      "FIELD3": ""
+    },
+    {
+      "ID": 7678,
+      "Descripcion": "CAMBACEO FORUM BUENAVISTA,R CASTILLA",
+      "FIELD3": ""
+    },
+    {
+      "ID": 7679,
+      "Descripcion": "CAMBACEO PLAZA SANTA TERESA,R CASTILLA",
+      "FIELD3": ""
+    },
+    {
+      "ID": 7680,
+      "Descripcion": "CAMBACEO SORIANA TULA,R CASTILLA",
+      "FIELD3": ""
+    },
+    {
+      "ID": 7681,
+      "Descripcion": "CAMBACEO BODEGA TULA,R CASTILLA",
+      "FIELD3": ""
+    },
+    {
+      "ID": 7682,
+      "Descripcion": "CAMBACEO BODEGA TLAXCOAPAN,R CASTILLA",
+      "FIELD3": ""
+    },
+    {
+      "ID": 7683,
+      "Descripcion": "CALL CENTER,R IBIZA",
+      "FIELD3": ""
+    },
+    {
+      "ID": 7684,
+      "Descripcion": "RECOMENDADO,R CASTILLA",
+      "FIELD3": ""
+    },
+    {
+      "ID": 7685,
+      "Descripcion": "REFERIDO,R CASTILLA",
+      "FIELD3": ""
+    },
+    {
+      "ID": 7686,
+      "Descripcion": "ACTIVACIÓN PUNTO VENTA,R CASTILLA",
+      "FIELD3": ""
+    },
+    {
+      "ID": 7687,
+      "Descripcion": "EXPO CASA,R SOLARE",
+      "FIELD3": ""
+    },
+    {
+      "ID": 7688,
+      "Descripcion": "VIP EMPRESARIAL,TECAMAC",
+      "FIELD3": ""
+    },
+    {
+      "ID": 7689,
+      "Descripcion": "CANADEVI,R CASTILLA",
+      "FIELD3": ""
+    },
+    {
+      "ID": 7690,
+      "Descripcion": "WEB GUIA DE INMUEBLES,R IBIZA",
+      "FIELD3": ""
+    },
+    {
+      "ID": 7691,
+      "Descripcion": "RADIO,R IBIZA",
+      "FIELD3": ""
+    },
+    {
+      "ID": 7692,
+      "Descripcion": "PROMOTOR EXTERNO,REAL IBIZA ",
+      "FIELD3": ""
+    },
+    {
+      "ID": 7693,
+      "Descripcion": "PROGRAMA REFERIDOS,TECAMAC",
+      "FIELD3": ""
+    },
+    {
+      "ID": 7694,
+      "Descripcion": "PERIFONEO,R IBIZA",
+      "FIELD3": ""
+    },
+    {
+      "ID": 7695,
+      "Descripcion": "MAILING,TECAMAC",
+      "FIELD3": ""
+    },
+    {
+      "ID": 7696,
+      "Descripcion": "CALL CENTER,TULA",
+      "FIELD3": ""
+    },
+    {
+      "ID": 7697,
+      "Descripcion": "EXPO WTC,R CASTILLA",
+      "FIELD3": ""
+    },
+    {
+      "ID": 7698,
+      "Descripcion": "PLAZA JOROBAS,R CASTILLA",
+      "FIELD3": ""
+    },
+    {
+      "ID": 7699,
+      "Descripcion": "ESP PUENTE CENTRAL CAMIONERA,R SOLARE",
+      "FIELD3": ""
+    },
+    {
+      "ID": 7700,
+      "Descripcion": "ESPECTACULAR CASA INN",
+      "FIELD3": ""
+    },
+    {
+      "ID": 7701,
+      "Descripcion": "ESPECTACULAR ARCO NORTE,R TOLEDO",
+      "FIELD3": ""
+    },
+    {
+      "ID": 7702,
+      "Descripcion": "ESPECTACULAR RETEN,R TOLEDO",
+      "FIELD3": ""
+    },
+    {
+      "ID": 7703,
+      "Descripcion": "ESPECTACULAR HERRADURA ACTOPAN,R TOLEDO",
+      "FIELD3": ""
+    },
+    {
+      "ID": 7704,
+      "Descripcion": "ESPECTACULAR PACHUCA SAHAGUN,R TOLEDO",
+      "FIELD3": ""
+    },
+    {
+      "ID": 7705,
+      "Descripcion": "EVENTOS EN PLAZA,R IBIZA",
+      "FIELD3": ""
+    },
+    {
+      "ID": 7706,
+      "Descripcion": "BASE DE DATOS,CORPORATIVO",
+      "FIELD3": ""
+    },
+    {
+      "ID": 7707,
+      "Descripcion": "PUBLICIDAD EN PARABUS (MUPI),R TOLEDO",
+      "FIELD3": ""
+    },
+    {
+      "ID": 7708,
+      "Descripcion": "PLAZA WAL-MART,R SOLARE",
+      "FIELD3": ""
+    },
+    {
+      "ID": 7709,
+      "Descripcion": "FACEBOOK COMUNIDAD VINTE",
+      "FIELD3": ""
+    },
+    {
+      "ID": 7710,
+      "Descripcion": "REFERIDO PAPELETA,R CASTILLA",
+      "FIELD3": ""
+    },
+    {
+      "ID": 7711,
+      "Descripcion": "RECOMENDADO PAPELETA,R CASTILLA",
+      "FIELD3": ""
+    },
+    {
+      "ID": 7712,
+      "Descripcion": "PLAZA TEPEYAC,TECAMAC",
+      "FIELD3": ""
+    },
+    {
+      "ID": 7713,
+      "Descripcion": "ENCARTE SEARS,TECAMAC",
+      "FIELD3": ""
+    },
+    {
+      "ID": 7714,
+      "Descripcion": "PAPELETA RECOMENDADO,R SOLARE",
+      "FIELD3": ""
+    },
+    {
+      "ID": 7715,
+      "Descripcion": "PAPELETA REFERIDO,R SOLARE",
+      "FIELD3": ""
+    },
+    {
+      "ID": 7716,
+      "Descripcion": "PAPELETA RECOMENDADO,R IBIZA",
+      "FIELD3": ""
+    },
+    {
+      "ID": 7717,
+      "Descripcion": "PAPELETA REFERIDO,R IBIZA",
+      "FIELD3": ""
+    },
+    {
+      "ID": 7718,
+      "Descripcion": "EVENTO NAVIDEÑO",
+      "FIELD3": ""
+    },
+    {
+      "ID": 7719,
+      "Descripcion": "ESPECTACULAR. AV NICHUPTE,R VALENCIA",
+      "FIELD3": ""
+    },
+    {
+      "ID": 7720,
+      "Descripcion": "ESPECTACULAR AV LAKIN,R VALENCIA",
+      "FIELD3": ""
+    },
+    {
+      "ID": 7721,
+      "Descripcion": "ESPECTACULAR AV BICENTENARIO,R VALENCIA",
+      "FIELD3": ""
+    },
+    {
+      "ID": 7722,
+      "Descripcion": "ESPECTACULAR AV LAKIN Y MADERO,R VALENCIA",
+      "FIELD3": ""
+    },
+    {
+      "ID": 7723,
+      "Descripcion": "ESPECTACULAR AV BICENTENARIO Y MADERO,CANCÚN",
+      "FIELD3": ""
+    },
+    {
+      "ID": 7724,
+      "Descripcion": "ESTACIÓN XHNUC  FM 105.1,CANCÚN",
+      "FIELD3": ""
+    },
+    {
+      "ID": 7725,
+      "Descripcion": "PÁGINA WEB DE GUÍA DE INMUEBLES,CANCÚN",
+      "FIELD3": ""
+    },
+    {
+      "ID": 7726,
+      "Descripcion": "REVISTA GUÍA DE INMUEBLES,CANCÚN",
+      "FIELD3": ""
+    },
+    {
+      "ID": 7727,
+      "Descripcion": "GALLARDETES,R VALENCIA",
+      "FIELD3": ""
+    },
+    {
+      "ID": 7728,
+      "Descripcion": "PENDONES AV BICENTENARIO,CANCÚN",
+      "FIELD3": ""
+    },
+    {
+      "ID": 7729,
+      "Descripcion": "PAPELETA REFERIDOS,CANCÚN",
+      "FIELD3": ""
+    },
+    {
+      "ID": 7730,
+      "Descripcion": "PAPELETA RECOMENDADOS,CANCÚN",
+      "FIELD3": ""
+    },
+    {
+      "ID": 7731,
+      "Descripcion": "REFERIDO,CANCÚN",
+      "FIELD3": ""
+    },
+    {
+      "ID": 7732,
+      "Descripcion": "RECOMENDADO,CANCÚN",
+      "FIELD3": ""
+    },
+    {
+      "ID": 7733,
+      "Descripcion": "PROSPECCIÓN EMPRESA,CANCÚN",
+      "FIELD3": ""
+    },
+    {
+      "ID": 7734,
+      "Descripcion": "CAMBACEO,CANCÚN",
+      "FIELD3": ""
+    },
+    {
+      "ID": 7735,
+      "Descripcion": "PERIFONEO,CANCÚN",
+      "FIELD3": ""
+    },
+    {
+      "ID": 7736,
+      "Descripcion": "OXXO PORTILLO,CANCÚN",
+      "FIELD3": ""
+    },
+    {
+      "ID": 7737,
+      "Descripcion": "ACTIVACION MAYAN PALACE,CANCÚN",
+      "FIELD3": ""
+    },
+    {
+      "ID": 7738,
+      "Descripcion": "ACTIVACION ENERGY GYM,CANCÚN",
+      "FIELD3": ""
+    },
+    {
+      "ID": 7739,
+      "Descripcion": "ACTIVACION EL CID,CANCÚN",
+      "FIELD3": ""
+    },
+    {
+      "ID": 7740,
+      "Descripcion": "MAILING DE INMUEBLE,CANCÚN",
+      "FIELD3": ""
+    },
+    {
+      "ID": 7741,
+      "Descripcion": "PANTALLA FIJA,CANCÚN",
+      "FIELD3": ""
+    },
+    {
+      "ID": 7742,
+      "Descripcion": "PANTALLA MOVIL,CANCÚN",
+      "FIELD3": ""
+    },
+    {
+      "ID": 7743,
+      "Descripcion": "REVISTA LIBRO VAQUERO,R CASTILLA",
+      "FIELD3": ""
+    },
+    {
+      "ID": 7744,
+      "Descripcion": "PERIÓDICO EL METRO,R CASTILLA",
+      "FIELD3": ""
+    },
+    {
+      "ID": 7745,
+      "Descripcion": "AUTOBUSES DF-COYOTEPEC,R CASTILLA",
+      "FIELD3": ""
+    },
+    {
+      "ID": 7746,
+      "Descripcion": "AUTOBUSES DF-TEPEJI,R CASTILLA",
+      "FIELD3": ""
+    },
+    {
+      "ID": 7747,
+      "Descripcion": "PERIFONEO VALLA MÓVIL,R CASTILLA",
+      "FIELD3": ""
+    },
+    {
+      "ID": 7748,
+      "Descripcion": "CALL CENTER BBVA,R TOLEDO",
+      "FIELD3": ""
+    },
+    {
+      "ID": 7749,
+      "Descripcion": "PROMOTORÍA EXTERNA,R CASTILLA",
+      "FIELD3": ""
+    },
+    {
+      "ID": 7750,
+      "Descripcion": "CAMIONETA ROTULADA,R VALENCIA",
+      "FIELD3": ""
+    },
+    {
+      "ID": 7751,
+      "Descripcion": "VOLANTEO,R VALENCIA",
+      "FIELD3": ""
+    },
+    {
+      "ID": 7752,
+      "Descripcion": "VOLANTEO ADO,QUINTANA ROO",
+      "FIELD3": ""
+    },
+    {
+      "ID": 7753,
+      "Descripcion": "BANDERAS ACCESO",
+      "FIELD3": ""
+    },
+    {
+      "ID": 7754,
+      "Descripcion": "FERIAS,R VALENCIA",
+      "FIELD3": ""
+    },
+    {
+      "ID": 7755,
+      "Descripcion": "CALL CENTER POR ASESOR,Q ROO",
+      "FIELD3": ""
+    },
+    {
+      "ID": 7756,
+      "Descripcion": "VOLANTEO FVTE,DF",
+      "FIELD3": ""
+    },
+    {
+      "ID": 7757,
+      "Descripcion": "CALL CENTER BBVA,TECAMAC",
+      "FIELD3": ""
+    },
+    {
+      "ID": 7758,
+      "Descripcion": "FUTBOL AZTECA",
+      "FIELD3": ""
+    },
+    {
+      "ID": 7759,
+      "Descripcion": "ESPECTACULAR KABAH,R VALENCIA",
+      "FIELD3": ""
+    },
+    {
+      "ID": 7760,
+      "Descripcion": "TELEBODEGA,R VALENCIA",
+      "FIELD3": ""
+    },
+    {
+      "ID": 7761,
+      "Descripcion": "ACCESO,R VALENCIA",
+      "FIELD3": ""
+    },
+    {
+      "ID": 7762,
+      "Descripcion": "ZONA PROP,R VALENCIA",
+      "FIELD3": ""
+    },
+    {
+      "ID": 7763,
+      "Descripcion": "PERIÓDICO,R VALENCIA",
+      "FIELD3": ""
+    },
+    {
+      "ID": 7764,
+      "Descripcion": "AUTOBUSES,R VALENCIA",
+      "FIELD3": ""
+    },
+    {
+      "ID": 7765,
+      "Descripcion": "CANAL DEL CLIMA,R VALENCIA",
+      "FIELD3": ""
+    },
+    {
+      "ID": 7766,
+      "Descripcion": "PLAZA ORIENTE,TECAMAC",
+      "FIELD3": ""
+    },
+    {
+      "ID": 7767,
+      "Descripcion": "CARRITOS DEL SÚPER",
+      "FIELD3": ""
+    },
+    {
+      "ID": 7768,
+      "Descripcion": "INTERNET ZONA PROP",
+      "FIELD3": ""
+    },
+    {
+      "ID": 7769,
+      "Descripcion": "ANUNCIANTE DE COACALCO,TECAMAC",
+      "FIELD3": ""
+    },
+    {
+      "ID": 7770,
+      "Descripcion": "METROS CÚBICOS,R SOLARE",
+      "FIELD3": ""
+    },
+    {
+      "ID": 7771,
+      "Descripcion": "TOTEM EN PLAZA QUINTA LA ALEGRIA,PLAYA DEL CARMEN",
+      "FIELD3": ""
+    },
+    {
+      "ID": 7772,
+      "Descripcion": "TOTEM PLAZA PASEOS DEL CARMEN,PLAYA DEL CARMEN",
+      "FIELD3": ""
+    },
+    {
+      "ID": 7773,
+      "Descripcion": "MEDALLONES VANS,PLAYA DEL CARMEN",
+      "FIELD3": ""
+    },
+    {
+      "ID": 7774,
+      "Descripcion": "CAPTRALIR",
+      "FIELD3": ""
+    },
+    {
+      "ID": 7775,
+      "Descripcion": "ASESORES EXTERNOS,TULA",
+      "FIELD3": ""
+    },
+    {
+      "ID": 7776,
+      "Descripcion": "CLIENTE VIP G7,PLAYA DEL CARMEN",
+      "FIELD3": ""
+    },
+    {
+      "ID": 7777,
+      "Descripcion": "CLIENTE VIP G7,CANCUN",
+      "FIELD3": ""
+    },
+    {
+      "ID": 7778,
+      "Descripcion": "PLAZA SENDERO,QUERÉTARO",
+      "FIELD3": ""
+    },
+    {
+      "ID": 7779,
+      "Descripcion": "LOCAL SUBURBANO",
+      "FIELD3": ""
+    },
+    {
+      "ID": 7780,
+      "Descripcion": "VOLANTEO SUBURBANO",
+      "FIELD3": ""
+    },
+    {
+      "ID": 7781,
+      "Descripcion": "PLAZA DE LAS TIENDAS,CANCÚN",
+      "FIELD3": ""
+    },
+    {
+      "ID": 7782,
+      "Descripcion": "CAMPER REAL VALENCIA,CANCÚN",
+      "FIELD3": ""
+    },
+    {
+      "ID": 7783,
+      "Descripcion": "SORIANA KABAH,CANCÚN",
+      "FIELD3": ""
+    },
+    {
+      "ID": 7784,
+      "Descripcion": "PROSPECCIÓN SUBURBANO",
+      "FIELD3": ""
+    },
+    {
+      "ID": 7785,
+      "Descripcion": "INTERNET SUBURBANO",
+      "FIELD3": ""
+    },
+    {
+      "ID": 7786,
+      "Descripcion": "CARTELERA HUEHUETOCA,R CASTILLA",
+      "FIELD3": ""
+    },
+    {
+      "ID": 7787,
+      "Descripcion": "CARRERA VINTE",
+      "FIELD3": ""
+    },
+    {
+      "ID": 7788,
+      "Descripcion": "CONTACTO INFONAVIT,TECAMAC",
+      "FIELD3": ""
+    },
+    {
+      "ID": 7789,
+      "Descripcion": "CAPTRALIR CANCÚN",
+      "FIELD3": ""
+    },
+    {
+      "ID": 7790,
+      "Descripcion": "CAPTRALIR QUERÉTARO",
+      "FIELD3": ""
+    },
+    {
+      "ID": 7791,
+      "Descripcion": "PROGRAMA EL CACHORRO,CANCÚN",
+      "FIELD3": ""
+    },
+    {
+      "ID": 7792,
+      "Descripcion": "TIENDA ELEKTRA,CANCÚN",
+      "FIELD3": ""
+    },
+    {
+      "ID": 7793,
+      "Descripcion": "PROSPECCIÓN SOLUCIONES INMOBILIARIAS,QRO",
+      "FIELD3": ""
+    },
+    {
+      "ID": 7794,
+      "Descripcion": "PROSPECCIÓN EXTERNA,QRO",
+      "FIELD3": ""
+    },
+    {
+      "ID": 7795,
+      "Descripcion": "PAPELETA REFERIDO TELEMARKETING,TECAMAC",
+      "FIELD3": ""
+    },
+    {
+      "ID": 7796,
+      "Descripcion": "PUENTE CLÍNICA 200,TECAMAC",
+      "FIELD3": ""
+    },
+    {
+      "ID": 7797,
+      "Descripcion": "PLAZA ESFERA,QUERÉTARO",
+      "FIELD3": ""
+    },
+    {
+      "ID": 7798,
+      "Descripcion": "LONA LOCAL COMERCIAL,TECÁMAC",
+      "FIELD3": ""
+    },
+    {
+      "ID": 7799,
+      "Descripcion": "PARABUSES DF",
+      "FIELD3": ""
+    },
+    {
+      "ID": 7800,
+      "Descripcion": "ESPECTACULAR CIRCUITO INTERIOR",
+      "FIELD3": ""
+    },
+    {
+      "ID": 7801,
+      "Descripcion": "ESPECTACULAR PALMAS",
+      "FIELD3": ""
+    },
+    {
+      "ID": 7802,
+      "Descripcion": "ESPECTACULAR TECAMACHALCO",
+      "FIELD3": ""
+    },
+    {
+      "ID": 7803,
+      "Descripcion": "ESPECTACULAR SANTA FE",
+      "FIELD3": ""
+    },
+    {
+      "ID": 7804,
+      "Descripcion": "ESPECTACULAR REFORMA",
+      "FIELD3": ""
+    },
+    {
+      "ID": 7805,
+      "Descripcion": "ESPECTACULAR CAMPOS ELÍSEOS",
+      "FIELD3": ""
+    },
+    {
+      "ID": 7806,
+      "Descripcion": "TÚNEL BOSQUES-REFORMA",
+      "FIELD3": ""
+    },
+    {
+      "ID": 7807,
+      "Descripcion": "CINEMEX",
+      "FIELD3": ""
+    },
+    {
+      "ID": 7808,
+      "Descripcion": "CINEPOLIS",
+      "FIELD3": ""
+    },
+    {
+      "ID": 7809,
+      "Descripcion": "TELEVISIÓN CANAL 2 NOT. CARLOS LORET DE MOLA",
+      "FIELD3": ""
+    },
+    {
+      "ID": 7810,
+      "Descripcion": "TELEVISIÓN ESPN",
+      "FIELD3": ""
+    },
+    {
+      "ID": 7811,
+      "Descripcion": "PERIODICO REFORMA",
+      "FIELD3": ""
+    },
+    {
+      "ID": 7812,
+      "Descripcion": "PERIODICO EXCELSIOR",
+      "FIELD3": ""
+    },
+    {
+      "ID": 7813,
+      "Descripcion": "PERIODICO EL FINANCIERO",
+      "FIELD3": ""
+    },
+    {
+      "ID": 7814,
+      "Descripcion": "REVISTA REAL ESTATE",
+      "FIELD3": ""
+    },
+    {
+      "ID": 7815,
+      "Descripcion": "REVISTA FORBES",
+      "FIELD3": ""
+    },
+    {
+      "ID": 7816,
+      "Descripcion": "REVISTA EXPANSIÓN",
+      "FIELD3": ""
+    },
+    {
+      "ID": 7817,
+      "Descripcion": "REVISTA ROBB REPORT",
+      "FIELD3": ""
+    },
+    {
+      "ID": 7818,
+      "Descripcion": "REVISTA DEPARTURES",
+      "FIELD3": ""
+    },
+    {
+      "ID": 7819,
+      "Descripcion": "REVISTA CENTURIÓN",
+      "FIELD3": ""
+    },
+    {
+      "ID": 7820,
+      "Descripcion": "INTERNET FORBES.COM",
+      "FIELD3": ""
+    },
+    {
+      "ID": 7821,
+      "Descripcion": "INTERNET CNN EXPANSION",
+      "FIELD3": ""
+    },
+    {
+      "ID": 7822,
+      "Descripcion": "PROMOTORES EXTERNOS,CANCÚN",
+      "FIELD3": ""
+    },
+    {
+      "ID": 7823,
+      "Descripcion": "PLAZA LAS AMÉRICAS,CANCÚN",
+      "FIELD3": ""
+    },
+    {
+      "ID": 7824,
+      "Descripcion": "ELEKTRA HUEHUETOCA,TULA",
+      "FIELD3": ""
+    },
+    {
+      "ID": 7825,
+      "Descripcion": "ELEKTRA IZCALLI,TULA",
+      "FIELD3": ""
+    },
+    {
+      "ID": 7826,
+      "Descripcion": "CANAL CABLEMAS,CANCÚN",
+      "FIELD3": ""
+    },
+    {
+      "ID": 7827,
+      "Descripcion": "PROSPECCIÓN SNTE,QRO",
+      "FIELD3": ""
+    },
+    {
+      "ID": 7828,
+      "Descripcion": "VOLANTEO SAN JERONIMO,TECAMAC",
+      "FIELD3": ""
+    },
+    {
+      "ID": 7829,
+      "Descripcion": "FORUM BUENAVISTA,TECAMAC",
+      "FIELD3": ""
+    },
+    {
+      "ID": 7830,
+      "Descripcion": "VALLA DIGITAL KABAH ESQ ANDRÉS,CANCÚN",
+      "FIELD3": ""
+    },
+    {
+      "ID": 7831,
+      "Descripcion": "ESPECTACULAR BASE AÉREA,TECÁMAC",
+      "FIELD3": ""
+    },
+    {
+      "ID": 7832,
+      "Descripcion": "KPI DIGITAL INTERNET,QRO",
+      "FIELD3": ""
+    },
+    {
+      "ID": 7833,
+      "Descripcion": "W RADIO,CANCÚN",
+      "FIELD3": ""
+    },
+    {
+      "ID": 7834,
+      "Descripcion": "ESPECTACULAR PISTA,TECAMAC",
+      "FIELD3": ""
+    },
+    {
+      "ID": 7835,
+      "Descripcion": "MAILING,PLAYA",
+      "FIELD3": ""
+    },
+    {
+      "ID": 7836,
+      "Descripcion": "BD INFONAVIT,PLAYA",
+      "FIELD3": ""
+    },
+    {
+      "ID": 7837,
+      "Descripcion": "BD FOVISSSTE,PLAYA",
+      "FIELD3": ""
+    },
+    {
+      "ID": 7838,
+      "Descripcion": "BD IMSS,PLAYA",
+      "FIELD3": ""
+    },
+    {
+      "ID": 7839,
+      "Descripcion": "PROMOTORIA EXTERNA,PLAYA",
+      "FIELD3": ""
+    },
+    {
+      "ID": 7840,
+      "Descripcion": "ASESORES EXTERNOS,PLAYA",
+      "FIELD3": ""
+    },
+    {
+      "ID": 7841,
+      "Descripcion": "ESPECTACULAR CARR CANCÚN-PLAYA",
+      "FIELD3": ""
+    },
+    {
+      "ID": 7842,
+      "Descripcion": "ESPECTACULAR Y AV. 115,PLAYA",
+      "FIELD3": ""
+    },
+    {
+      "ID": 7843,
+      "Descripcion": "ESPECTACULAR ESQ COLOSIO Y 125,PLAYA",
+      "FIELD3": ""
+    },
+    {
+      "ID": 7844,
+      "Descripcion": "ESPECTACULAR ESQ CTM Y 125,PLAYA",
+      "FIELD3": ""
+    },
+    {
+      "ID": 7845,
+      "Descripcion": "ESPECTACULAR CAMINO AMÉRICAS,PLAYA",
+      "FIELD3": ""
+    },
+    {
+      "ID": 7846,
+      "Descripcion": "ESPECTACULAR ENTRADA DE TELCEL,PLAYA",
+      "FIELD3": ""
+    },
+    {
+      "ID": 7847,
+      "Descripcion": "ESPECTACULAR FRENTE A LOS OLIVOS,PLAYA",
+      "FIELD3": ""
+    },
+    {
+      "ID": 7848,
+      "Descripcion": "ESPECTACULAR ENTRADA BILBAO,PLAYA",
+      "FIELD3": ""
+    },
+    {
+      "ID": 7849,
+      "Descripcion": "CANAL GRAN PLAZA,CANCÚN",
+      "FIELD3": ""
+    },
+    {
+      "ID": 7850,
+      "Descripcion": "PUENTE POWER CENTER,TECAMAC",
+      "FIELD3": ""
+    },
+    {
+      "ID": 7851,
+      "Descripcion": "EXPO TU CASA TOTAL,PLAYA",
+      "FIELD3": ""
+    },
+    {
+      "ID": 7852,
+      "Descripcion": "MICROSITIO,CANCÚN",
+      "FIELD3": ""
+    },
+    {
+      "ID": 7853,
+      "Descripcion": "ESPECTACULAR GRAN PLAZA,CANCÚN",
+      "FIELD3": ""
+    },
+    {
+      "ID": 7854,
+      "Descripcion": "INTERNET KPI,TULA",
+      "FIELD3": ""
+    },
+    {
+      "ID": 7855,
+      "Descripcion": "MAGUEN DAVID,PLAYA",
+      "FIELD3": ""
+    },
+    {
+      "ID": 7856,
+      "Descripcion": "SPOT EN BARCOS,PLAYA",
+      "FIELD3": ""
+    },
+    {
+      "ID": 7857,
+      "Descripcion": "ENCARTE ASUR,PLAYA",
+      "FIELD3": ""
+    },
+    {
+      "ID": 7858,
+      "Descripcion": "BANJERCITO,PLAYA",
+      "FIELD3": ""
+    },
+    {
+      "ID": 7859,
+      "Descripcion": "ESPECTACULAR REVOLUCIÓN",
+      "FIELD3": ""
+    },
+    {
+      "ID": 7860,
+      "Descripcion": "PERIODICO LA JORNADA",
+      "FIELD3": ""
+    },
+    {
+      "ID": 7861,
+      "Descripcion": "PERIODICO MILENIO DIARIO",
+      "FIELD3": ""
+    },
+    {
+      "ID": 7862,
+      "Descripcion": "PERIODICO EL SOL DE TOLUCA",
+      "FIELD3": ""
+    },
+    {
+      "ID": 7863,
+      "Descripcion": "PERIODICO NOVEDADES QUINTANA ROO",
+      "FIELD3": ""
+    },
+    {
+      "ID": 7864,
+      "Descripcion": "PERIODICO LA VERDAD QUINTANA ROO",
+      "FIELD3": ""
+    },
+    {
+      "ID": 7865,
+      "Descripcion": "REFORMA.COM",
+      "FIELD3": ""
+    },
+    {
+      "ID": 7866,
+      "Descripcion": "MUPI HOSPITAL GENERAL",
+      "FIELD3": ""
+    },
+    {
+      "ID": 7867,
+      "Descripcion": "BASE DE DATOS FOVISSSTE,TECAMAC",
+      "FIELD3": ""
+    },
+    {
+      "ID": 7868,
+      "Descripcion": "MYCONCIERGE,PLAYA",
+      "FIELD3": ""
+    },
+    {
+      "ID": 7869,
+      "Descripcion": "REVISTA TV NOTAS,PACHUCA",
+      "FIELD3": ""
+    },
+    {
+      "ID": 7870,
+      "Descripcion": "NEWSLETTER,Q ROO",
+      "FIELD3": ""
+    },
+    {
+      "ID": 7871,
+      "Descripcion": "VALLA MÓVIL,CANCÚN",
+      "FIELD3": ""
+    },
+    {
+      "ID": 7872,
+      "Descripcion": "EVENTOS-FERIA DEL ZÓCALO",
+      "FIELD3": ""
+    },
+    {
+      "ID": 7873,
+      "Descripcion": "ESPECTACULAR LOPEZ PORTILLO,TECAMAC",
+      "FIELD3": ""
+    },
+    {
+      "ID": 7874,
+      "Descripcion": "INTERNET – MAILING FACEBOOK",
+      "FIELD3": ""
+    },
+    {
+      "ID": 7875,
+      "Descripcion": "CARTELERA ESMERALDA,TECAMAC",
+      "FIELD3": ""
+    },
+    {
+      "ID": 7876,
+      "Descripcion": "CALL CENTER/FOVI-SNTE",
+      "FIELD3": ""
+    },
+    {
+      "ID": 7877,
+      "Descripcion": "VOLANTEO METRO POTRERO,TECAMAC",
+      "FIELD3": ""
+    },
+    {
+      "ID": 7878,
+      "Descripcion": "VOLANTEO METRO CARRERA",
+      "FIELD3": "TECAMAC"
+    },
+    {
+      "ID": 7879,
+      "Descripcion": "ESPECTACULAR KABAH-PORTILLO,CANCÚN",
+      "FIELD3": ""
+    },
+    {
+      "ID": 7880,
+      "Descripcion": "RESTAURANT EL RETORNO,PACHUCA",
+      "FIELD3": ""
+    },
+    {
+      "ID": 7881,
+      "Descripcion": "VALLA FIJA INFONAVIT,PACHUCA",
+      "FIELD3": ""
+    },
+    {
+      "ID": 7882,
+      "Descripcion": "ESPECTACULAR PORTILLO-ANDRÉS QUINTANA ROO",
+      "FIELD3": ""
+    },
+    {
+      "ID": 7883,
+      "Descripcion": "PLAZA COMERCIAL TLALNEPANTLA,TECAMAC",
+      "FIELD3": ""
+    },
+    {
+      "ID": 7884,
+      "Descripcion": "PROSPECCIÓN KUBO,TECAMAC",
+      "FIELD3": ""
+    },
+    {
+      "ID": 7885,
+      "Descripcion": "TELEVISA",
+      "FIELD3": ""
+    },
+    {
+      "ID": 7886,
+      "Descripcion": "TV AZTECA",
+      "FIELD3": ""
+    },
+    {
+      "ID": 7887,
+      "Descripcion": "ESPN",
+      "FIELD3": ""
+    },
+    {
+      "ID": 7888,
+      "Descripcion": "FOX SPORTS",
+      "FIELD3": ""
+    },
+    {
+      "ID": 7889,
+      "Descripcion": "AUTOBUSES DF",
+      "FIELD3": ""
+    },
+    {
+      "ID": 7890,
+      "Descripcion": "KIOSCOS DE PERIODICOS DF",
+      "FIELD3": ""
+    },
+    {
+      "ID": 7891,
+      "Descripcion": "VALLAS DF",
+      "FIELD3": ""
+    },
+    {
+      "ID": 7892,
+      "Descripcion": "ESPECTACULARES",
+      "FIELD3": ""
+    },
+    {
+      "ID": 7893,
+      "Descripcion": "PERIÓDICO EL GRÁFICO",
+      "FIELD3": ""
+    },
+    {
+      "ID": 7894,
+      "Descripcion": "PERIÓDICO PUBLIMETRO",
+      "FIELD3": ""
+    },
+    {
+      "ID": 7895,
+      "Descripcion": "REVISTA INMOBILIARE",
+      "FIELD3": ""
+    },
+    {
+      "ID": 7896,
+      "Descripcion": "REVISTA LÍDERES MEXICANOS",
+      "FIELD3": ""
+    },
+    {
+      "ID": 7897,
+      "Descripcion": "INTERNET FORBES",
+      "FIELD3": ""
+    },
+    {
+      "ID": 7898,
+      "Descripcion": "INTERNET LINKEDIN",
+      "FIELD3": ""
+    },
+    {
+      "ID": 7899,
+      "Descripcion": "RADIO ADELA MICHA",
+      "FIELD3": ""
+    },
+    {
+      "ID": 7900,
+      "Descripcion": "EXPO VIVIENDA MONUMENTO A LA REVOLUCIÓN ",
+      "FIELD3": ""
+    },
+    {
+      "ID": 7901,
+      "Descripcion": "REFERIDO VIP",
+      "FIELD3": ""
+    },
+    {
+      "ID": 7902,
+      "Descripcion": "PLAZA CANCÚN MALL",
+      "FIELD3": ""
+    },
+    {
+      "ID": 7903,
+      "Descripcion": "ESPECTACULAR LOS CONOS,PACHUCA",
+      "FIELD3": ""
+    },
+    {
+      "ID": 7904,
+      "Descripcion": "VOLANTEO RETEN,PACHUCA",
+      "FIELD3": ""
+    },
+    {
+      "ID": 7905,
+      "Descripcion": "PLAZA GALERÍAS,PACHUCA",
+      "FIELD3": ""
+    },
+    {
+      "ID": 7906,
+      "Descripcion": "CASTING MASTER CHEF",
+      "FIELD3": ""
+    },
+    {
+      "ID": 7907,
+      "Descripcion": "CENTRAL DEL NORTE",
+      "FIELD3": ""
+    },
+    {
+      "ID": 7908,
+      "Descripcion": "RADIO MIX AMOR",
+      "FIELD3": ""
+    },
+    {
+      "ID": 7909,
+      "Descripcion": "CARRERA IMAGEN KELLOGG",
+      "FIELD3": ""
+    },
+    {
+      "ID": 7910,
+      "Descripcion": "FERIA CEA CANADEVI",
+      "FIELD3": ""
+    },
+    {
+      "ID": 7911,
+      "Descripcion": "CARRERA PLAZA PARAISO",
+      "FIELD3": ""
+    },
+    {
+      "ID": 7912,
+      "Descripcion": "ULTRA RADIO,PUEBLA",
+      "FIELD3": ""
+    },
+    {
+      "ID": 7913,
+      "Descripcion": "PANTALLA ANIMAS,PUEBLA",
+      "FIELD3": ""
+    },
+    {
+      "ID": 7914,
+      "Descripcion": "REVISTA STAYHERE,PUEBLA",
+      "FIELD3": ""
+    },
+    {
+      "ID": 7915,
+      "Descripcion": "AUTOBUSES,PUEBLA",
+      "FIELD3": ""
+    },
+    {
+      "ID": 7916,
+      "Descripcion": "ESPECTACULAR NODO,PUEBLA",
+      "FIELD3": ""
+    },
+    {
+      "ID": 7917,
+      "Descripcion": "ESPECTACULAR AEROPUERTO,PUEBLA",
+      "FIELD3": ""
+    },
+    {
+      "ID": 7918,
+      "Descripcion": "ESPECTACULAR SAN MARTIN,PUEBLA",
+      "FIELD3": ""
+    },
+    {
+      "ID": 7919,
+      "Descripcion": "VOLANTEO CUAUTLANCINGO,PUEBLA",
+      "FIELD3": ""
+    },
+    {
+      "ID": 7920,
+      "Descripcion": "VOLANTEO HUEJOTZINGO,PUEBLA",
+      "FIELD3": ""
+    },
+    {
+      "ID": 7921,
+      "Descripcion": "VOLANTEO PUEBLA,PUEBLA",
+      "FIELD3": ""
+    },
+    {
+      "ID": 7922,
+      "Descripcion": "REFERIDO,PUEBLA",
+      "FIELD3": ""
+    },
+    {
+      "ID": 7923,
+      "Descripcion": "RECOMENDADO,PUEBLA",
+      "FIELD3": ""
+    },
+    {
+      "ID": 7924,
+      "Descripcion": "PROSPECCIÓN A EMPRESAS,PUEBLA",
+      "FIELD3": ""
+    },
+    {
+      "ID": 7925,
+      "Descripcion": "FERIAS,PUEBLA",
+      "FIELD3": ""
+    },
+    {
+      "ID": 7926,
+      "Descripcion": "ACTIVACIONES,PUEBLA",
+      "FIELD3": ""
+    },
+    {
+      "ID": 7927,
+      "Descripcion": "CAMBACEO,PUEBLA",
+      "FIELD3": ""
+    },
+    {
+      "ID": 7928,
+      "Descripcion": "PAGINA WEB VINTE,PUEBLA",
+      "FIELD3": ""
+    },
+    {
+      "ID": 7929,
+      "Descripcion": "GALLARDETES,PUEBLA",
+      "FIELD3": ""
+    },
+    {
+      "ID": 7930,
+      "Descripcion": "EXPO TU CASA TOTAL",
+      "FIELD3": ""
+    },
+    {
+      "ID": 7931,
+      "Descripcion": "RESTAURANTE LA PARRILLA,CANCÚN",
+      "FIELD3": ""
+    },
+    {
+      "ID": 7932,
+      "Descripcion": "RESTAURANTE CASA DE LOS ABUELOS,CANCÚN",
+      "FIELD3": ""
+    },
+    {
+      "ID": 7933,
+      "Descripcion": "PERIÓDICO ESPACIO,CANCÚN",
+      "FIELD3": ""
+    },
+    {
+      "ID": 7934,
+      "Descripcion": "AZTECA HECHOS,CANCÚN",
+      "FIELD3": ""
+    },
+    {
+      "ID": 7935,
+      "Descripcion": "RADIO MIX,CANCÚN",
+      "FIELD3": ""
+    },
+    {
+      "ID": 7936,
+      "Descripcion": "PODER JUDICIAL HIDALGO",
+      "FIELD3": ""
+    },
+    {
+      "ID": 7937,
+      "Descripcion": "FERIA TLALNEPANTLA",
+      "FIELD3": ""
+    },
+    {
+      "ID": 7938,
+      "Descripcion": "SOCIO VIP,PACHUCA",
+      "FIELD3": ""
+    },
+    {
+      "ID": 7939,
+      "Descripcion": "TODOS SOMOS VENTAS,TECAMAC",
+      "FIELD3": ""
+    },
+    {
+      "ID": 7940,
+      "Descripcion": "SINDICATOS",
+      "FIELD3": ""
+    },
+    {
+      "ID": 7941,
+      "Descripcion": "LOCAL TLANEPANTLA",
+      "FIELD3": ""
+    },
+    {
+      "ID": 7942,
+      "Descripcion": "PROSPECCIÓN,PUEBLA",
+      "FIELD3": ""
+    },
+    {
+      "ID": 7943,
+      "Descripcion": "CLARO SPORTS",
+      "FIELD3": ""
+    },
+    {
+      "ID": 7944,
+      "Descripcion": "INTERCAMBIO CARTERA VINTE ",
+      "FIELD3": ""
+    },
+    {
+      "ID": 7945,
+      "Descripcion": "AGENTE EXTERNO,PUEBLA",
+      "FIELD3": ""
+    },
+    {
+      "ID": 7946,
+      "Descripcion": "SÓLO OFERTAS PUEBLA",
+      "FIELD3": ""
+    },
+    {
+      "ID": 7947,
+      "Descripcion": "CARTELERA EN LA AV FRANCISCO I MADERO Y ARCO NORT",
+      "FIELD3": ""
+    },
+    {
+      "ID": 7948,
+      "Descripcion": "GUÍA DE INMUEBLES INTERNET,PUEBLA",
+      "FIELD3": ""
+    },
+    {
+      "ID": 7949,
+      "Descripcion": "GUÍA DE INMUEBLES REVISTA,PUEBLA",
+      "FIELD3": ""
+    },
+    {
+      "ID": 7950,
+      "Descripcion": "METROS CÚBICOS M3,QUERÉTARO",
+      "FIELD3": ""
+    },
+    {
+      "ID": 7951,
+      "Descripcion": "FERIA CANACINTRA,QUERÉTARO",
+      "FIELD3": ""
+    },
+    {
+      "ID": 7952,
+      "Descripcion": "CARRERA PARQ IND EL MARQUÉS,QUERÉTARO",
+      "FIELD3": ""
+    },
+    {
+      "ID": 7953,
+      "Descripcion": "ESPECTACULAR CASETA SN MARCOS,PUEBLA",
+      "FIELD3": ""
+    },
+    {
+      "ID": 7954,
+      "Descripcion": "ESPECTACULAR AUTOPISTA PUEBLA",
+      "FIELD3": ""
+    },
+    {
+      "ID": 7955,
+      "Descripcion": "ESPECTACULAR PUENTE AEROPUERTO,PUEBLA",
+      "FIELD3": ""
+    },
+    {
+      "ID": 7956,
+      "Descripcion": "ESPECTACULAR FED. A HUEJOTZINGO,PUEBLA",
+      "FIELD3": ""
+    },
+    {
+      "ID": 7957,
+      "Descripcion": "CANAL VALLA MÓVIL,PUEBLA",
+      "FIELD3": ""
+    },
+    {
+      "ID": 7958,
+      "Descripcion": "FERIA SNTE DF",
+      "FIELD3": ""
+    },
+    {
+      "ID": 7959,
+      "Descripcion": "PERIÓDICO PUBLIMETRO,TECÁMAC",
+      "FIELD3": ""
+    },
+    {
+      "ID": 7960,
+      "Descripcion": "RADIO ACIR,TECÁMAC",
+      "FIELD3": ""
+    },
+    {
+      "ID": 7961,
+      "Descripcion": "SOCIO-VIP,TECÁMAC",
+      "FIELD3": ""
+    },
+    {
+      "ID": 7962,
+      "Descripcion": "CARRERA EL MARQUES,QUERÉTARO",
+      "FIELD3": ""
+    },
+    {
+      "ID": 7963,
+      "Descripcion": "FERIA DE CD MEX (SNTE) DE MAESTROS,QUERÉTARO",
+      "FIELD3": ""
+    },
+    {
+      "ID": 7964,
+      "Descripcion": "EXPO PROVIDENT,PUEBLA",
+      "FIELD3": ""
+    },
+    {
+      "ID": 7965,
+      "Descripcion": "EXPO CANADEVI,PUEBLA",
+      "FIELD3": ""
+    },
+    {
+      "ID": 7966,
+      "Descripcion": "EXPO CENTRO BANAMEX FOV,PUEBLA",
+      "FIELD3": ""
+    },
+    {
+      "ID": 7967,
+      "Descripcion": "EXPO CANADEVI DF,PUEBLA",
+      "FIELD3": ""
+    },
+    {
+      "ID": 7968,
+      "Descripcion": "EXPO FOVISSSTE",
+      "FIELD3": ""
+    },
+    {
+      "ID": 7969,
+      "Descripcion": "CALL CENTER,PUEBLA ",
+      "FIELD3": ""
+    },
+    {
+      "ID": 7970,
+      "Descripcion": "EXPO MONUMENTO A LA REVOLUCIÓN",
+      "FIELD3": ""
+    },
+    {
+      "ID": 7971,
+      "Descripcion": "BOLETOS RICKY MARTIN,CANCÚN",
+      "FIELD3": ""
+    },
+    {
+      "ID": 7972,
+      "Descripcion": "VALES DE GASOLINA,CANCÚN",
+      "FIELD3": ""
+    },
+    {
+      "ID": 7973,
+      "Descripcion": "PROMOCIÓN CATRINES,CANCÚN",
+      "FIELD3": ""
+    },
+    {
+      "ID": 7974,
+      "Descripcion": "SORIANA,CANCÚN",
+      "FIELD3": ""
+    },
+    {
+      "ID": 7975,
+      "Descripcion": "PALETA FED. HUEJOTZINGO,PUEBLA",
+      "FIELD3": ""
+    },
+    {
+      "ID": 7976,
+      "Descripcion": "EXPO INFONAVIT,QUERÉTARO",
+      "FIELD3": ""
+    },
+    {
+      "ID": 7977,
+      "Descripcion": "RED VALENCIA,CANCÚN",
+      "FIELD3": ""
+    },
+    {
+      "ID": 7978,
+      "Descripcion": "PLAZA POWER CENTER,TECÁMAC",
+      "FIELD3": ""
+    },
+    {
+      "ID": 7979,
+      "Descripcion": "BASE VINTE,TECÁMAC",
+      "FIELD3": ""
+    },
+    {
+      "ID": 7980,
+      "Descripcion": "BASE SOFOLES,TECÁMAC",
+      "FIELD3": ""
+    },
+    {
+      "ID": 7981,
+      "Descripcion": "PROSPECCIÓN DEPENDENCIAS,TECÁMAC",
+      "FIELD3": ""
+    },
+    {
+      "ID": 7982,
+      "Descripcion": "KPI,PACHUCA",
+      "FIELD3": ""
+    },
+    {
+      "ID": 7983,
+      "Descripcion": "12 Y 13 NOV. FERIA TULA,QUERÉTARO",
+      "FIELD3": ""
+    },
+    {
+      "ID": 7984,
+      "Descripcion": "17 Y 18 NOV FERIA HSBC,QUERÉTARO",
+      "FIELD3": ""
+    },
+    {
+      "ID": 7985,
+      "Descripcion": "25 AL 27 FERIA ZÓCALO FVTE,QUERÉTARO",
+      "FIELD3": ""
+    },
+    {
+      "ID": 7986,
+      "Descripcion": "26 Y 27 FERIA EXPO CASAS,QUERÉTARO",
+      "FIELD3": ""
+    },
+    {
+      "ID": 7987,
+      "Descripcion": "SOCIO VIP,QUERÉTARO",
+      "FIELD3": ""
+    },
+    {
+      "ID": 7988,
+      "Descripcion": "EXPO ZÓCALO 2016",
+      "FIELD3": ""
+    },
+    {
+      "ID": 7989,
+      "Descripcion": "LOCAL COMERCIAL CATANIA RESIDENCIAL,CANCÚN",
+      "FIELD3": ""
+    },
+    {
+      "ID": 7990,
+      "Descripcion": "INTERNET CATANIA RESIDENCIAL,CANCÚN",
+      "FIELD3": ""
+    },
+    {
+      "ID": 7991,
+      "Descripcion": "VOLANTEO CATANIA RESIDENCIAL,CANCÚN",
+      "FIELD3": ""
+    },
+    {
+      "ID": 7992,
+      "Descripcion": "REVISTA ENCUENTRA TU CASA,PACHUCA",
+      "FIELD3": ""
+    },
+    {
+      "ID": 7993,
+      "Descripcion": "PERLA NEGRA VINTE",
+      "FIELD3": ""
+    },
+    {
+      "ID": 7994,
+      "Descripcion": "ESPECTACULAR FRAY JUNÍPERO SERRA,LA VISTA",
+      "FIELD3": ""
+    },
+    {
+      "ID": 7995,
+      "Descripcion": "GALLARDETES,LA VISTA",
+      "FIELD3": ""
+    },
+    {
+      "ID": 7996,
+      "Descripcion": "PANTALLA DIGITAL METROBÚS DF,PLAYA DEL CARMEN",
+      "FIELD3": ""
+    },
+    {
+      "ID": 7997,
+      "Descripcion": "PROSPECCIÓN ASESOR,LA VISTA",
+      "FIELD3": ""
+    },
+    {
+      "ID": 7998,
+      "Descripcion": "ANUNCIO ASESOR,LA VISTA",
+      "FIELD3": ""
+    },
+    {
+      "ID": 7999,
+      "Descripcion": "FACEBOOK ASESOR,LA VISTA",
+      "FIELD3": ""
+    },
+    {
+      "ID": 8000,
+      "Descripcion": "CARTELERA Y PENDONES EXTERIORES,LA VISTA",
+      "FIELD3": ""
+    },
+    {
+      "ID": 8001,
+      "Descripcion": "GUÍA VIDA Y ESTILO,LA VISTA",
+      "FIELD3": ""
+    },
+    {
+      "ID": 8002,
+      "Descripcion": "PÁGINA MISIÓN DE SANTIAGO,LA VISTA",
+      "FIELD3": ""
+    },
+    {
+      "ID": 8003,
+      "Descripcion": "PANTALLA BERNARDO QUINTANA,LA VISTA",
+      "FIELD3": ""
+    },
+    {
+      "ID": 8004,
+      "Descripcion": "PANTALLA 5 DE FEBRERO,LA VISTA",
+      "FIELD3": ""
+    },
+    {
+      "ID": 8005,
+      "Descripcion": "PLUMAS EN ESTACIONAMIENTO,LA VISTA",
+      "FIELD3": ""
+    },
+    {
+      "ID": 8006,
+      "Descripcion": "ESPECTACULAR 135 AV. GLORIETA,CATANIA",
+      "FIELD3": ""
+    },
+    {
+      "ID": 8007,
+      "Descripcion": "ESPECTACULAR 2. 135 AV. VITALA,CATANIA",
+      "FIELD3": ""
+    },
+    {
+      "ID": 8008,
+      "Descripcion": "ESPECTACULAR 3. TORRES C/135,CATANIA",
+      "FIELD3": ""
+    },
+    {
+      "ID": 8009,
+      "Descripcion": "ESPECTACULAR AV. LAS TORRES,CATANIA",
+      "FIELD3": ""
+    },
+    {
+      "ID": 8010,
+      "Descripcion": "NOVEDADES CANCUN,CATANIA",
+      "FIELD3": ""
+    },
+    {
+      "ID": 8011,
+      "Descripcion": "GRUPO ACIR CANCUN,CATANIA",
+      "FIELD3": ""
+    },
+    {
+      "ID": 8012,
+      "Descripcion": "AUTOBUSES CENTRO,CATANIA",
+      "FIELD3": ""
+    },
+    {
+      "ID": 8013,
+      "Descripcion": "FERIA SHCP,CANCÚN",
+      "FIELD3": ""
+    },
+    {
+      "ID": 8014,
+      "Descripcion": "PENDONES AV 135,CATANIA",
+      "FIELD3": ""
+    },
+    {
+      "ID": 8015,
+      "Descripcion": "ESPECTACULAR CASETA OJO DE AGUA",
+      "FIELD3": ""
+    },
+    {
+      "ID": 8016,
+      "Descripcion": "ESPECTACULAR SALIDA A GRANADA,PISTA",
+      "FIELD3": ""
+    },
+    {
+      "ID": 8017,
+      "Descripcion": "RADIO FORMULA,CATANIA",
+      "FIELD3": ""
+    },
+    {
+      "ID": 8018,
+      "Descripcion": "EXPOS,CATANIA",
+      "FIELD3": ""
+    },
+    {
+      "ID": 8019,
+      "Descripcion": "VIVA ANUNCIOS,TULA",
+      "FIELD3": ""
+    },
+    {
+      "ID": 8020,
+      "Descripcion": "FACEBOOK ORGÁNICO,TULA",
+      "FIELD3": ""
+    },
+    {
+      "ID": 8021,
+      "Descripcion": "PLAZA POWER CENTER COACALCO,TECÁMAC",
+      "FIELD3": ""
+    },
+    {
+      "ID": 8022,
+      "Descripcion": "BASE DE DATOS BBVA BANCOMER,TECÁMAC",
+      "FIELD3": ""
+    },
+    {
+      "ID": 8023,
+      "Descripcion": "PREOPERATI,LA VISTA",
+      "FIELD3": ""
+    },
+    {
+      "ID": 8024,
+      "Descripcion": "METROS CÚBICOS,LA VISTA",
+      "FIELD3": ""
+    },
+    {
+      "ID": 8025,
+      "Descripcion": "FACEBOOK COMUNIDAD VINTE,QUERALT",
+      "FIELD3": ""
+    },
+    {
+      "ID": 8026,
+      "Descripcion": "FACEBOOK,LA VISTA",
+      "FIELD3": ""
+    },
+    {
+      "ID": 8027,
+      "Descripcion": "WEBSITE QUERALT.COM.MX",
+      "FIELD3": ""
+    },
+    {
+      "ID": 8028,
+      "Descripcion": "PROPERATI,QUERALT",
+      "FIELD3": ""
+    },
+    {
+      "ID": 8029,
+      "Descripcion": "LAMUDI,QUERALT",
+      "FIELD3": ""
+    },
+    {
+      "ID": 8030,
+      "Descripcion": "METROS CUBICOS,QUERALT",
+      "FIELD3": ""
+    },
+    {
+      "ID": 8031,
+      "Descripcion": "INMUEBLES 24,QUERALT",
+      "FIELD3": ""
+    },
+    {
+      "ID": 8032,
+      "Descripcion": "REFORMA BIENES RAICES,QUERALT",
+      "FIELD3": ""
+    },
+    {
+      "ID": 8033,
+      "Descripcion": "ESPECTACULAR CARRETERA MEX-QRO,QUERALT",
+      "FIELD3": ""
+    },
+    {
+      "ID": 8034,
+      "Descripcion": "FERIA CAPREPOL,TECÁMAC",
+      "FIELD3": ""
+    },
+    {
+      "ID": 8035,
+      "Descripcion": "SOCIO VIP,PUEBLA",
+      "FIELD3": ""
+    },
+    {
+      "ID": 8036,
+      "Descripcion": "REVISTA CITY,LA VISTA",
+      "FIELD3": ""
+    },
+    {
+      "ID": 8037,
+      "Descripcion": "REVISTA WHO,LA VISTA",
+      "FIELD3": ""
+    },
+    {
+      "ID": 8038,
+      "Descripcion": "PERIÓDICO REFORMA,LA VISTA",
+      "FIELD3": ""
+    },
+    {
+      "ID": 8039,
+      "Descripcion": "ICASAS,LA VISTA",
+      "FIELD3": ""
+    },
+    {
+      "ID": 8040,
+      "Descripcion": "ICASAS,QUERALT",
+      "FIELD3": ""
+    },
+    {
+      "ID": 8041,
+      "Descripcion": "WEBSITE QUERALT",
+      "FIELD3": ""
+    },
+    {
+      "ID": 8042,
+      "Descripcion": "WEBSITE VINTE,QUERALT",
+      "FIELD3": ""
+    },
+    {
+      "ID": 8043,
+      "Descripcion": "ESPECTACULAR CARR MÉX-QRO,QUERALT",
+      "FIELD3": ""
+    },
+    {
+      "ID": 8044,
+      "Descripcion": "FACEBOOK QUERALT",
+      "FIELD3": ""
+    },
+    {
+      "ID": 8045,
+      "Descripcion": "INSTAGRAM,QUERALT",
+      "FIELD3": ""
+    },
+    {
+      "ID": 8046,
+      "Descripcion": "PROSPECCIÓN CD MÉX-PUEBLA",
+      "FIELD3": ""
+    },
+    {
+      "ID": 8047,
+      "Descripcion": "PROPERATI,TECAMAC",
+      "FIELD3": ""
+    },
+    {
+      "ID": 8048,
+      "Descripcion": "RECOMENDADO,QUERALT",
+      "FIELD3": ""
+    },
+    {
+      "ID": 8049,
+      "Descripcion": "PROSPECCION ASESOR,QUERALT",
+      "FIELD3": ""
+    },
+    {
+      "ID": 8050,
+      "Descripcion": "SEÑALIZACIÓN EXTERIOR,QUERALT ",
+      "FIELD3": ""
+    },
+    {
+      "ID": 8051,
+      "Descripcion": "PESCA ASESOR,TLALNEPANTLA",
+      "FIELD3": ""
+    },
+    {
+      "ID": 8052,
+      "Descripcion": "PESCA PROSPECCION,TLALNEPANTLA",
+      "FIELD3": ""
+    },
+    {
+      "ID": 8053,
+      "Descripcion": "FLUJO NATURAL,TLALNEPANTLA",
+      "FIELD3": ""
+    },
+    {
+      "ID": 8054,
+      "Descripcion": "PAE,TLALNEPANTLA",
+      "FIELD3": ""
+    },
+    {
+      "ID": 8055,
+      "Descripcion": "REFERIDO,TLALNEPANTLA",
+      "FIELD3": ""
+    },
+    {
+      "ID": 8056,
+      "Descripcion": "RECOMENDADO,TLALNEPANTLA",
+      "FIELD3": ""
+    },
+    {
+      "ID": 8057,
+      "Descripcion": "INTERNET,TLALNEPANTLA",
+      "FIELD3": ""
+    },
+    {
+      "ID": 8058,
+      "Descripcion": "PLAZA COSMOPOL,TECÁMAC",
+      "FIELD3": ""
+    },
+    {
+      "ID": 8059,
+      "Descripcion": "PROSPECCIÓN CARRARA,TECÁMAC",
+      "FIELD3": ""
+    },
+    {
+      "ID": 8060,
+      "Descripcion": "EXPO TU CASA TOTAL,LA VISTA",
+      "FIELD3": ""
+    },
+    {
+      "ID": 8061,
+      "Descripcion": "EXPO TELEVISA,TECAMAC",
+      "FIELD3": ""
+    },
+    {
+      "ID": 8062,
+      "Descripcion": "CAMIONES CDMX",
+      "FIELD3": ""
+    },
+    {
+      "ID": 8063,
+      "Descripcion": "NFL",
+      "FIELD3": ""
+    },
+    {
+      "ID": 8064,
+      "Descripcion": "BICIS CDMX",
+      "FIELD3": ""
+    },
+    {
+      "ID": 8065,
+      "Descripcion": "SPOTIFY VINTE",
+      "FIELD3": ""
+    },
+    {
+      "ID": 8066,
+      "Descripcion": "EXPANSIÓN WEB",
+      "FIELD3": ""
+    },
+    {
+      "ID": 8067,
+      "Descripcion": "VOLANTEO HOTELES,LA VISTA",
+      "FIELD3": ""
+    },
+    {
+      "ID": 8068,
+      "Descripcion": "VOLANTEO BANCOS,LA VISTA",
+      "FIELD3": ""
+    },
+    {
+      "ID": 8069,
+      "Descripcion": "PANTALLA DIGITAL AEROPUERTO,LA VISTA",
+      "FIELD3": ""
+    },
+    {
+      "ID": 8070,
+      "Descripcion": "PANTALLA DIGITAL PLAZA DE TOROS,LA VISTA",
+      "FIELD3": ""
+    },
+    {
+      "ID": 8071,
+      "Descripcion": "PANTALLA DIGITAL URBAN JURICA,LA VISTA",
+      "FIELD3": ""
+    },
+    {
+      "ID": 8072,
+      "Descripcion": "PANTALLA DIGITAL URBAN JURIQUILLA,LA VISTA",
+      "FIELD3": ""
+    },
+    {
+      "ID": 8073,
+      "Descripcion": "CARRERA 3 DE SEP 2017 PARQUE INDUSTRIAL,QUERÉTARO",
+      "FIELD3": ""
+    },
+    {
+      "ID": 8074,
+      "Descripcion": "PORTALES INMOBILIARIOS (MKT -ONLINE),QUERÉTARO",
+      "FIELD3": ""
+    },
+    {
+      "ID": 8075,
+      "Descripcion": "MACROLONA C/ VOLANTEO,QUERÉTARO",
+      "FIELD3": ""
+    },
+    {
+      "ID": 8076,
+      "Descripcion": "FACEBOOK-ASESORES INMOBILIARIOS,QUERÉTARO",
+      "FIELD3": ""
+    },
+    {
+      "ID": 8077,
+      "Descripcion": "FACEBOOK-CALL CENTER,QUERÉTARO",
+      "FIELD3": ""
+    },
+    {
+      "ID": 8078,
+      "Descripcion": "MÓDULO SNTE,PUEBLA",
+      "FIELD3": ""
+    },
+    {
+      "ID": 8079,
+      "Descripcion": "MÓDULO VW,PUEBLA",
+      "FIELD3": ""
+    },
+    {
+      "ID": 8080,
+      "Descripcion": "FERIA VIVIENDA INFONAVIT,PUEBLA",
+      "FIELD3": ""
+    },
+    {
+      "ID": 8081,
+      "Descripcion": "CINCO RADIO,PUEBLA",
+      "FIELD3": ""
+    },
+    {
+      "ID": 8082,
+      "Descripcion": "ASESOR EXTERNO,LA VISTA",
+      "FIELD3": ""
+    },
+    {
+      "ID": 8083,
+      "Descripcion": "LAMUDI,LA VISTA",
+      "FIELD3": ""
+    },
+    {
+      "ID": 8084,
+      "Descripcion": "FERIA SAN MARTÍN,PUEBLA",
+      "FIELD3": ""
+    },
+    {
+      "ID": 8085,
+      "Descripcion": "REFERIDO,LA VISTA",
+      "FIELD3": ""
+    },
+    {
+      "ID": 8086,
+      "Descripcion": "RECOMENDADO,LA VISTA",
+      "FIELD3": ""
+    },
+    {
+      "ID": 8087,
+      "Descripcion": "BARBACOA DE SANTIAGO PALMILLAS,LA VISTA",
+      "FIELD3": ""
+    },
+    {
+      "ID": 8088,
+      "Descripcion": "VOLANTEO CIUDAD QRO,LA VISTA",
+      "FIELD3": ""
+    },
+    {
+      "ID": 8089,
+      "Descripcion": "BINE,PUEBLA",
+      "FIELD3": ""
+    },
+    {
+      "ID": 8090,
+      "Descripcion": "AGENTES EXTERNOS,R NAVARRA",
+      "FIELD3": ""
+    },
+    {
+      "ID": 8091,
+      "Descripcion": "CALL CENTER BBVA,R NAVARRA",
+      "FIELD3": ""
+    },
+    {
+      "ID": 8092,
+      "Descripcion": "CALL CENTER R NAVARRA",
+      "FIELD3": ""
+    },
+    {
+      "ID": 8093,
+      "Descripcion": "EL SOL DE HIDALGO,R NAVARRA",
+      "FIELD3": ""
+    },
+    {
+      "ID": 8094,
+      "Descripcion": "ENCARTE FOVISSSTE,R NAVARRA",
+      "FIELD3": ""
+    },
+    {
+      "ID": 8095,
+      "Descripcion": "ENCARTE INFONAVIT,R NAVARRA",
+      "FIELD3": ""
+    },
+    {
+      "ID": 8096,
+      "Descripcion": "ESPECTACULAR RETEN,R NAVARRA",
+      "FIELD3": ""
+    },
+    {
+      "ID": 8097,
+      "Descripcion": "EVENTO ESPECIAL CALLE,R NAVARRA",
+      "FIELD3": ""
+    },
+    {
+      "ID": 8098,
+      "Descripcion": "EVENTO NAVIDEÑO R NAVARRA",
+      "FIELD3": ""
+    },
+    {
+      "ID": 8099,
+      "Descripcion": "FERIA CANADEVI,R NAVARRA",
+      "FIELD3": ""
+    },
+    {
+      "ID": 8100,
+      "Descripcion": "FERIA PACHUCA,PACHUCA",
+      "FIELD3": ""
+    },
+    {
+      "ID": 8101,
+      "Descripcion": "GALLARDETES,R NAVARRA",
+      "FIELD3": ""
+    },
+    {
+      "ID": 8102,
+      "Descripcion": "INTERNET PÁGINA WEB VINTE",
+      "FIELD3": ""
+    },
+    {
+      "ID": 8103,
+      "Descripcion": "MAILING,R NAVARRA",
+      "FIELD3": ""
+    },
+    {
+      "ID": 8104,
+      "Descripcion": "MENSAJES DE TEXTO,R NAVARRA",
+      "FIELD3": ""
+    },
+    {
+      "ID": 8105,
+      "Descripcion": "PAE VENTAS,R NAVARRA",
+      "FIELD3": ""
+    },
+    {
+      "ID": 8106,
+      "Descripcion": "PAE VENTAS,OTRAS PLAZAS",
+      "FIELD3": ""
+    },
+    {
+      "ID": 8107,
+      "Descripcion": "PERIODICO EL UNIVERSAL,R NAVARRA",
+      "FIELD3": ""
+    },
+    {
+      "ID": 8108,
+      "Descripcion": "PERIÓDICO MILENIO,R NAVARRA",
+      "FIELD3": ""
+    },
+    {
+      "ID": 8109,
+      "Descripcion": "PLAZA GRAN PATIO,R NAVARRA",
+      "FIELD3": ""
+    },
+    {
+      "ID": 8110,
+      "Descripcion": "PROSP EMPRESAS CALLE,R NAVARRA",
+      "FIELD3": ""
+    },
+    {
+      "ID": 8111,
+      "Descripcion": "PROSPECCION A EMPRESAS,TOLEDO",
+      "FIELD3": ""
+    },
+    {
+      "ID": 8112,
+      "Descripcion": "PUBLICIDAD EN PARABUS (MUPI),R NAVARRA",
+      "FIELD3": ""
+    },
+    {
+      "ID": 8113,
+      "Descripcion": "RADIO ACIR,R NAVARRA",
+      "FIELD3": ""
+    },
+    {
+      "ID": 8114,
+      "Descripcion": "RADIO 40 PRINCIPALES,R NAVARRA",
+      "FIELD3": ""
+    },
+    {
+      "ID": 8115,
+      "Descripcion": "RECOMENDADO,R NAVARRA",
+      "FIELD3": ""
+    },
+    {
+      "ID": 8116,
+      "Descripcion": "REFERIDO PROSPECCION HUEJUTLA,R NAVARRA",
+      "FIELD3": ""
+    },
+    {
+      "ID": 8117,
+      "Descripcion": "REFERIDO,R NAVARRA",
+      "FIELD3": ""
+    },
+    {
+      "ID": 8118,
+      "Descripcion": "TELEVISIÓN CANAL 2,R NAVARRA",
+      "FIELD3": ""
+    },
+    {
+      "ID": 8119,
+      "Descripcion": "TV AZTECA,R NAVARRA",
+      "FIELD3": ""
+    },
+    {
+      "ID": 8120,
+      "Descripcion": "VOLANTEO R NAVARRA",
+      "FIELD3": ""
+    },
+    {
+      "ID": 8121,
+      "Descripcion": "TV CANAL 2 NOT. CARLOS LORET DE MOLA",
+      "FIELD3": ""
+    },
+    {
+      "ID": 8122,
+      "Descripcion": "ESPECTACULAR SANTA FE",
+      "FIELD3": ""
+    },
+    {
+      "ID": 8123,
+      "Descripcion": "ESPECTACULAR REVOLUCIÓN",
+      "FIELD3": ""
+    },
+    {
+      "ID": 8124,
+      "Descripcion": "FACEBOOK VINTE,PACHUCA",
+      "FIELD3": ""
+    },
+    {
+      "ID": 8125,
+      "Descripcion": "PERIODICO LA JORNADA",
+      "FIELD3": ""
+    },
+    {
+      "ID": 8126,
+      "Descripcion": "PERIODICO MILENIO DIARIO",
+      "FIELD3": ""
+    },
+    {
+      "ID": 8127,
+      "Descripcion": "PERIODICO EL SOL DE TOLUCA",
+      "FIELD3": ""
+    },
+    {
+      "ID": 8128,
+      "Descripcion": "PERIODICO NOVEDADES QUINTANA ROO",
+      "FIELD3": ""
+    },
+    {
+      "ID": 8129,
+      "Descripcion": "PERIODICO LA VERDAD QUINTANA ROO",
+      "FIELD3": ""
+    },
+    {
+      "ID": 8130,
+      "Descripcion": "INTERNET REFORMA.COM",
+      "FIELD3": ""
+    },
+    {
+      "ID": 8131,
+      "Descripcion": "INTERNET FORBES.COM",
+      "FIELD3": ""
+    },
+    {
+      "ID": 8132,
+      "Descripcion": "MUPI HOSPITAL GENERAL",
+      "FIELD3": ""
+    },
+    {
+      "ID": 8133,
+      "Descripcion": "REVISTA TV NOTAS,PACHUCA",
+      "FIELD3": ""
+    },
+    {
+      "ID": 8134,
+      "Descripcion": "EVENTOS-FERIA DEL ZÓCALO",
+      "FIELD3": ""
+    },
+    {
+      "ID": 8135,
+      "Descripcion": "INTERNET – MAILING FACEBOOK",
+      "FIELD3": ""
+    },
+    {
+      "ID": 8136,
+      "Descripcion": "CALL CENTER/FOVI-SNTE",
+      "FIELD3": ""
+    },
+    {
+      "ID": 8137,
+      "Descripcion": "RESTAURANT EL RETORNO,PACHUCA",
+      "FIELD3": ""
+    },
+    {
+      "ID": 8138,
+      "Descripcion": "VALLA FIJA INFONAVIT,PACHUCA",
+      "FIELD3": ""
+    },
+    {
+      "ID": 8139,
+      "Descripcion": "AUTOBUSES DF",
+      "FIELD3": ""
+    },
+    {
+      "ID": 8140,
+      "Descripcion": "KIOSCOS DE PERIODICOS DF",
+      "FIELD3": ""
+    },
+    {
+      "ID": 8141,
+      "Descripcion": "VALLAS DF",
+      "FIELD3": ""
+    },
+    {
+      "ID": 8142,
+      "Descripcion": "ESPECTACULARES DF",
+      "FIELD3": ""
+    },
+    {
+      "ID": 8143,
+      "Descripcion": "PERIÓDICO EL GRÁFICO",
+      "FIELD3": ""
+    },
+    {
+      "ID": 8144,
+      "Descripcion": "PERIÓDICO PUBLIMETRO",
+      "FIELD3": ""
+    },
+    {
+      "ID": 8145,
+      "Descripcion": "REVISTA FORBES",
+      "FIELD3": ""
+    },
+    {
+      "ID": 8146,
+      "Descripcion": "REVISTA INMOBILIARE",
+      "FIELD3": ""
+    },
+    {
+      "ID": 8147,
+      "Descripcion": "REVISTA LÍDERES MEXICANOS",
+      "FIELD3": ""
+    },
+    {
+      "ID": 8148,
+      "Descripcion": "INTERNET FORBES",
+      "FIELD3": ""
+    },
+    {
+      "ID": 8149,
+      "Descripcion": "INTERNET CNN EXPANSIÓN",
+      "FIELD3": ""
+    },
+    {
+      "ID": 8150,
+      "Descripcion": "INTERNET LINKEDIN",
+      "FIELD3": ""
+    },
+    {
+      "ID": 8151,
+      "Descripcion": "RADIO ADELA MICHA",
+      "FIELD3": ""
+    },
+    {
+      "ID": 8152,
+      "Descripcion": "TELEVISA",
+      "FIELD3": ""
+    },
+    {
+      "ID": 8153,
+      "Descripcion": "TV AZTECA",
+      "FIELD3": ""
+    },
+    {
+      "ID": 8154,
+      "Descripcion": "ESPN",
+      "FIELD3": ""
+    },
+    {
+      "ID": 8155,
+      "Descripcion": "FOX SPORTS",
+      "FIELD3": ""
+    },
+    {
+      "ID": 8156,
+      "Descripcion": "EXPO VIVIENDA MONUMENTO A LA REVOLUCIÓN ",
+      "FIELD3": ""
+    },
+    {
+      "ID": 8157,
+      "Descripcion": "REFERIDO VIP",
+      "FIELD3": ""
+    },
+    {
+      "ID": 8158,
+      "Descripcion": "ESPECTACULAR LOS CONOS,PACHUCA",
+      "FIELD3": ""
+    },
+    {
+      "ID": 8159,
+      "Descripcion": "VOLANTEO RETEN,PACHUCA",
+      "FIELD3": ""
+    },
+    {
+      "ID": 8160,
+      "Descripcion": "PLAZA GALERÍAS,PACHUCA",
+      "FIELD3": ""
+    },
+    {
+      "ID": 8161,
+      "Descripcion": "CASTING MASTER CHEF",
+      "FIELD3": ""
+    },
+    {
+      "ID": 8162,
+      "Descripcion": "PODER JUDICIAL HIDALGO",
+      "FIELD3": ""
+    },
+    {
+      "ID": 8163,
+      "Descripcion": "FERIA TLALNEPANTLA",
+      "FIELD3": ""
+    },
+    {
+      "ID": 8164,
+      "Descripcion": "EXPO TU CASA TOTAL",
+      "FIELD3": ""
+    },
+    {
+      "ID": 8165,
+      "Descripcion": "SOCIO VIP,PACHUCA",
+      "FIELD3": ""
+    },
+    {
+      "ID": 8166,
+      "Descripcion": "CLARO SPORTS",
+      "FIELD3": ""
+    },
+    {
+      "ID": 8167,
+      "Descripcion": "INTERCAMBIO CARTERA VINTE ",
+      "FIELD3": ""
+    },
+    {
+      "ID": 8168,
+      "Descripcion": "VIVA ANUNCIOS PACHUCA",
+      "FIELD3": ""
+    },
+    {
+      "ID": 8169,
+      "Descripcion": "FERIA SNTE DF",
+      "FIELD3": ""
+    },
+    {
+      "ID": 8170,
+      "Descripcion": "EXPO FOVISSSTE ",
+      "FIELD3": ""
+    },
+    {
+      "ID": 8171,
+      "Descripcion": "EXPO MONUMENTO A LA REVOLUCIÓN",
+      "FIELD3": ""
+    },
+    {
+      "ID": 8172,
+      "Descripcion": "KPI,PACHUCA",
+      "FIELD3": ""
+    },
+    {
+      "ID": 8173,
+      "Descripcion": "PASO",
+      "FIELD3": ""
+    },
+    {
+      "ID": 8174,
+      "Descripcion": "EXPO ZÓCALO 2016",
+      "FIELD3": ""
+    },
+    {
+      "ID": 8175,
+      "Descripcion": "REFERIDO,PLAYA DEL CARMEN",
+      "FIELD3": ""
+    },
+    {
+      "ID": 8176,
+      "Descripcion": "VOLANTEO,PLAYA DEL CARMEN",
+      "FIELD3": ""
+    },
+    {
+      "ID": 8177,
+      "Descripcion": "GALLARDETES,PLAYA DEL CARMEN",
+      "FIELD3": ""
+    },
+    {
+      "ID": 8178,
+      "Descripcion": "PORTAL VINTE,PLAYA DEL CARMEN",
+      "FIELD3": ""
+    },
+    {
+      "ID": 8179,
+      "Descripcion": "PROSPECCION,PLAYA DEL CARMEN",
+      "FIELD3": ""
+    },
+    {
+      "ID": 8180,
+      "Descripcion": "RECOMENDADO,PLAYA DEL CARMEN",
+      "FIELD3": ""
+    },
+    {
+      "ID": 8181,
+      "Descripcion": "GRAN CINEMA,PLAYA DEL CARMEN",
+      "FIELD3": ""
+    },
+    {
+      "ID": 8182,
+      "Descripcion": "CAMIONETA ROTULADA,PLAYA DEL CARMEN",
+      "FIELD3": ""
+    },
+    {
+      "ID": 8183,
+      "Descripcion": "PLAZA LAS AMÉRICAS,PLAYA DEL CARMEN",
+      "FIELD3": ""
+    },
+    {
+      "ID": 8184,
+      "Descripcion": "ENCARTE RECIBOS DE CABLEMÁS,PLAYA DEL CARMEN",
+      "FIELD3": ""
+    },
+    {
+      "ID": 8185,
+      "Descripcion": "SEÑALETICA AV 115,PLAYA DEL CARMEN",
+      "FIELD3": ""
+    },
+    {
+      "ID": 8186,
+      "Descripcion": "FACEBOOK,PLAYA DEL CARMEN",
+      "FIELD3": ""
+    },
+    {
+      "ID": 8187,
+      "Descripcion": "WEB GUIA DE INMUEBLES,PLAYA DEL CARMEN",
+      "FIELD3": ""
+    },
+    {
+      "ID": 8188,
+      "Descripcion": "MAILING,PLAYA",
+      "FIELD3": ""
+    },
+    {
+      "ID": 8189,
+      "Descripcion": "BD INFONAVIT,PLAYA",
+      "FIELD3": ""
+    },
+    {
+      "ID": 8190,
+      "Descripcion": "BD FOVISSSTE,PLAYA",
+      "FIELD3": ""
+    },
+    {
+      "ID": 8191,
+      "Descripcion": "BD IMSS,PLAYA",
+      "FIELD3": ""
+    },
+    {
+      "ID": 8192,
+      "Descripcion": "ASESORES EXTERNOS,PLAYA",
+      "FIELD3": ""
+    },
+    {
+      "ID": 8193,
+      "Descripcion": "ESPECTACULAR CARR CANCÚN-PLAYA",
+      "FIELD3": ""
+    },
+    {
+      "ID": 8194,
+      "Descripcion": "ESPECTACULAR Y AV. 115,PLAYA",
+      "FIELD3": ""
+    },
+    {
+      "ID": 8195,
+      "Descripcion": "ESPECTACULAR ESQ COLOSIO Y 125,PLAYA",
+      "FIELD3": ""
+    },
+    {
+      "ID": 8196,
+      "Descripcion": "ESPECTACULAR ESQ CTM Y 125,PLAYA",
+      "FIELD3": ""
+    },
+    {
+      "ID": 8197,
+      "Descripcion": "ESPECTACULAR CAMINO AMÉRICAS,PLAYA",
+      "FIELD3": ""
+    },
+    {
+      "ID": 8198,
+      "Descripcion": "ESPECTACULAR FRENTE A LOS OLIVOS,PLAYA",
+      "FIELD3": ""
+    },
+    {
+      "ID": 8199,
+      "Descripcion": "EXPO TU CASA TOTAL,PLAYA",
+      "FIELD3": ""
+    },
+    {
+      "ID": 8200,
+      "Descripcion": "INTERNET – MAILING FACEBOOK,PLAYA",
+      "FIELD3": ""
+    },
+    {
+      "ID": 8201,
+      "Descripcion": "REVISTA ENCUENTRA TU CASA,PACHUCA",
+      "FIELD3": ""
+    },
+    {
+      "ID": 8202,
+      "Descripcion": "PERLA NEGRA VINTE",
+      "FIELD3": ""
+    },
+    {
+      "ID": 8203,
+      "Descripcion": "CARTELERA MEX LAREDO (ESQ. BONFIL),PACHUCA",
+      "FIELD3": ""
+    },
+    {
+      "ID": 8204,
+      "Descripcion": "PUBLIPUENTE PITAYAS,PACHUCA",
+      "FIELD3": ""
+    },
+    {
+      "ID": 8205,
+      "Descripcion": "PUBLIPUENTE LAREDO-MEX,PACHUCA",
+      "FIELD3": ""
+    },
+    {
+      "ID": 8206,
+      "Descripcion": "PUBLIPUENTE MEX-PACHUCA",
+      "FIELD3": ""
+    },
+    {
+      "ID": 8207,
+      "Descripcion": "ESPECTACULAR BIPOLAR ACCESO MADEIRA,PACHUCA",
+      "FIELD3": ""
+    },
+    {
+      "ID": 8208,
+      "Descripcion": "ESPECTACULAR TULPETLAC,PACHUCA",
+      "FIELD3": ""
+    },
+    {
+      "ID": 8209,
+      "Descripcion": "RUTA MADEIRA,PACHUCA",
+      "FIELD3": ""
+    },
+    {
+      "ID": 8210,
+      "Descripcion": "FACEBOOK,PACHUCA",
+      "FIELD3": ""
+    },
+    {
+      "ID": 8211,
+      "Descripcion": "GOOGLE ADWORDS,PACHUCA",
+      "FIELD3": ""
+    },
+    {
+      "ID": 8212,
+      "Descripcion": "MAILING,PACHUCA",
+      "FIELD3": ""
+    },
+    {
+      "ID": 8213,
+      "Descripcion": "SITIO VENTA CASAS,PACHUCA",
+      "FIELD3": ""
+    },
+    {
+      "ID": 8214,
+      "Descripcion": "PÁGINA DE INTERNET VINTE,PACHUCA",
+      "FIELD3": ""
+    },
+    {
+      "ID": 8215,
+      "Descripcion": "DISEÑO DE PROGRAMA DE REFIERE Y GANA",
+      "FIELD3": ""
+    },
+    {
+      "ID": 8216,
+      "Descripcion": "RADIO 95.3 AMOR,PACHUCA",
+      "FIELD3": ""
+    },
+    {
+      "ID": 8217,
+      "Descripcion": "RADIO ENLACE DEPORTIVO,PACHUCA",
+      "FIELD3": ""
+    },
+    {
+      "ID": 8218,
+      "Descripcion": "CORRESPONDENCIA SORTEADOS FOVISSSTE,PACHUCA",
+      "FIELD3": ""
+    },
+    {
+      "ID": 8219,
+      "Descripcion": "EXPO VIVIENDA ZÓCALO,PACHUCA",
+      "FIELD3": ""
+    },
+    {
+      "ID": 8220,
+      "Descripcion": "EXPO CANADEVI TUZOFORUM,PACHUCA",
+      "FIELD3": ""
+    },
+    {
+      "ID": 8221,
+      "Descripcion": "EQUIPO DE CALL CENTER REGIONAL,PACHUCA",
+      "FIELD3": ""
+    },
+    {
+      "ID": 8222,
+      "Descripcion": "ESTRATEGIA BANCOMER DURACIÓN 3 MESES,PACHUCA",
+      "FIELD3": ""
+    },
+    {
+      "ID": 8223,
+      "Descripcion": "PANTALLA DIGITAL METROBÚS DF,PLAYA DEL CARMEN",
+      "FIELD3": ""
+    },
+    {
+      "ID": 8224,
+      "Descripcion": "VOLANTEO RETEN MADEIRA,PACHUCA",
+      "FIELD3": ""
+    },
+    {
+      "ID": 8225,
+      "Descripcion": "CLIENTE VIP G7,PLAYA DEL CARMEN",
+      "FIELD3": ""
+    },
+    {
+      "ID": 8226,
+      "Descripcion": "EXPO CAPREPOL",
+      "FIELD3": ""
+    },
+    {
+      "ID": 8227,
+      "Descripcion": "GALLARDETES,R MADEIRA",
+      "FIELD3": ""
+    },
+    {
+      "ID": 8228,
+      "Descripcion": "METROS CÚBICOS,PACHUCA",
+      "FIELD3": ""
+    },
+    {
+      "ID": 8229,
+      "Descripcion": "PESCA ASESOR,TLALNEPANTLA",
+      "FIELD3": ""
+    },
+    {
+      "ID": 8230,
+      "Descripcion": "PESCA PROSPECCION,TLALNEPANTLA",
+      "FIELD3": ""
+    },
+    {
+      "ID": 8231,
+      "Descripcion": "FLUJO NATURAL,TLALNEPANTLA",
+      "FIELD3": ""
+    },
+    {
+      "ID": 8232,
+      "Descripcion": "PAE,TLALNEPANTLA",
+      "FIELD3": ""
+    },
+    {
+      "ID": 8233,
+      "Descripcion": "REFERIDO,TLALNEPANTLA",
+      "FIELD3": ""
+    },
+    {
+      "ID": 8234,
+      "Descripcion": "RECOMENDADO,TLALNEPANTLA",
+      "FIELD3": ""
+    },
+    {
+      "ID": 8235,
+      "Descripcion": "INTERNET,TLALNEPANTLA",
+      "FIELD3": ""
+    },
+    {
+      "ID": 8236,
+      "Descripcion": "LAMUDI,PACHUCA",
+      "FIELD3": ""
+    },
+    {
+      "ID": 8237,
+      "Descripcion": "AGENTES EXTERNOS,MADEIRA",
+      "FIELD3": ""
+    },
+    {
+      "ID": 8238,
+      "Descripcion": "CALL CENTER,MADEIRA",
+      "FIELD3": ""
+    },
+    {
+      "ID": 8239,
+      "Descripcion": "PAE VENTAS,MADEIRA",
+      "FIELD3": ""
+    },
+    {
+      "ID": 8240,
+      "Descripcion": "PROSPECCION EMPRESAS,MADEIRA",
+      "FIELD3": ""
+    },
+    {
+      "ID": 8241,
+      "Descripcion": "RECOMENDADO,MADEIRA",
+      "FIELD3": ""
+    },
+    {
+      "ID": 8242,
+      "Descripcion": "VOLANTEO,MADEIRA",
+      "FIELD3": ""
+    },
+    {
+      "ID": 8243,
+      "Descripcion": "PROSPECCIÓN RETEN,NAVARRA",
+      "FIELD3": ""
+    },
+    {
+      "ID": 8244,
+      "Descripcion": "PROSPECCIÓN RETEN,MADEIRA",
+      "FIELD3": ""
+    },
+    {
+      "ID": 8245,
+      "Descripcion": "INTERNET TROVIT,PACHUCA",
+      "FIELD3": ""
+    },
+    {
+      "ID": 8246,
+      "Descripcion": "PROSPECCIÓN EN BANCOS,PACHUCA",
+      "FIELD3": ""
+    },
+    {
+      "ID": 8247,
+      "Descripcion": "CARTELERA REAL MADEIRA,PACHUCA",
+      "FIELD3": ""
+    },
+    {
+      "ID": 8248,
+      "Descripcion": "CAMIONES CDMX",
+      "FIELD3": ""
+    },
+    {
+      "ID": 8249,
+      "Descripcion": "NFL",
+      "FIELD3": ""
+    },
+    {
+      "ID": 8250,
+      "Descripcion": "BICIS CDMX",
+      "FIELD3": ""
+    },
+    {
+      "ID": 8251,
+      "Descripcion": "SPOTIFY VINTE",
+      "FIELD3": ""
+    },
+    {
+      "ID": 8252,
+      "Descripcion": "EXPANSIÓN WEB",
+      "FIELD3": ""
+    },
+    {
+      "ID": 8253,
+      "Descripcion": "CAPTRALIR",
+      "FIELD3": ""
+    },
+    {
+      "ID": 8254,
+      "Descripcion": "YOUTUBE VINTE",
+      "FIELD3": ""
+    },
+    {
+      "ID": 8255,
+      "Descripcion": "INSTAGRAM VINTE",
+      "FIELD3": ""
+    },
+    {
+      "ID": 8256,
+      "Descripcion": "VIVANUNCIOS,PLAYA",
+      "FIELD3": ""
+    },
+    {
+      "ID": 8257,
+      "Descripcion": "RECOMENDADOS",
+      "FIELD3": ""
+    },
+    {
+      "ID": 8258,
+      "Descripcion": "LANDING PAGE REAL SOLARE,QUERÉTARO",
+      "FIELD3": ""
+    },
+    {
+      "ID": 8259,
+      "Descripcion": "PLAZA GALERÍAS,QUERÉTARO",
+      "FIELD3": ""
+    },
+    {
+      "ID": 8260,
+      "Descripcion": "PLAZA ECATEPEC,TECÁMAC",
+      "FIELD3": ""
+    },
+    {
+      "ID": 8261,
+      "Descripcion": "REVISTAS",
+      "FIELD3": ""
+    },
+    {
+      "ID": 8262,
+      "Descripcion": "PERIÓDICOS",
+      "FIELD3": ""
+    },
+    {
+      "ID": 8263,
+      "Descripcion": "RADIO",
+      "FIELD3": ""
+    },
+    {
+      "ID": 8264,
+      "Descripcion": "PLAZA COMERCIAL",
+      "FIELD3": ""
+    },
+    {
+      "ID": 8265,
+      "Descripcion": "FERIA/EVENTO",
+      "FIELD3": ""
+    },
+    {
+      "ID": 8266,
+      "Descripcion": "TELEVISIÓN",
+      "FIELD3": ""
+    },
+    {
+      "ID": 8267,
+      "Descripcion": "GOOGLE",
+      "FIELD3": ""
+    },
+    {
+      "ID": 8268,
+      "Descripcion": "VOLANTEO",
+      "FIELD3": ""
+    },
+    {
+      "ID": 8269,
+      "Descripcion": "FACEBOOK",
+      "FIELD3": ""
+    },
+    {
+      "ID": 8270,
+      "Descripcion": "VINTE.COM.MX",
+      "FIELD3": ""
+    },
+    {
+      "ID": 8271,
+      "Descripcion": "VISITA A TU EMPRESA",
+      "FIELD3": ""
+    },
+    {
+      "ID": 8272,
+      "Descripcion": "REFERIDOS",
+      "FIELD3": ""
+    },
+    {
+      "ID": 8273,
+      "Descripcion": "VINTE.COM.MX",
+      "FIELD3": ""
+    },
+    {
+      "ID": 8274,
+      "Descripcion": "GOOGLE ",
+      "FIELD3": ""
+    },
+    {
+      "ID": 8275,
+      "Descripcion": "ESPECTACULARES",
+      "FIELD3": ""
+    },
+    {
+      "ID": 8276,
+      "Descripcion": "VISITA A TU EMPRESA",
+      "FIELD3": ""
+    },
+    {
+      "ID": 8277,
+      "Descripcion": "LETREROS EN POSTES",
+      "FIELD3": ""
+    },
+    {
+      "ID": 8278,
+      "Descripcion": "VOLANTEO",
+      "FIELD3": ""
+    },
+    {
+      "ID": 8279,
+      "Descripcion": "REVISTA",
+      "FIELD3": ""
+    },
+    {
+      "ID": 8280,
+      "Descripcion": "PERIÓDICO",
+      "FIELD3": ""
+    },
+    {
+      "ID": 8281,
+      "Descripcion": "RADIO",
+      "FIELD3": ""
+    },
+    {
+      "ID": 8282,
+      "Descripcion": "TELEVISIÓN",
+      "FIELD3": ""
+    },
+    {
+      "ID": 8283,
+      "Descripcion": "RECOMENDADO",
+      "FIELD3": ""
+    },
+    {
+      "ID": 8284,
+      "Descripcion": "REFERIDO",
+      "FIELD3": ""
+    },
+    {
+      "ID": 8285,
+      "Descripcion": "FERIA/EVENTO",
+      "FIELD3": ""
+    },
+    {
+      "ID": 8286,
+      "Descripcion": "PLAZA COMERCIAL",
+      "FIELD3": ""
+    },
+    {
+      "ID": 8287,
+      "Descripcion": "FACEBOOK ASESOR,CANCÚN",
+      "FIELD3": ""
+    },
+    {
+      "ID": 8288,
+      "Descripcion": "FACEBOOK PLAZA,CANCÚN",
+      "FIELD3": ""
+    },
+    {
+      "ID": 8289,
+      "Descripcion": "GOOGLE VIZCAYA,TECÁMAC",
+      "FIELD3": ""
+    },
+    {
+      "ID": 8290,
+      "Descripcion": "ICASAS,TECÁMAC",
+      "FIELD3": ""
+    },
+    {
+      "ID": 8291,
+      "Descripcion": "FACEBOOK VINTE",
+      "FIELD3": ""
+    },
+    {
+      "ID": 9291,
+      "Descripcion": "PAE VENTAS,MONTERREY ",
+      "FIELD3": ""
+    },
+    {
+      "ID": 9292,
+      "Descripcion": "PAGINA WEB MONTALTO,MONTERREY",
+      "FIELD3": ""
+    },
+    {
+      "ID": 9295,
+      "Descripcion": "EXPO FONATUR,PACHUCA",
+      "FIELD3": ""
+    },
+    {
+      "ID": 9296,
+      "Descripcion": "INTERNET",
+      "FIELD3": ""
+    },
+    {
+      "ID": 9297,
+      "Descripcion": "FACEBOOK VINTE",
+      "FIELD3": ""
+    },
+    {
+      "ID": 9298,
+      "Descripcion": "PAE VENTAS",
+      "FIELD3": ""
+    },
+    {
+      "ID": 9299,
+      "Descripcion": "FACEBOOK",
+      "FIELD3": ""
+    },
+    {
+      "ID": 9300,
+      "Descripcion": "DIGITAL VENTAS",
+      "FIELD3": ""
+    },
+    {
+      "ID": 9301,
+      "Descripcion": "FACEBOOK AGENCIA",
+      "FIELD3": ""
+    },
+    {
+      "ID": 9302,
+      "Descripcion": "PROSPECCIÓN VÍA REAL,TECÁMAC",
+      "FIELD3": ""
+    },
+    {
+      "ID": 9303,
+      "Descripcion": "PUNTO DE ATENCIÓN EL CID,TECÁMAC",
+      "FIELD3": ""
+    },
+    {
+      "ID": 9304,
+      "Descripcion": "FACEBOOK ASESOR,TECÁMAC",
+      "FIELD3": ""
+    },
+    {
+      "ID": 9305,
+      "Descripcion": "METROBÚS CDMX,TECÁMAC",
+      "FIELD3": ""
+    },
+    {
+      "ID": 9306,
+      "Descripcion": "BASE FOVISSSTE,PUEBLA",
+      "FIELD3": ""
+    },
+    {
+      "ID": 9308,
+      "Descripcion": "FACEBOOK ASESOR,MONTERREY",
+      "FIELD3": ""
+    },
+    {
+      "ID": 9309,
+      "Descripcion": "ASESOR EXTERNO,VINTE MYKBA",
+      "FIELD3": ""
+    },
+    {
+      "ID": 9310,
+      "Descripcion": "BROCKER FORÁNEO,VINTE MYKBA",
+      "FIELD3": ""
+    },
+    {
+      "ID": 9311,
+      "Descripcion": "ESPECTACULARES,VINTE MYKBA",
+      "FIELD3": ""
+    },
+    {
+      "ID": 9312,
+      "Descripcion": "ESPECTACULAR AV. PINTORES,VINTE MYKBA",
+      "FIELD3": ""
+    },
+    {
+      "ID": 9313,
+      "Descripcion": "ESPECTACULAR FILTRO POLICIACO,VINTE MYKBA",
+      "FIELD3": ""
+    },
+    {
+      "ID": 9314,
+      "Descripcion": "ESPECTACULAR CIUDAD MAYAKOBA,VINTE MYKBA",
+      "FIELD3": ""
+    },
+    {
+      "ID": 9315,
+      "Descripcion": "LA VUELTA MAYAKOBA ,VINTE MYKBA",
+      "FIELD3": ""
+    },
+    {
+      "ID": 9316,
+      "Descripcion": "OHL CLASSIC,VINTE MYKBA",
+      "FIELD3": ""
+    },
+    {
+      "ID": 9317,
+      "Descripcion": "FÓRMULA 4,VINTE MYKBA",
+      "FIELD3": ""
+    },
+    {
+      "ID": 9318,
+      "Descripcion": "CARRERA MAYAKOBA ,VINTE MYKBA",
+      "FIELD3": ""
+    },
+    {
+      "ID": 9319,
+      "Descripcion": "BEER AND FOOD FESTIVAL,VINTE MYKBA",
+      "FIELD3": ""
+    },
+    {
+      "ID": 9320,
+      "Descripcion": "FOOD TRUCK FEST ,VINTE MYKBA",
+      "FIELD3": ""
+    },
+    {
+      "ID": 9321,
+      "Descripcion": "GOLF CON LAS ESTRELLAS,VINTE MYKBA",
+      "FIELD3": ""
+    },
+    {
+      "ID": 9322,
+      "Descripcion": "FERIA/EXPO,VINTE MYKBA",
+      "FIELD3": ""
+    },
+    {
+      "ID": 9323,
+      "Descripcion": "EXPO TU CASA TOTAL,VINTE MYKBA",
+      "FIELD3": ""
+    },
+    {
+      "ID": 9324,
+      "Descripcion": "EXPO DIGITAL ENCUENTRA TU CASA,VINTE MYKBA",
+      "FIELD3": ""
+    },
+    {
+      "ID": 9325,
+      "Descripcion": "FACEBOOK,VINTE MYKBA",
+      "FIELD3": ""
+    },
+    {
+      "ID": 9326,
+      "Descripcion": "PÁGINA WEB,VINTE MYKBA",
+      "FIELD3": ""
+    },
+    {
+      "ID": 9327,
+      "Descripcion": "TELEMARKETING Y SMS,VINTE MYKBA",
+      "FIELD3": ""
+    },
+    {
+      "ID": 9328,
+      "Descripcion": "MERCADO LIBRE,VINTE MYKBA",
+      "FIELD3": ""
+    },
+    {
+      "ID": 9329,
+      "Descripcion": "METROS CÚBICOS,VINTE MYKBA",
+      "FIELD3": ""
+    },
+    {
+      "ID": 9330,
+      "Descripcion": "GUÍA DE INMUEBLES,VINTE MYKBA",
+      "FIELD3": ""
+    },
+    {
+      "ID": 9331,
+      "Descripcion": "INTERNET INMUEBLES 24,VINTE MYKBA",
+      "FIELD3": ""
+    },
+    {
+      "ID": 9332,
+      "Descripcion": "TU CASA ONLINE,VINTE MYKBA",
+      "FIELD3": ""
+    },
+    {
+      "ID": 9333,
+      "Descripcion": "BOT,FACEBOOK PLAZA,VINTE MYKBA",
+      "FIELD3": ""
+    },
+    {
+      "ID": 9334,
+      "Descripcion": "INSTAGRAM,VINTE MYKBA",
+      "FIELD3": ""
+    },
+    {
+      "ID": 9335,
+      "Descripcion": "WEB CDMKB,VINTE MYKBA",
+      "FIELD3": ""
+    },
+    {
+      "ID": 9336,
+      "Descripcion": "FACEBOOK CDMKB,VINTE MYKBA",
+      "FIELD3": ""
+    },
+    {
+      "ID": 9337,
+      "Descripcion": "CIUDAD MAYAKOBA,VINTE MYKBA",
+      "FIELD3": ""
+    },
+    {
+      "ID": 9338,
+      "Descripcion": "BANNER,VINTE MYKBA",
+      "FIELD3": ""
+    },
+    {
+      "ID": 9339,
+      "Descripcion": "PENDONES/GALLARDETES,VINTE MYKBA",
+      "FIELD3": ""
+    },
+    {
+      "ID": 9340,
+      "Descripcion": "MAILING,VINTE MYKBA",
+      "FIELD3": ""
+    },
+    {
+      "ID": 9341,
+      "Descripcion": "PROMOCIÓN CAMPAÑA BUEN FIN,VINTE MYKBA",
+      "FIELD3": ""
+    },
+    {
+      "ID": 9342,
+      "Descripcion": "CAMIÓN,VINTE MYKBA",
+      "FIELD3": ""
+    },
+    {
+      "ID": 9343,
+      "Descripcion": "OHL CLASSIC AT MAYAKOBA 2017,VINTE MYKBA",
+      "FIELD3": ""
+    },
+    {
+      "ID": 9344,
+      "Descripcion": "VENTA VINTE,VINTE MYKBA",
+      "FIELD3": ""
+    },
+    {
+      "ID": 9345,
+      "Descripcion": "5TA CARRERA CIUDAD MAYAKOBA ,VINTE MYKBA",
+      "FIELD3": ""
+    },
+    {
+      "ID": 9349,
+      "Descripcion": "3ER FESTIVAL FOOD TRUCK CIUDAD MAYAKOBA",
+      "FIELD3": ""
+    },
+    {
+      "ID": 9350,
+      "Descripcion": "ROBOT VIC,VINTE MYKBA",
+      "FIELD3": ""
+    },
+    {
+      "ID": 9351,
+      "Descripcion": "PROMOTORÍA EXTERNA,VINTE MYKBA",
+      "FIELD3": ""
+    },
+    {
+      "ID": 9352,
+      "Descripcion": "PASO JARDINES,VINTE MYKBA",
+      "FIELD3": ""
+    },
+    {
+      "ID": 9353,
+      "Descripcion": "PRENSA,VINTE MYKBA",
+      "FIELD3": ""
+    },
+    {
+      "ID": 9354,
+      "Descripcion": "PLAZA LAS AMÉRICAS,VINTE MYKBA",
+      "FIELD3": ""
+    },
+    {
+      "ID": 9355,
+      "Descripcion": "PROSPECCIÓN (PROM DIR),VINTE MYKBA",
+      "FIELD3": ""
+    },
+    {
+      "ID": 9356,
+      "Descripcion": "PROSPECCIÓN FOVISSSTE,VINTE MYKBA",
+      "FIELD3": ""
+    },
+    {
+      "ID": 9357,
+      "Descripcion": "PROSPECCIÓN CANCÚN,VINTE MYKBA",
+      "FIELD3": ""
+    },
+    {
+      "ID": 9358,
+      "Descripcion": "PROSPECCION OHL CLASSIC AT MAYAKOBA,VINTE MYKBA",
+      "FIELD3": ""
+    },
+    {
+      "ID": 9359,
+      "Descripcion": "RADIO,VINTE MYKBA",
+      "FIELD3": ""
+    },
+    {
+      "ID": 9360,
+      "Descripcion": "RECOMENDADO,VINTE MYKBA",
+      "FIELD3": ""
+    },
+    {
+      "ID": 9361,
+      "Descripcion": "COLABORADOR OHL,VINTE MYKBA",
+      "FIELD3": ""
+    },
+    {
+      "ID": 9362,
+      "Descripcion": "COLABORADOR VINTE,VINTE MYKBA",
+      "FIELD3": ""
+    },
+    {
+      "ID": 9363,
+      "Descripcion": "REFERIDO VIP,VINTE MYKBA",
+      "FIELD3": ""
+    },
+    {
+      "ID": 9364,
+      "Descripcion": "REFERIDO,VINTE MYKBA",
+      "FIELD3": ""
+    },
+    {
+      "ID": 9365,
+      "Descripcion": "GUÍA DE INMUEBLES,VINTE MYKBA",
+      "FIELD3": ""
+    },
+    {
+      "ID": 9366,
+      "Descripcion": "VOLANTEO,VINTE MYKBA",
+      "FIELD3": ""
+    },
+    {
+      "ID": 9367,
+      "Descripcion": "CALL CENTER VINTE",
+      "FIELD3": ""
+    },
+    {
+      "ID": 9368,
+      "Descripcion": "#235 CALL CENTER VINTE",
+      "FIELD3": ""
+    }
+  ],
+  "PuntoVenta": [
+    {
+      "ID": 1,
+      "Descripcion": "TECÁMAC VIM"
+    },
+    {
+      "ID": 2,
+      "Descripcion": "SAN JERÓNIMO"
+    },
+    {
+      "ID": 3,
+      "Descripcion": "ECATEPEC"
+    },
+    {
+      "ID": 4,
+      "Descripcion": "PACHUCA"
+    },
+    {
+      "ID": 5,
+      "Descripcion": "PLAYA DEL CARMEN"
+    },
+    {
+      "ID": 6,
+      "Descripcion": "QUERÉTARO"
+    },
+    {
+      "ID": 7,
+      "Descripcion": "TULA"
+    },
+    {
+      "ID": 8,
+      "Descripcion": "CANCÚN"
+    },
+    {
+      "ID": 9,
+      "Descripcion": "ZEMPOALA"
+    },
+    {
+      "ID": 10,
+      "Descripcion": "TLALNEPANTLA"
+    },
+    {
+      "ID": 11,
+      "Descripcion": "PUEBLA"
+    },
+    {
+      "ID": 12,
+      "Descripcion": "LOCAL LÓPEZ PORTILLO"
+    },
+    {
+      "ID": 13,
+      "Descripcion": "P. CARMEN (URBA)"
+    },
+    {
+      "ID": 14,
+      "Descripcion": "CATANIA RESIDENCIAL"
+    },
+    {
+      "ID": 15,
+      "Descripcion": "MADEIRA PACHUCA"
+    },
+    {
+      "ID": 16,
+      "Descripcion": "LA VISTA RESIDENCIAL"
+    },
+    {
+      "ID": 17,
+      "Descripcion": "QUERALT"
+    },
+    {
+      "ID": 18,
+      "Descripcion": "TECÁMAC VIS"
+    },
+    {
+      "ID": 19,
+      "Descripcion": "MONTALTO RESIDENCIAL"
+    },
+    {
+      "ID": 20,
+      "Descripcion": "VINTE MAYAKOBA"
     }
   ]
 }
