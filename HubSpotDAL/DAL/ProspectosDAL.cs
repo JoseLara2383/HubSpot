@@ -17,11 +17,11 @@ namespace HubSpotDAL.DAL
             {
                 if (Contacts.Count > 0)
                 {
-                    List<Prospecto> Prospectos = new List<Prospecto>();
+                    ListProspectos Prospectos = new ListProspectos();
                     foreach (var itemContact in Contacts)
                     {
 
-                        Prospectos.Add(new Prospecto()
+                        Prospectos.Prospectos.Add(new Prospecto()
                         {
                             IdHubspot = itemContact.id,
                             Nombre = itemContact.properties.nombre_completo,
@@ -43,17 +43,17 @@ namespace HubSpotDAL.DAL
                     }
 
                     //Send data to krm
-                    if (Prospectos.Count > 0)
+                    if (Prospectos.Prospectos.Count > 0)
                     {
                         KRMApi.SendProspectostoKRM(Prospectos);
                     }
                 }
 
             }
-            catch (Exception)
+            catch (Exception ex) 
             {
 
-                throw;
+                Helpers.ExcepcionLog.WriteLog("SendProspectotoKRM", ex);
             }
         }
 

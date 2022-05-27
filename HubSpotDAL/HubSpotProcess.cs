@@ -110,7 +110,7 @@ namespace HubSpotDAL
         {
             SettingSync.getSetting();
 
-           List< Model.Prospecto> oProspectos = new List<Model.Prospecto>();
+           Model.ListProspectos oProspectos = new Model.ListProspectos();
 
             Model.Prospecto Prosp = new Model.Prospecto()
             {
@@ -132,7 +132,7 @@ namespace HubSpotDAL
                 CampañaPublicidad = "4681"
             };
 
-            oProspectos.Add(Prosp);
+            oProspectos.Prospectos.Add(Prosp);
 
           Prosp = new Model.Prospecto()
             {
@@ -154,7 +154,7 @@ namespace HubSpotDAL
                 CampañaPublicidad = "4681"
             };
 
-            oProspectos.Add(Prosp);
+            oProspectos.Prospectos.Add(Prosp);
 
            string test =await KRMApi.SendProspectostoKRM(oProspectos);
 

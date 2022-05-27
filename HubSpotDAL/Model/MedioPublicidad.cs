@@ -8,7 +8,7 @@ namespace HubSpotDAL.Model
 {
     internal class MedioPublicidad
     {
-        public string ID { get; set; }
+        public int ID { get; set; }
         public string Descripcion { get; set; }
     }
 }
