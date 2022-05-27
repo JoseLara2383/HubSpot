@@ -225,7 +225,7 @@ namespace HubSpotDAL.DAL
                         command.Parameters.Add(Param);
                         Param = new SqlParameter("@yotellevo", itemContact.properties.yotellevo);
                         command.Parameters.Add(Param);
-                        Param = new SqlParameter("@gander", itemContact.properties.gander);
+                        Param = new SqlParameter("@gander", itemContact.properties.gender);
                         command.Parameters.Add(Param);
                         Param = new SqlParameter("@email", itemContact.properties.email);
                         command.Parameters.Add(Param);

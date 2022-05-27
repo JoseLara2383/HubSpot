@@ -9,5 +9,7 @@ namespace HubSpotDAL.Model
     internal class ListProspectos
     {
         public List<Prospecto> Prospectos { get; set; } = new List<Prospecto>();
+        
+      
     }
 }

@@ -94,7 +94,7 @@ namespace HubSpotDAL.Model
         public string? username { get; set; }
         public string? visita { get; set; }
         public string? yotellevo { get; set; }
-        public string? gander { get; set; }
+        public string? gender { get; set; }
         public string? email { get; set; }
         public string? tipo_persona { get; set; }
         public string? estado_civil { get; set; }

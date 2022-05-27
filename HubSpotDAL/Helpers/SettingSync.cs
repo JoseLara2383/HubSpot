@@ -74,7 +74,7 @@ namespace HubSpotDAL.Helpers
             string CampaniaPublicidadoId = "0";
             if (!string.IsNullOrEmpty(_CampaniaPublicidad))
             {
-                var CampaniaPublicidad = HubSpotDAL.Helpers.SettingSync.SettingHubSpot.CampaniaPublicidad.Where(e => e.Descripcion == _CampaniaPublicidad).ToList();
+                var CampaniaPublicidad = HubSpotDAL.Helpers.SettingSync.SettingHubSpot.CampaniaPublicidad.Where(e => e.Descripcion.ToUpper().Replace(" ", "").Trim() == _CampaniaPublicidad.ToUpper().Replace(" ", "").Trim()).ToList();
                 CampaniaPublicidadoId = _CampaniaPublicidad != null && CampaniaPublicidad.Count > 0 ? CampaniaPublicidad[0].ID.ToString() : "0";
             }
 
@@ -86,7 +86,7 @@ namespace HubSpotDAL.Helpers
             string MedioPublicidadId = "0";
             if (!string.IsNullOrEmpty(_MedioPublicidad))
             {
-                var MedioPublicidad = HubSpotDAL.Helpers.SettingSync.SettingHubSpot.MedioPublicidad.Where(e => e.Descripcion == _MedioPublicidad).ToList();
+                var MedioPublicidad = HubSpotDAL.Helpers.SettingSync.SettingHubSpot.MedioPublicidad.Where(e => e.Descripcion.ToUpper().Replace(" ","").Trim() == _MedioPublicidad.ToUpper().Replace(" ", "").Trim()).ToList();
                 MedioPublicidadId = MedioPublicidad != null && MedioPublicidad.Count > 0 ? MedioPublicidad[0].ID.ToString() : "0";
             }
 
@@ -97,7 +97,7 @@ namespace HubSpotDAL.Helpers
             string PuntoVentaId = "0";
             if (!string.IsNullOrEmpty(_PuntoVenta))
             {
-                var PuntoVenta = HubSpotDAL.Helpers.SettingSync.SettingHubSpot.PuntoVenta.Where(e => e.Descripcion == _PuntoVenta).ToList();
+                var PuntoVenta = HubSpotDAL.Helpers.SettingSync.SettingHubSpot.PuntoVenta.Where(e => e.Descripcion.ToUpper().Trim().Replace(" ", "") == _PuntoVenta.ToUpper().Replace(" ", "").Trim()).ToList();
                 PuntoVentaId = PuntoVenta != null && PuntoVenta.Count > 0 ? PuntoVenta[0].ID.ToString() : "0";
             }
 

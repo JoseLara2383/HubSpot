@@ -11,17 +11,17 @@ namespace HubSpotDAL.DAL
 {
     internal class ProspectosDAL
     {
-        public void SendProspectotoKRM(string conexionString, List<ContactData> Contacts)
+        public async void SendProspectotoKRM(string conexionString, List<ContactData> Contacts)
         {
             try
             {
+                Prospecto Prospecto;
                 if (Contacts.Count > 0)
                 {
                     ListProspectos Prospectos = new ListProspectos();
                     foreach (var itemContact in Contacts)
                     {
-
-                        Prospectos.Prospectos.Add(new Prospecto()
+                        Prospecto = new Prospecto()
                         {
                             IdHubspot = itemContact.id,
                             Nombre = itemContact.properties.nombre_completo,
@@ -30,22 +30,24 @@ namespace HubSpotDAL.DAL
                             FechadeNacimiento = itemContact.properties.date_of_birth,
                             RFC = itemContact.properties.rfc,
                             Telefono = itemContact.properties.telefono_2,
-                            Genero = Helpers.SettingSync.GetGenero(itemContact.properties.gander),
+                            Genero = Helpers.SettingSync.GetGenero(itemContact.properties.gender),
                             TelefonoMovil = itemContact.properties.phone,
                             Email = itemContact.properties.correo_electrnico,
-                            TipoPersona = Helpers.SettingSync.GetTipoPersona(itemContact.properties.tipo_persona),
-                            EstadoCivil = Helpers.SettingSync.GetEstadoCivil(itemContact.properties.estado_civil),
+                            TipoPersona = itemContact.properties.tipo_persona,
+                            EstadoCivil = itemContact.properties.estado_civil,
                             Etapa = "1",
-                            PuntoVenta = itemContact.properties.punto_de_venta,
+                            PuntoVenta = Helpers.SettingSync.GetPuntoVenta(itemContact.properties.punto_de_venta),
                             MedioPubicidad = Helpers.SettingSync.GetMedioPublicidad(itemContact.properties.canal_tradicional),
                             CampañaPublicidad = Helpers.SettingSync.GetCampaniaPublicidad(itemContact.properties.campana),
-                        });
+                        };
+                        if(Prospecto.isValid())
+                            Prospectos.Prospectos.Add(Prospecto);;
                     }
 
                     //Send data to krm
                     if (Prospectos.Prospectos.Count > 0)
                     {
-                        KRMApi.SendProspectostoKRM(Prospectos);
+                      await  KRMApi.SendProspectostoKRM(Prospectos);
                     }
                 }
 
