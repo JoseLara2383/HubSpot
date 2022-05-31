@@ -27,7 +27,7 @@ namespace HubSpotDAL.DAL
                             Nombre = itemContact.properties.nombre_completo,
                             ApellidoPaterno = itemContact.properties.lastname,
                             ApellidoMaterno = itemContact.properties.apellido_materno,
-                            FechadeNacimiento = itemContact.properties.date_of_birth,
+                            FechadeNacimiento = String.IsNullOrEmpty(itemContact.properties.date_of_birth) ? "" : DateTime.Parse( itemContact.properties.date_of_birth).ToString("yyyy-MM-dd"),
                             RFC = itemContact.properties.rfc,
                             Telefono = itemContact.properties.telefono_2,
                             Genero = Helpers.SettingSync.GetGenero(itemContact.properties.gender),

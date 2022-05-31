@@ -8,6 +8,5 @@ var a = await HubSpotDAL.HubSpotProcess.GetContact();
 Console.WriteLine(a);
 
 Console.WriteLine("Finalizado");
-
-Console.ReadLine();
+//Console.ReadLine();
 
