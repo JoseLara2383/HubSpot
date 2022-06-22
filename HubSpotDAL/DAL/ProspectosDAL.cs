@@ -1,6 +1,7 @@
 ﻿using HubSpotDAL.EntityHS.ContactHS;
 using HubSpotDAL.Model;
 using HubSpotDAL.WebClient;
+using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -15,7 +16,9 @@ namespace HubSpotDAL.DAL
         {
             try
             {
-                Prospecto Prospecto;
+                string ResultKRM = string.Empty;
+                DAL.ContactDAL ContactDAL;
+                  Prospecto Prospecto;
                 if (Contacts.Count > 0)
                 {
                     ListProspectos Prospectos = new ListProspectos();
@@ -41,13 +44,42 @@ namespace HubSpotDAL.DAL
                             CampañaPublicidad = Helpers.SettingSync.GetCampaniaPublicidad(itemContact.properties.campana),
                         };
                         if(Prospecto.isValid())
-                            Prospectos.Prospectos.Add(Prospecto);;
+                            Prospectos.Prospectos.Add(Prospecto);
                     }
 
                     //Send data to krm
                     if (Prospectos.Prospectos.Count > 0)
                     {
-                      await  KRMApi.SendProspectostoKRM(Prospectos);
+                      ResultKRM =  await  KRMApi.SendProspectostoKRM(Prospectos);
+                        try
+                        {
+                            ResultKRM = ResultKRM.Replace("\\r\\n      ", "").Replace("\\r\\n  ", "").Replace("\\r\\n", "").Replace("\\\"", "\"").Replace("\"{", "{").Replace("}\"", "}");
+                            ProspectosResult PropespetosResult = JsonConvert.DeserializeObject<ProspectosResult>(ResultKRM);
+                            //Sacar los que fueron exitosos
+                           if (PropespetosResult!=null && PropespetosResult.Result.Count()>0)
+                            {
+                                string ListHuspotId = string.Empty;
+                              var ProspetotoKRM =   PropespetosResult.Result.Where(Prospecto => Prospecto.success == "True");
+                                foreach (var item in ProspetotoKRM)
+                                {
+                                    ListHuspotId = ListHuspotId ==string.Empty ? item.id_HubSpot :  string.Format("{0},{1}", ListHuspotId, item.id_HubSpot);
+                                }
+
+                                //Actualizar la Base de datos como enviado
+                                if (ListHuspotId != string.Empty)
+                                {
+                                    ContactDAL = new DAL.ContactDAL();
+                                    ContactDAL.InsUpdData(conexionString, ListHuspotId);
+                                }
+                            }
+
+
+                        }
+                        catch (Exception ex)
+                        {
+
+                            Helpers.ExcepcionLog.WriteLog("SendProspectostoKRM", "No se puedo procesar la respuesta de KRM: " + ex.Message);
+                        }
                     }
                 }
 

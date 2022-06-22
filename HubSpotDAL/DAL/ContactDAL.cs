@@ -23,17 +23,17 @@ namespace HubSpotDAL.DAL
                     command.Connection = connection;
                     command.CommandType = System.Data.CommandType.StoredProcedure;
                     command.CommandText = SP;
-                  
+
 
                     SqlParameter Param;
                     connection.Open();
                     foreach (var itemContact in DataResult.results)
                     {
                         command.Parameters.Clear();
-                        Param = new SqlParameter("@ID_Contacts",SqlDbType.BigInt);
+                        Param = new SqlParameter("@ID_Contacts", SqlDbType.BigInt);
                         Param.Direction = ParameterDirection.Output;
                         command.Parameters.Add(Param);
-                     
+
                         Param = new SqlParameter("@id", itemContact.id);
                         command.Parameters.Add(Param);
                         Param = new SqlParameter("@actualizado", itemContact.properties.actualizado);
@@ -238,11 +238,11 @@ namespace HubSpotDAL.DAL
 
 
 
-                       int  i =  command.ExecuteNonQuery();
+                        int i = command.ExecuteNonQuery();
 
-                        if (itemContact.properties.ID_Contacts ==0)
+                        if (itemContact.properties.ID_Contacts == 0)
                         {
-                            itemContact.properties.ID_Contacts =  command.Parameters["@ID_Contacts"].Value == DBNull.Value ? 0 : Convert.ToInt64(command.Parameters["@ID_Contacts"].Value);
+                            itemContact.properties.ID_Contacts = command.Parameters["@ID_Contacts"].Value == DBNull.Value ? 0 : Convert.ToInt64(command.Parameters["@ID_Contacts"].Value);
                         }
                     }
                 }
@@ -252,7 +252,37 @@ namespace HubSpotDAL.DAL
                 Helpers.ExcepcionLog.WriteLog("InsUpdData", ex);
             }
 
-          
+
+        }
+
+        public async void InsUpdData(string conexionString, string ContactIds)
+        {
+            // string message = string.Empty;
+            string SP = "dbo.st_UpdContacts_by_Id_HubSpot";
+            try
+            {
+                using (SqlConnection connection = new SqlConnection(conexionString))
+                {
+                    SqlCommand command = new SqlCommand();
+                    command.Connection = connection;
+                    command.CommandType = System.Data.CommandType.StoredProcedure;
+                    command.CommandText = SP;
+
+
+                    SqlParameter Param;
+                    connection.Open();
+
+                    Param = new SqlParameter("@ContactIds", ContactIds);
+                  
+                    command.Parameters.Add(Param);
+
+                    int i = command.ExecuteNonQuery();
+                }
+            }
+            catch (Exception ex)
+            {
+                Helpers.ExcepcionLog.WriteLog("InsUpdData_upd", ex);
+            }
         }
     }
 }
