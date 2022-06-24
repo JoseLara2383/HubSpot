@@ -103,6 +103,50 @@ namespace HubSpotDAL.WebClient
                 return "";
             }
         }
+        public static async Task<string> GettokenKRMUpd()
+        {
+            try
+            {
+
+                var url = Helpers.SettingSync.SettingHubSpot.UrlApiKRMTokenUpd;
+
+                //var json = Newtonsoft.Json.JsonConvert.SerializeObject(Prospectos);
+                HttpContent content = new FormUrlEncodedContent(new[]
+            {
+                new KeyValuePair<string, string>("username", Helpers.SettingSync.SettingHubSpot.User),
+                new KeyValuePair<string, string>("password", Helpers.SettingSync.SettingHubSpot.Password),
+                new KeyValuePair<string, string>("grant_type", Helpers.SettingSync.SettingHubSpot.Grant_type)
+            });
+
+               
+
+                //var data = new System.Net.Http.StringContent(json, Encoding.UTF8, "application/json");
+               // string baseUrl = Helpers.SettingSync.SettingHubSpot.UrlApiKRM;
+                using (var client = new HttpClient())
+                {
+                    //client.BaseAddress = new Uri(baseUrl);
+                    
+                    var responseTask = client.PostAsync(url, content);
+                    responseTask.Wait();
+                    string Result = string.Empty;
+                    if (responseTask.Result.IsSuccessStatusCode)
+                    {
+                        var jsonr = responseTask.Result.Content.ReadAsStringAsync();
+
+                        if (jsonr != null)
+                        {
+                            Result = jsonr.Result;
+                        }
+                    }
+                    return Result;
+                }
+            }
+            catch (Exception ex)
+            {
+                Helpers.ExcepcionLog.WriteLog("GettokenKRM", ex);
+                return "";
+            }
+        }
 
     }
 }

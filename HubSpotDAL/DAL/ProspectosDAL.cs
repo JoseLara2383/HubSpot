@@ -4,6 +4,7 @@ using HubSpotDAL.WebClient;
 using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -17,6 +18,7 @@ namespace HubSpotDAL.DAL
             try
             {
                 string ResultKRM = string.Empty;
+                string ListContact = string.Empty;
                 DAL.ContactDAL ContactDAL;
                   Prospecto Prospecto;
                 if (Contacts.Count > 0)
@@ -43,23 +45,35 @@ namespace HubSpotDAL.DAL
                             MedioPubicidad = Helpers.SettingSync.GetMedioPublicidad(itemContact.properties.canal_tradicional),
                             CampañaPublicidad = Helpers.SettingSync.GetCampaniaPublicidad(itemContact.properties.campana),
                         };
-                        if(Prospecto.isValid())
+                        if (Prospecto.isValid())
+                        {
                             Prospectos.Prospectos.Add(Prospecto);
+                            ListContact = ListContact==String.Empty ? Prospecto.IdHubspot : string.Format("{0},{1}", ListContact, Prospecto.IdHubspot);
+                           
+                        }
                     }
-
-                    //Send data to krm
+                  
+                    
                     if (Prospectos.Prospectos.Count > 0)
                     {
-                      ResultKRM =  await  KRMApi.SendProspectostoKRM(Prospectos);
+
+                        //Ver si estos propectos se ha enviado a KRM
+                      DataTable dtContacs=  LoadContacts(conexionString, ListContact);
+
+                        Prospectos.Prospectos.RemoveAll(p => p.IdHubspot == isPropectoEnviatoKRM(dtContacs, p.IdHubspot));
+
+                        //Send data to krm
+                        ResultKRM =  await  KRMApi.SendProspectostoKRM(Prospectos);
                         try
                         {
-                            ResultKRM = ResultKRM.Replace("\\r\\n      ", "").Replace("\\r\\n  ", "").Replace("\\r\\n", "").Replace("\\\"", "\"").Replace("\"{", "{").Replace("}\"", "}");
+                            //ResultKRM = ResultKRM.Replace("\\r\\n      ", "").Replace("\\r\\n  ", "").Replace("\\r\\n", "").Replace("\\\"", "\"").Replace("\"{", "{").Replace("}\"", "}");
+                            ResultKRM = ResultKRM.Replace(@"\r\n","").Replace(@"\r\n\","").Replace(@"\", "").Replace("\"{", "{").Replace("}\"", "}");
                             ProspectosResult PropespetosResult = JsonConvert.DeserializeObject<ProspectosResult>(ResultKRM);
                             //Sacar los que fueron exitosos
                            if (PropespetosResult!=null && PropespetosResult.Result.Count()>0)
                             {
                                 string ListHuspotId = string.Empty;
-                              var ProspetotoKRM =   PropespetosResult.Result.Where(Prospecto => Prospecto.success == "True");
+                              var ProspetotoKRM =   PropespetosResult.Result.Where(Prospecto => Prospecto.success.ToLower() == "true");
                                 foreach (var item in ProspetotoKRM)
                                 {
                                     ListHuspotId = ListHuspotId ==string.Empty ? item.id_HubSpot :  string.Format("{0},{1}", ListHuspotId, item.id_HubSpot);
@@ -91,9 +105,21 @@ namespace HubSpotDAL.DAL
             }
         }
 
-       
 
-        
+        private DataTable LoadContacts(string conexionString, string ListContact)
+        {
+            ContactDAL ContactDAL = new ContactDAL();
+            DataTable dt =  ContactDAL.LoadContact(conexionString, ListContact);
+
+            return dt;
+        }
+
+        private string isPropectoEnviatoKRM(DataTable Prospectos, string id_HubSpot)
+        {
+            var Prospectp = Prospectos.Select("id=" + id_HubSpot);
+            
+            return Prospectp==null ? "0" : Prospectp[0]["id"].ToString();
+        }
        
     }
 }

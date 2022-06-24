@@ -284,5 +284,42 @@ namespace HubSpotDAL.DAL
                 Helpers.ExcepcionLog.WriteLog("InsUpdData_upd", ex);
             }
         }
+
+        public DataTable LoadContact(string conexionString, string ContactIds)
+        {
+            // string message = string.Empty;
+            string SP = "dbo.st_Contacts_by_Id_HubSpot";
+            DataTable dt = new DataTable();
+            try
+            {
+               
+                using (SqlConnection connection = new SqlConnection(conexionString))
+                {
+                    SqlCommand command = new SqlCommand();
+                    command.Connection = connection;
+                    command.CommandType = System.Data.CommandType.StoredProcedure;
+                    command.CommandText = SP;
+
+                    SqlParameter Param;
+                    connection.Open();
+
+                    Param = new SqlParameter("@ContactIds", ContactIds);
+                    command.Parameters.Add(Param);
+                    
+                    SqlDataAdapter adapter = new SqlDataAdapter();
+                    adapter.SelectCommand = command;
+                   
+                    adapter.Fill(dt);
+
+                  
+                }
+               
+            }
+            catch (Exception ex)
+            {
+                Helpers.ExcepcionLog.WriteLog("InsUpdData_upd", ex);
+            }
+            return dt;
+        }
     }
 }

@@ -10,6 +10,8 @@
   "NumItemsxPage": 100,
   "HorasSQL": 0,
   "FechaFiltro": "919747892000",
+  "UrlApiKRMUpd": "http://krm.vinte.com.mx/Krm-HSQA/api/data/krmprospectos/hubspotQA",
+  "UrlApiKRMTokenUpd": "http://krm.vinte.com.mx/Krm-HSQA/token",
   "ColumsEntity": [
     {
       "Entity": "Contact",
