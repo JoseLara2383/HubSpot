@@ -255,7 +255,7 @@ namespace HubSpotDAL.DAL
 
         }
 
-        public async void InsUpdData(string conexionString, string ContactIds)
+        public async void InsUpdData(string conexionString, string ContactIds, Boolean EnviadoKRM)
         {
             // string message = string.Empty;
             string SP = "dbo.st_UpdContacts_by_Id_HubSpot";
@@ -272,8 +272,10 @@ namespace HubSpotDAL.DAL
                     SqlParameter Param;
                     connection.Open();
 
-                    Param = new SqlParameter("@ContactIds", ContactIds);
-                  
+                    Param = new SqlParameter("@ContactIds", ContactIds);                
+                    command.Parameters.Add(Param);
+
+                    Param = new SqlParameter("@EnviadoKRM", EnviadoKRM);
                     command.Parameters.Add(Param);
 
                     int i = command.ExecuteNonQuery();

@@ -25,7 +25,9 @@ namespace HubSpotDAL.Model
         public Int32 NumItemsxPage { get; set; } = 100;
 
         public Int32 HorasSQL { get; set; } = 0;
-        public string FechaFiltro { get; set; } 
+        public string FechaFiltro { get; set; }
+
+        public string FechaInicioHubSpot { get; set; } = "1999-01-01";
         public List<ColumnsEntity> ColumsEntity { get; set; }
         public List<PuntoVenta> PuntoVenta { get; set; }
         public List<MedioPublicidad> MedioPublicidad { get; set; }

@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using HubSpotDAL.EntityHS.ContactHS;
 using HubSpotDAL.Helpers;
+using HubSpotDAL.Model;
 using HubSpotDAL.WebClient;
 using Newtonsoft.Json;
 using static HubSpotDAL.Helpers.EnumHubspot;
@@ -94,6 +95,21 @@ namespace HubSpotDAL
         public static async Task<string> UpdContact()
         {
             SettingSync.getSetting();
+
+            string FechaInicioHubSpot = SettingSync.SettingHubSpot.FechaInicioHubSpot;
+
+            //Obtener Schedule
+            ConfScheduleHubSpot.getScheduleHubSpot(1, Convert.ToDateTime(FechaInicioHubSpot));
+
+            string FechaFinal = DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss");
+            //Obtener  los datos de la Api de KRM
+           var prospectos= await KRMApi.GetProspectostoKRM(new PropectoParamGetKRM() { 
+                                                            Fecha_Inicial=ConfScheduleHubSpot.ScheduleHubSpot.FechaUltimaEjecucion.ToString("yyyy-MM-dd HH:mm:ss"),
+                                                            Fecha_Final =FechaFinal 
+                                                            });
+            //Actualizar campos de hubSpot
+
+            //Actualizar el fecha de incio para la siguiente iteración.
 
             ContactDataUpd contactData = new ContactDataUpd();
 

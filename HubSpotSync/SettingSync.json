@@ -12,6 +12,7 @@
   "FechaFiltro": "919747892000",
   "UrlApiKRMUpd": "http://krm.vinte.com.mx/Krm-HSQA/api/data/krmprospectos/hubspotQA",
   "UrlApiKRMTokenUpd": "http://krm.vinte.com.mx/Krm-HSQA/token",
+  "FechaInicioHubSpot": "1999-01-01",
   "ColumsEntity": [
     {
       "Entity": "Contact",

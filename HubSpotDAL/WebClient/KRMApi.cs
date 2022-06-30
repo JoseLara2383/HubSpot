@@ -25,6 +25,7 @@ namespace HubSpotDAL.WebClient
                 var json = Newtonsoft.Json.JsonConvert.SerializeObject(Prospectos);
                 var data = new System.Net.Http.StringContent(json, Encoding.UTF8, "application/json");
                 string baseUrl = Helpers.SettingSync.SettingHubSpot.UrlApiKRM;
+
                 using (var client = new HttpClient())
                 {
                     client.BaseAddress = new Uri(baseUrl);
@@ -42,11 +43,8 @@ namespace HubSpotDAL.WebClient
                            
                         }
                     }
-                   
-                  
+                                    
                     return Result;
-
-               
 
                 }
             }
@@ -147,6 +145,48 @@ namespace HubSpotDAL.WebClient
                 return "";
             }
         }
+       
+        public static async Task<string> GetProspectostoKRM(PropectoParamGetKRM prospectopParam)
+        {
+            try
+            {
+                var Apitoken = await GettokenKRMUpd();
+               
+                var AccessTKResult = JsonConvert.DeserializeObject<AccessToken>(Apitoken);
 
+                var url = Helpers.SettingSync.SettingHubSpot.UrlApiKRMUpd;
+
+                var json = Newtonsoft.Json.JsonConvert.SerializeObject(prospectopParam);
+                var data = new System.Net.Http.StringContent(json, Encoding.UTF8, "application/json");
+               // string baseUrl = Helpers.SettingSync.SettingHubSpot.UrlApiKRM;
+
+                using (var client = new HttpClient())
+                {
+                   // client.BaseAddress = new Uri(baseUrl);
+                    client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", AccessTKResult.access_token);
+                    var responseTask = client.PostAsync(url, data);
+                    responseTask.Wait();
+                    string Result = string.Empty;
+                    if (responseTask.Result.IsSuccessStatusCode)
+                    {
+                        var jsonr = responseTask.Result.Content.ReadAsStringAsync();
+
+                        if (jsonr != null)
+                        {
+                            Result = jsonr.Result;
+
+                        }
+                    }
+
+                    return Result;
+
+                }
+            }
+            catch (Exception ex)
+            {
+                Helpers.ExcepcionLog.WriteLog("SendProspectostoKRM", ex);
+                return "";
+            }
+        }
     }
 }

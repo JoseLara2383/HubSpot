@@ -57,42 +57,60 @@ namespace HubSpotDAL.DAL
                     if (Prospectos.Prospectos.Count > 0)
                     {
 
-                        //Ver si estos propectos se ha enviado a KRM
+                        //Ver si estos propectos se ha enviado a KRM, al igual marca esa lista a 1 como paso
                       DataTable dtContacs=  LoadContacts(conexionString, ListContact);
 
                         Prospectos.Prospectos.RemoveAll(p => p.IdHubspot == isPropectoEnviatoKRM(dtContacs, p.IdHubspot));
 
-                        //Send data to krm
-                        ResultKRM =  await  KRMApi.SendProspectostoKRM(Prospectos);
-                        try
+                        if (Prospectos.Prospectos.Count > 0)
                         {
-                            //ResultKRM = ResultKRM.Replace("\\r\\n      ", "").Replace("\\r\\n  ", "").Replace("\\r\\n", "").Replace("\\\"", "\"").Replace("\"{", "{").Replace("}\"", "}");
-                            ResultKRM = ResultKRM.Replace(@"\r\n","").Replace(@"\r\n\","").Replace(@"\", "").Replace("\"{", "{").Replace("}\"", "}");
-                            ProspectosResult PropespetosResult = JsonConvert.DeserializeObject<ProspectosResult>(ResultKRM);
-                            //Sacar los que fueron exitosos
-                           if (PropespetosResult!=null && PropespetosResult.Result.Count()>0)
+                            //Send data to krm
+                            ResultKRM = await KRMApi.SendProspectostoKRM(Prospectos);
+                            try
                             {
-                                string ListHuspotId = string.Empty;
-                              var ProspetotoKRM =   PropespetosResult.Result.Where(Prospecto => Prospecto.success.ToLower() == "true");
-                                foreach (var item in ProspetotoKRM)
+                                //ResultKRM = ResultKRM.Replace("\\r\\n      ", "").Replace("\\r\\n  ", "").Replace("\\r\\n", "").Replace("\\\"", "\"").Replace("\"{", "{").Replace("}\"", "}");
+                                ResultKRM = ResultKRM.Replace(@"\r\n", "").Replace(@"\r\n\", "").Replace(@"\", "").Replace("\"{", "{").Replace("}\"", "}");
+                                ProspectosResult PropespetosResult = JsonConvert.DeserializeObject<ProspectosResult>(ResultKRM);
+                                
+                               
+                                if (PropespetosResult != null && PropespetosResult.Result.Count() > 0)
                                 {
-                                    ListHuspotId = ListHuspotId ==string.Empty ? item.id_HubSpot :  string.Format("{0},{1}", ListHuspotId, item.id_HubSpot);
-                                }
-
-                                //Actualizar la Base de datos como enviado
-                                if (ListHuspotId != string.Empty)
-                                {
+                                    string ListHuspotId = string.Empty;
                                     ContactDAL = new DAL.ContactDAL();
-                                    ContactDAL.InsUpdData(conexionString, ListHuspotId);
+                                    //Sacar los que fueron exitosos
+                                    var ProspetotoKRM = PropespetosResult.Result.Where(Prospecto => Prospecto.success.ToLower() == "true");
+                                    foreach (var item in ProspetotoKRM)
+                                    {
+                                        ListHuspotId = ListHuspotId == string.Empty ? item.id_HubSpot : string.Format("{0},{1}", ListHuspotId, item.id_HubSpot);
+                                    }
+
+                                    //Actualizar la Base de datos como enviado
+                                    if (ListHuspotId != string.Empty)
+                                    {                                       
+                                        ContactDAL.InsUpdData(conexionString, ListHuspotId,true);
+                                    }
+
+                                    ListHuspotId = string.Empty;
+                                    //Sacar los que fueron fallidos
+                                    ProspetotoKRM = PropespetosResult.Result.Where(Prospecto => Prospecto.success.ToLower() == "false");
+                                    foreach (var item in ProspetotoKRM)
+                                    {
+                                        ListHuspotId = ListHuspotId == string.Empty ? item.id_HubSpot : string.Format("{0},{1}", ListHuspotId, item.id_HubSpot);
+                                    }
+                                    //Actualizar la Base de datos como enviado
+                                    if (ListHuspotId != string.Empty)
+                                    {                         
+                                        ContactDAL.InsUpdData(conexionString, ListHuspotId, false);
+                                    }
+
                                 }
+
+
                             }
-
-
-                        }
-                        catch (Exception ex)
-                        {
-
-                            Helpers.ExcepcionLog.WriteLog("SendProspectostoKRM", "No se puedo procesar la respuesta de KRM: " + ex.Message);
+                            catch (Exception ex)
+                            {
+                                Helpers.ExcepcionLog.WriteLog("SendProspectostoKRM", "No se puedo procesar la respuesta de KRM: " + ex.Message);
+                            }
                         }
                     }
                 }
@@ -106,6 +124,12 @@ namespace HubSpotDAL.DAL
         }
 
 
+        /// <summary>
+        /// Este metodo trae la lista que se enviaron a krm, al igual hará un upd a la tabla de contacts
+        /// </summary>
+        /// <param name="conexionString"></param>
+        /// <param name="ListContact"></param>
+        /// <returns></returns>
         private DataTable LoadContacts(string conexionString, string ListContact)
         {
             ContactDAL ContactDAL = new ContactDAL();
