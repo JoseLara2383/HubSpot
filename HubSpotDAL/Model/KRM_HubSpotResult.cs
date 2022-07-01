@@ -6,8 +6,8 @@ using System.Threading.Tasks;
 
 namespace HubSpotDAL.Model
 {
-    internal class ListScheduleHubSpot
+    internal class KRM_HubSpotResult
     {
-        public List<ScheduleHubSpot> ScheduleHubSpot { get; set; } = new List<ScheduleHubSpot>();
+        public List<KRM_HubSpot> KRM_HUBSPOT { get; set; }
     }
 }

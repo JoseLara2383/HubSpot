@@ -11,6 +11,6 @@ namespace HubSpotDAL.Model
         /// <summary>
         /// Indica la fecha hora que se trajo la informacion de KRM 
         /// </summary>
-        public DateTime FechaUltimaEjecucion { get; set; } 
+        public string FechaUltimaEjecucion { get; set; } 
     }
 }

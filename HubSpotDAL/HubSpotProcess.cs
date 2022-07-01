@@ -96,20 +96,27 @@ namespace HubSpotDAL
         {
             SettingSync.getSetting();
 
-            string FechaInicioHubSpot = SettingSync.SettingHubSpot.FechaInicioHubSpot;
+            //string FechaInicioHubSpot = SettingSync.SettingHubSpot.FechaInicioHubSpot;
 
             //Obtener Schedule
-            ConfScheduleHubSpot.getScheduleHubSpot(1, Convert.ToDateTime(FechaInicioHubSpot));
+            ConfScheduleHubSpot.getScheduleHubSpot();
 
             string FechaFinal = DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss");
+
             //Obtener  los datos de la Api de KRM
-           var prospectos= await KRMApi.GetProspectostoKRM(new PropectoParamGetKRM() { 
-                                                            Fecha_Inicial=ConfScheduleHubSpot.ScheduleHubSpot.FechaUltimaEjecucion.ToString("yyyy-MM-dd HH:mm:ss"),
+           var prospectos= await KRMApi.GetProspectostoKRM(new ProspectoParamGetKRM() { 
+                                                            Fecha_Inicial=ConfScheduleHubSpot.ScheduleHubSpot.FechaUltimaEjecucion,
                                                             Fecha_Final =FechaFinal 
                                                             });
+            var ProspectoResult = JsonConvert.DeserializeObject<KRM_HubSpotResult>(prospectos);
+
             //Actualizar campos de hubSpot
 
             //Actualizar el fecha de incio para la siguiente iteración.
+            ConfScheduleHubSpot.ScheduleHubSpot.FechaUltimaEjecucion = FechaFinal;
+            ConfScheduleHubSpot.UpdateScheduleHubSpot();
+            // ConfScheduleHubSpot.UpdateScheduleHubSpot(FechaFinal);
+
 
             ContactDataUpd contactData = new ContactDataUpd();
 

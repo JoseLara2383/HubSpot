@@ -146,7 +146,7 @@ namespace HubSpotDAL.WebClient
             }
         }
        
-        public static async Task<string> GetProspectostoKRM(PropectoParamGetKRM prospectopParam)
+        public static async Task<string> GetProspectostoKRM(ProspectoParamGetKRM prospectopParam)
         {
             try
             {
@@ -173,7 +173,7 @@ namespace HubSpotDAL.WebClient
 
                         if (jsonr != null)
                         {
-                            Result = jsonr.Result;
+                            Result = jsonr.Result.Replace(@"\r\n", "").Replace(@"\r\n\", "").Replace(@"\", "").Replace("\"{", "{").Replace("}\"", "}"); ;
 
                         }
                     }

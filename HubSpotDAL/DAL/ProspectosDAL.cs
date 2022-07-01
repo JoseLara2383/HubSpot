@@ -97,7 +97,7 @@ namespace HubSpotDAL.DAL
                                     {
                                         ListHuspotId = ListHuspotId == string.Empty ? item.id_HubSpot : string.Format("{0},{1}", ListHuspotId, item.id_HubSpot);
                                     }
-                                    //Actualizar la Base de datos como enviado
+                                    //Actualizar la Base de datos como enviado pero tivieron algun detalle
                                     if (ListHuspotId != string.Empty)
                                     {                         
                                         ContactDAL.InsUpdData(conexionString, ListHuspotId, false);

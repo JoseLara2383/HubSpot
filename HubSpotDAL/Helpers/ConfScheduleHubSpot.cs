@@ -16,7 +16,7 @@ namespace HubSpotDAL.Helpers
         /// Obtiene la configuracion de progración de la tabla
         /// </summary>
         /// <param name="IdBoardTable"></param>
-        public static void getScheduleHubSpot(Int32 IdBoardTable,  DateTime fechafin)
+        public static void getScheduleHubSpot()
         {
             try
             {
@@ -52,7 +52,7 @@ namespace HubSpotDAL.Helpers
 
         }
 
-        public static void UpdateScheduleTable(Int32 IdBoardTable, DateTime Fecha)
+        public static void UpdateScheduleHubSpot( string Fecha)
         {
             try
             {
@@ -68,6 +68,28 @@ namespace HubSpotDAL.Helpers
                 schedulehubSpottoUpd = ListScheduleHubSpot.ScheduleHubSpot[0];
                 schedulehubSpottoUpd.FechaUltimaEjecucion = Fecha;
 
+                string json = JsonConvert.SerializeObject(ListScheduleHubSpot);
+
+                System.IO.File.WriteAllText(ruta, json);
+
+            }
+            catch (Exception ex)
+            {
+
+                ExcepcionLog.WriteLog("ActualizaScheduleTable", ex);
+            }
+        }
+        public static void UpdateScheduleHubSpot()
+        {
+            try
+            {
+                ScheduleHubSpot schedulehubSpottoUpd;
+                ListScheduleHubSpot ListScheduleHubSpot = new ListScheduleHubSpot();
+
+                string ruta = Path.Combine(System.IO.Path.GetDirectoryName(
+                   System.Reflection.Assembly.GetExecutingAssembly().Location), @"ScheduleHubSpotSync.json");
+
+                ListScheduleHubSpot.ScheduleHubSpot.Add(ScheduleHubSpot);
                 string json = JsonConvert.SerializeObject(ListScheduleHubSpot);
 
                 System.IO.File.WriteAllText(ruta, json);
