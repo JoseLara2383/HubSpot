@@ -23,7 +23,7 @@ namespace HubSpotDAL.Model
         public string cTelefonoMovil { get; set; }
         public string cEmail { get; set; }
         public string bActivo { get; set; }
-        public string CampfkIdPuntoProspeccionañaPublicidad { get; set; }
+        public string fkIdPuntoProspeccion { get; set; }
         public string nMontoCreditoex { get; set; }
         public string fkIdTipoPersona { get; set; }
         public string fkIdCampaniaPublicidadRegion { get; set; }
@@ -32,7 +32,6 @@ namespace HubSpotDAL.Model
         public string fkIdCampania { get; set; }
         public string dtFechaRegistro { get; set; }
         public string Recomendado_Nombre { get; set; }
-
         public string Recomendado_ApPaterno { get; set; }
         public string Recomendado_ApMaterno { get; set; }
         public string Recomendado_Telefono { get; set; }
@@ -41,6 +40,8 @@ namespace HubSpotDAL.Model
         public string tipo_credito { get; set; }
         public string IdCliente { get; set; }
         public string IdHubSpot { get; set; }
-
+        public string FechaApartado { get; set; }
+        public string bitCita { get; set; }
+        public string FechaCita { get; set; }
     }
 }
