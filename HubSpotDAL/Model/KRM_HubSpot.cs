@@ -8,7 +8,6 @@ namespace HubSpotDAL.Model
 {
     internal class KRM_HubSpot
     {
-        public string IdHubspot { get; set; }
         public string cNombre { get; set; }
         public string cApellidoPaterno { get; set; }
         public string cApellidoMaterno { get; set; }

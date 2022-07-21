@@ -110,22 +110,48 @@ namespace HubSpotDAL
                                                             });
             var ProspectoResult = JsonConvert.DeserializeObject<KRM_HubSpotResult>(prospectos);
 
+            ContactDataUpd contactData = new ContactDataUpd();
             //Actualizar campos de hubSpot
+            foreach (var Prospecto in ProspectoResult.KRM_HUBSPOT)
+            {
+                contactData.properties.firstname = Prospecto.cNombre;
+                contactData.properties.lastname = Prospecto.cApellidoPaterno;
+                contactData.properties.apellido_materno = Prospecto.cApellidoMaterno;
+                contactData.properties.date_of_birth= Prospecto.dtFechaNacimiento;
+                contactData.properties.estado_direccion = Prospecto.cEstado;
+                contactData.properties.curp = Prospecto.cCURP;
+                contactData.properties.rfc = Prospecto.cRFC;
+                contactData.properties.nss = Prospecto.cNSS;
+                contactData.properties.genero = Prospecto.fkIdGenero;
+                contactData.properties.phone = Prospecto.cTelefono;
+                contactData.properties.telefono_2 = Prospecto.cTelefonoMovil;
+                contactData.properties.email = Prospecto.cEmail;
+                contactData.properties.activo_inactivo = Prospecto.bActivo;
+                contactData.properties.punto_venta = Prospecto.fkIdPuntoProspeccion;
+                contactData.properties.credito = Prospecto.nMontoCreditoex;
+                contactData.properties.telefono_trabajo = Prospecto.cTelefono;
+                contactData.properties.tipo_persona = Prospecto.fkIdTipoPersona;
+                contactData.properties.fecha_registro = Prospecto.dtFechaRegistro;
+                contactData.properties.recomendado_nombre = Prospecto.Recomendado_Nombre;
+                contactData.properties.recomendado_appaterno = Prospecto.Recomendado_ApPaterno;
+                contactData.properties.recomendado_apmaterno = Prospecto.Recomendado_ApMaterno;
+                contactData.properties.recomendado_telefono = Prospecto.Recomendado_Telefono;
+                contactData.properties.recomendado_email = Prospecto.Recomendado_email;
+                contactData.properties.estado_civil = Prospecto.fkEstadoCivil;
+                contactData.properties.zip = Prospecto.cCP;
+                contactData.properties.tipo_credito = Prospecto.tipo_credito;
+                contactData.properties.id_cliente_ek = Prospecto.IdCliente;
+               // contactData.properties.hs_object_id = Prospecto.IdHubSpot;
+                contactData.properties.fecha_apartado = Prospecto.FechaApartado;
+                contactData.properties.fecha_cita = Prospecto.FechaCita;
 
+                HubSpotApi.UpdContact(contactData, Prospecto.IdHubSpot);
+
+            }
             //Actualizar el fecha de incio para la siguiente iteración.
             ConfScheduleHubSpot.ScheduleHubSpot.FechaUltimaEjecucion = FechaFinal;
             ConfScheduleHubSpot.UpdateScheduleHubSpot();
-            // ConfScheduleHubSpot.UpdateScheduleHubSpot(FechaFinal);
-
-
-            ContactDataUpd contactData = new ContactDataUpd();
-
-            contactData.properties.correo_electrnico = "veroop@yahoo.com.mx";
-            contactData.properties.am_mkt = "";
-
-            HubSpotApi.UpdContact(contactData, "2159951");
-
-
+           
             return "La actualización ha terminado con éxito";
         }
 

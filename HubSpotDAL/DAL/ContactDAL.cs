@@ -235,9 +235,7 @@ namespace HubSpotDAL.DAL
                         command.Parameters.Add(Param);
                         Param = new SqlParameter("@estado_civil", itemContact.properties.estado_civil);
                         command.Parameters.Add(Param);
-
-
-
+                      
                         int i = command.ExecuteNonQuery();
 
                         if (itemContact.properties.ID_Contacts == 0)
