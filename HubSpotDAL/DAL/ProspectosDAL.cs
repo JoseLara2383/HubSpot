@@ -29,19 +29,19 @@ namespace HubSpotDAL.DAL
                         Prospecto = new Prospecto()
                         {
                             IdHubspot = itemContact.id,
-                            Nombre = itemContact.properties.nombre_completo,
+                            Nombre = itemContact.properties.firstname,
                             ApellidoPaterno = itemContact.properties.lastname,
                             ApellidoMaterno = itemContact.properties.apellido_materno,
                             FechadeNacimiento = String.IsNullOrEmpty(itemContact.properties.date_of_birth) ? "" : DateTime.Parse( itemContact.properties.date_of_birth).ToString("yyyy-MM-dd"),
                             RFC = itemContact.properties.rfc,
                             Telefono = itemContact.properties.telefono_2,
-                            Genero = Helpers.SettingSync.GetGenero(itemContact.properties.gender),
+                            Genero = itemContact.properties.genero,
                             TelefonoMovil = itemContact.properties.phone,
-                            Email = itemContact.properties.correo_electrnico,
+                            Email = itemContact.properties.email,
                             TipoPersona = itemContact.properties.tipo_persona,
                             EstadoCivil = itemContact.properties.estado_civil,
                             Etapa = "1",
-                            PuntoVenta = Helpers.SettingSync.GetPuntoVenta(itemContact.properties.punto_de_venta),
+                            PuntoVenta = itemContact.properties.punto_venta,
                             MedioPubicidad = Helpers.SettingSync.GetMedioPublicidad(itemContact.properties.canal_tradicional),
                             CampañaPublicidad = Helpers.SettingSync.GetCampaniaPublicidad(itemContact.properties.campana),
                         };
@@ -142,7 +142,7 @@ namespace HubSpotDAL.DAL
         {
             var Prospectp = Prospectos.Select("id=" + id_HubSpot);
             
-            return Prospectp==null ? "0" : Prospectp[0]["id"].ToString();
+            return Prospectp==null || Prospectp.Length==0 ? "0" : Prospectp[0]["id"].ToString();
         }
        
     }

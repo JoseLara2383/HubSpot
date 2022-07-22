@@ -62,6 +62,7 @@ namespace HubSpotDAL.Model
         public string? isassignable { get; set; }
         public string? isover { get; set; }
         public string? isready { get; set; }
+        public string? firstname { get; set; }
         public string? lastname { get; set; }
         public string? lugares_reservados { get; set; }
         public string? motivo_de_compra { get; set; }
@@ -82,6 +83,7 @@ namespace HubSpotDAL.Model
         public string? prototipo { get; set; }
         public string? punto_de_encuentro { get; set; }
         public string? punto_de_venta { get; set; }
+        public string? punto_venta { get; set; }
         public string? rango_ingresos { get; set; }
         public string? respondido { get; set; }
         public string? staff_mkt { get; set; }
@@ -95,6 +97,7 @@ namespace HubSpotDAL.Model
         public string? visita { get; set; }
         public string? yotellevo { get; set; }
         public string? gender { get; set; }
+        public string? genero { get; set; }
         public string? email { get; set; }
         public string? tipo_persona { get; set; }
         public string? estado_civil { get; set; }

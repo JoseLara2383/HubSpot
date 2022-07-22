@@ -68,7 +68,7 @@ namespace HubSpotDAL.DAL
                         command.Parameters.Add(Param);
                         Param = new SqlParameter("@contacto_efectivo", itemContact.properties.contacto_efectivo);
                         command.Parameters.Add(Param);
-                        Param = new SqlParameter("@correo_electrnico", itemContact.properties.correo_electrnico);
+                        Param = new SqlParameter("@correo_electrnico", itemContact.properties.email);
                         command.Parameters.Add(Param);
                         Param = new SqlParameter("@creado_en", itemContact.properties.creado_en);
                         command.Parameters.Add(Param);
@@ -235,7 +235,13 @@ namespace HubSpotDAL.DAL
                         command.Parameters.Add(Param);
                         Param = new SqlParameter("@estado_civil", itemContact.properties.estado_civil);
                         command.Parameters.Add(Param);
-                      
+                        Param = new SqlParameter("@genero", itemContact.properties.genero);
+                        command.Parameters.Add(Param);
+                        Param = new SqlParameter("@punto_venta", itemContact.properties.punto_venta);
+                        command.Parameters.Add(Param);
+                        Param = new SqlParameter("@firsname", itemContact.properties.firstname);
+                        command.Parameters.Add(Param);
+
                         int i = command.ExecuteNonQuery();
 
                         if (itemContact.properties.ID_Contacts == 0)

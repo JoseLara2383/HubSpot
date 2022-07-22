@@ -155,6 +155,10 @@ namespace HubSpotDAL.WebClient
                             Result = jsonr.Result;
                         }
                     }
+                    else
+                    {
+                        Helpers.ExcepcionLog.WriteLog("UpdContact", "No se puedo actualizar HubSpot: " + responseTask.Result.RequestMessage);
+                    }
                     return Result;
                 }
             }
