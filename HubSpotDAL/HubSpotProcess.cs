@@ -114,11 +114,13 @@ namespace HubSpotDAL
             //Actualizar campos de hubSpot
             foreach (var Prospecto in ProspectoResult.KRM_HUBSPOT)
             {
+                DateTime fecha = DateTime.Now;
+
                 contactData.properties.firstname = Prospecto.cNombre;
                 contactData.properties.lastname = Prospecto.cApellidoPaterno;
                 contactData.properties.apellido_materno = Prospecto.cApellidoMaterno;
                 contactData.properties.date_of_birth= Prospecto.dtFechaNacimiento;
-                contactData.properties.estado_direccion = Prospecto.cEstado;
+                //contactData.properties.estado_direccion = Prospecto.cEstado;
                 contactData.properties.curp = Prospecto.cCURP;
                 contactData.properties.rfc = Prospecto.cRFC;
                 contactData.properties.nss = Prospecto.cNSS;
@@ -126,12 +128,12 @@ namespace HubSpotDAL
                 contactData.properties.phone = Prospecto.cTelefono;
                 contactData.properties.telefono_2 = Prospecto.cTelefonoMovil;
                 contactData.properties.email = Prospecto.cEmail;
-                contactData.properties.activo_inactivo = Prospecto.bActivo;
+                contactData.properties.activo_inactivo = Prospecto.bActivo.ToLower()=="true" ? "1" : "0";
                 contactData.properties.punto_venta = Prospecto.fkIdPuntoProspeccion;
-                contactData.properties.credito = Prospecto.nMontoCreditoex;
+                //contactData.properties.credito = Prospecto.nMontoCreditoex;
                 contactData.properties.telefono_trabajo = Prospecto.cTelefono;
                 contactData.properties.tipo_persona = Prospecto.fkIdTipoPersona;
-                contactData.properties.fecha_registro = Prospecto.dtFechaRegistro;
+               // contactData.properties.fecha_registro = Convert.ToDateTime(Prospecto.dtFechaRegistro).ToString("yyyy-MM-dd");
                 contactData.properties.recomendado_nombre = Prospecto.Recomendado_Nombre;
                 contactData.properties.recomendado_appaterno = Prospecto.Recomendado_ApPaterno;
                 contactData.properties.recomendado_apmaterno = Prospecto.Recomendado_ApMaterno;
@@ -140,8 +142,7 @@ namespace HubSpotDAL
                 contactData.properties.estado_civil = Prospecto.fkEstadoCivil;
                 contactData.properties.zip = Prospecto.cCP;
                 contactData.properties.tipo_credito = Prospecto.tipo_credito;
-                contactData.properties.id_cliente_ek = Prospecto.IdCliente;
-               // contactData.properties.hs_object_id = Prospecto.IdHubSpot;
+                contactData.properties.id_cliente_ek = Prospecto.IdCliente;           
                 contactData.properties.fecha_apartado = Prospecto.FechaApartado;
                 contactData.properties.fecha_cita = Prospecto.FechaCita;
 

@@ -28,7 +28,7 @@ namespace HubSpotDAL.Model
         public string? credito { get; set; }
         public string? telefono_trabajo { get; set; }
         public string? tipo_persona { get; set; }
-        public string? correofecha_registro_electrnico { get; set; }
+       // public string? correofecha_registro_electrnico { get; set; }
         public string? recomendado_nombre { get; set; } 
         public string? recomendado_appaterno { get; set; }
         public string? recomendado_apmaterno { get; set; }
